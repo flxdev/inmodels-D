@@ -1,0 +1,151 @@
+---
+title: ui
+bodyClass: Index_Page
+outClass: Index_Page
+---
+extends layouts/_layout
+block content
+	.block
+		.navigation
+		._bg
+		.block-content.ui-block.bg-brend
+
+			h1.h1 Contact us
+		
+			h2.h2 Models
+		
+			h3.h3 Models
+		
+			h4.h4 Models
+		
+			p.text-big Our models are sent on business trips only for a work visa, because our priority is security. 
+		
+			p.text Before opening the agency, we worked for a long time models in Italy, France, USA, China and other countries. 
+			
+			div
+
+				a.link(href="#") Link
+			
+			div
+
+				a.link-big(href="#") back to gallery
+
+			.ui-btn-wrap
+				.bg-white
+					+button('send a message')
+				.bg-brend
+					+button('Become a model')
+				.bg-darken
+					+button('business request')
+			
+			.bg-white
+				.form-search
+					form
+						.input-item.search-field
+							input.input-field(type="search" id="searching")
+							label.input-label(for="searching") | Search by name
+							button.clear-bttn
+								span._icon
+									+icon('cross')
+				br
+				.form-block
+					form.js-validate
+						.form-block__title Title title
+						.input-row
+							.input-item
+								input.input-field(type="text"
+									id="name"
+									data-validation="required")
+								label.input-label(for="name") Name
+						.form-block__title title
+						.input-row
+							.input-item.c2
+								input.input-field(type="text" id="name1")
+								label.input-label(for="name1") Name
+							.input-item.c2
+								input.input-field(type="text" id="name2")
+								label.input-label(for="name2") Name
+						.form-block__title title
+						.input-row
+							.input-item.c4
+								input.input-field(type="text" id="name3")
+								label.input-label(for="name3") Name
+							.input-item.c4
+								input.input-field(type="text" id="name4")
+								label.input-label(for="name4") Name
+							.input-item.c4
+								input.input-field(type="text" id="name5")
+								label.input-label(for="name5") Name
+							.input-item.c4.input-disable
+								input.input-field(type="text" id="name6")
+								label.input-label(for="name6") Name
+						.input-row
+							.input-item.c4
+								input.input-field(type="text" id="name7")
+								label.input-label(for="name7") Name
+							.input-item.c4
+								input.input-field(type="text" id="name8")
+								label.input-label(for="name8") Name
+							.input-item.c4
+								input.input-field(type="text" id="name9")
+								label.input-label(for="name9") Name
+							.input-item.c4.input-disable
+								input.input-field(type="text" id="name10")
+								label.input-label(for="name10") Name
+						.form-block__title title title
+						.input-row
+							.input-item.c2.select
+								input.input-field(type="hidden" id="lang1" )
+								span.select-link Knowledge of English 
+								span.select-carret
+									+icon('carret')
+								ul.select-list
+									li._item Elementary
+									li._item Pre-Intermediate
+									li._item Intermediate
+									li._item Upper-Intermediate
+									li._item Advanced
+									li._item Proficiency
+									
+							.input-item.c2.select
+								input.input-field(type="hidden" id="lang1" data-validation="required")
+								span.select-link Knowledge of English 
+								span.select-carret
+									+icon('carret')
+								ul.select-list
+									li._item Elementary
+									li._item Pre-Intermediate
+									li._item Intermediate 
+
+									li._item Upper-Intermediate
+									li._item Advanced
+									li._item Proficiency
+						.form-block__title title title
+						.input-row
+							.input-item.c2.drop-item(action="/upload")
+								.dz-message 
+									span.drop-item__icon
+										+icon('cross')
+									.input-label Attach file
+							.input-item.c2.drop-item(action="/upload")
+								.dz-message 
+									span.drop-item__icon
+										+icon('cross')
+									.input-label Attach file
+							.input-item.c2.drop-item(action="/upload")
+								.dz-message 
+									span.drop-item__icon
+										+icon('cross')
+									.input-label Attach file
+							.input-item.c2.input-bttn
+								+button('send a message')
+							.input-item.input-bttn
+								+button('send a message', 'w100')
+				
+				a(href="#").link-menu facebook 
+				a(href="#").link-menu instagram 
+				a(href="#").link-menu vkontakte 
+			.bg-darken
+				a(href="#").link-social Facebook 
+				a(href="#").link-social Facebook 
+				a(href="#").link-social Facebook 

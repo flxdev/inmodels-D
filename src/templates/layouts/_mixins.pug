@@ -1,0 +1,15 @@
+mixin icon(name, modClass)
+	if modClass == undefined
+		- var modClass = ''
+	else
+		- var modClass = ' ' + modClass
+	svg(class=name + modClass)
+		use(xlink:href= '#' + name)
+
+mixin button(text, add_class)
+	if add_class == undefined
+		- var add_class = ''
+	else
+		- var add_class = ' ' + add_class
+	button(class="bttn "+add_class)
+		span= text

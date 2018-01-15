@@ -1,0 +1,152 @@
+.bttn
+	display: inline-block
+	text-transform: uppercase
+	text-align: center
+	letter-spacing: 3px
+	font-size: 12px
+	font-weight: normal
+	line-height: normal
+	padding: 22px 33px 23px 33px
+	background-color: $bg-brend
+	color: $color
+	position: relative
+	border: 1px solid $color
+	+tr(color .35s)
+	span
+		display: inline-block
+		position: relative
+		z-index: 2
+	&:before
+		content: ''
+		display: block
+		height: 100%
+		width: 0
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 1
+		background-color: $color
+		transition: width .25s ease-in, background-color .2s
+	&:hover
+		color: #e0dfdf
+		&:before
+			width: 100%
+	&:active
+		color: $color
+		&:before
+			background-color: $bg-brend
+	&.w100
+		width: 100%
+.bg-white
+	.bttn
+		background-color: $color
+		color: $btn-color
+		position: relative
+		+tr(color .35s)
+		span
+			display: inline-block
+			position: relative
+			z-index: 2
+		&:before
+			content: ''
+			display: block
+			height: 100%
+			width: 0
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 1
+			background-color: $hover-color
+			transition: width .3s ease-in, background-color .2s
+		&:hover
+			&:before
+				width: 100%
+		&:active
+			&:before
+				background-color: $color
+.bg-darken
+	.bttn
+		border: 1px solid #e5dfdc
+		background-color: $bg-darken
+		color: #8d8786
+		&:before
+			background-color: #f0eae8
+		&:hover
+			color: $color
+		&:active
+			color: #8d8786
+			&:before
+				background-color: $bg-darken
+
+.clear-bttn
+	display: block
+	width: 30px
+	height: 30px
+	position: absolute
+	right: 15px
+	top: 5px
+	z-index: 6
+	background: transparent
+	svg
+		stroke-width: 0
+		+tr(stroke-width .3s)
+	&:hover &__icon
+		svg
+			stroke-width: 1px
+	&__icon
+		transform: rotate(45deg)
+		display: block
+		width: 100%
+		height: 100%
+
+.link
+	font-size: $font-size
+	color: $link-color
+	text-decoration: none
+	+tr(color .3s ease)
+	&:visited
+		color: $link-color
+	&:hover
+		color: $color
+	&:active
+		color: $link-color
+
+.link-menu
+	font-size: 12px
+	color: $color
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: 3px;
+	+tr(color .3s ease)
+	&:visited
+		color: $color
+	&:hover
+		color: $hover-color
+	&:active
+		color: $color
+
+.link-big
+	font-size: 26px
+	color: $color
+	text-decoration: none
+	+tr(color .3s ease)
+	&:visited
+		color: $light-brend
+	&:hover
+		color: $hover-color
+	&:active
+		color: $color
+
+.link-social
+	font-size: 26px
+	line-height: 1.62
+	color: $link-color
+	text-decoration: none
+	font-weight: 300
+	+tr(color .3s ease)
+	&:visited
+		color: $link-color
+	&:hover
+		color: #cec3bd
+	&:active
+		color: $link-color

@@ -1,0 +1,27 @@
+.modals
+	visibility: hidden
+	pointer-events: none
+	position: absolute
+	top: -1000px
+	left: -1000px
+
+.modal	
+	&-layout
+		visibility: hidden
+		background-color: transparent
+		position: fixed
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		pointer-events: all
+		// width: 100%
+		// height: 100%
+		padding: 10px
+		z-index: 4
+		&.active
+			visibility: visible
+	&-container
+		background-color: #ffffff
+		width: 100%
+		height: 100%

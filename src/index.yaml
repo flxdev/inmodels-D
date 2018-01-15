@@ -1,0 +1,7 @@
+ProjectTitle: Inmodels desctope
+
+PageList:
+- file: home.html
+  ready: 1
+- file: ui.html
+  ready: 40

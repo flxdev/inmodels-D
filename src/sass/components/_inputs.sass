@@ -1,0 +1,304 @@
+.form-block
+	width: 100%
+	max-width: 600px
+	margin: 0 auto
+	&__title
+		width: 100%
+		margin-bottom: 50px
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: 3px
+		color: $light-brend
+		font-weight: normal
+		&:not(:first-child)
+			margin-top: 50px
+.form-search
+	width: 100%
+	max-width: 590px
+	margin: 0 auto
+.input
+	&-item
+		display: inline-block
+		width: 100%
+		font-size: 20px
+		line-height: 1
+		font-weight: 300
+		border-bottom: 1px solid $hover-color
+		position: relative
+		margin-bottom: 50px
+		&::before, &::after
+			content: ''
+			display: block
+			height: 2px
+			width: 0
+			position: absolute
+			bottom: -1px
+			left: 0
+			z-index: 2
+			background-color: $color
+			transition: width .4s ease-in
+		&::before
+			bottom: 0
+			z-index: 1
+			height: 100%
+			background-color: #f4f4f4
+		&:hover
+			&:after
+				width: 100%
+		&.focus
+			&::before, &::after
+				width: 100%
+		&.editing
+			&::before, &::after
+				width: 100%
+			label
+				font-size: 15px
+				top: -20px
+				left: -1px
+				transition-delay: 0s
+		input[data-validation] + *
+			&:after
+				content: '*'
+		.input-field
+			padding: 3px 10px
+			position: relative
+			z-index: 5
+			background-color: inherit
+			font-weight: 300
+			&:focus ~ label
+				font-size: 15px
+				top: -20px
+				left: -1px
+				transition-delay: 0s
+				
+		&.search-field
+			font-size: 26px
+			line-height: 1.54
+			font-weight: 300
+			.input-label
+				top: 0
+				left: 16px
+				color: $light-brend
+			&::before
+				display: none
+			.input-field
+				padding: 3px 50px 14px 20px
+				&::-webkit-search-cancel-button
+					display: none
+				&::-ms-clear
+					display: none
+				&:focus ~ label
+					opacity: 0
+					top: 0
+					left: 16px
+					font-size: inherit
+					line-height: inherit
+					transition-delay: 0s
+			&.editing
+				&::after
+					width: 100%
+				label
+					opacity: 0
+					top: 0
+					left: 16px
+					font-size: inherit
+					line-height: inherit
+					transition-delay: 0s
+		&.c2
+			width: 45.83%
+		&.c4
+			width: 19%
+		&.input-disable
+			pointer-events: none
+			border-color: $disable-color
+			label
+				color: $disable-color
+		&.has-error
+			border-color: $error-color
+			&::before
+				background-color: $bg-error
+			&::after
+				background-color: $error-color
+		&.drop-item
+			border: none
+			cursor: pointer
+			.dz-message
+				font-size: 0
+			.drop-item__icon
+				display: inline-block
+				vertical-align: middle
+				width: 30px
+				height: 30px
+				margin-right: 25px
+				color: $color
+				svg
+					stroke-width: 0
+					+tr(stroke-width .3s)
+			.input-label
+				display: inline-block
+				position: relative
+				top: auto
+				left: auto
+				vertical-align: middle
+				cursor: pointer
+				font-size: 20px
+				line-height: 1
+				font-weight: 300
+				color: $link-color
+			&::before, &::after, .dz-success-mark, .dz-error-mark, .dz-image
+				display: none
+			.dz-preview
+				position: relative
+				display: inline-block
+				padding-right: 12px
+				margin-top: 16px
+				margin-left: 55px
+				cursor: normal
+			.dz-details
+				display: flex
+				.dz-size
+					order: 1
+					color: $link-color
+					font-size: $font-size
+					line-height: 2
+					font-weight: normal
+					margin-right: 15px
+					strong
+						font-weight: inherit
+				.dz-filename
+					order: 0
+					color: $color
+					font-size: $font-size
+					line-height: 2
+					font-weight: normal
+					margin-right: 15px
+			.dz-remove
+				position: absolute
+				top: 8px
+				right: 0
+				cursor: pointer
+			.dz-error-message
+				font-size: 14px
+				font-weight: normal
+				line-height: 1.43
+				color: $error-color
+				margin-top: 15px
+			&.dz-started
+				cursor: default
+				.dz-message
+					cursor: pointer
+			&:hover
+				.drop-item__icon
+					svg
+						stroke-width: 1px
+		&.input-bttn
+			border: none
+			text-align: right
+			&::before, &::after
+				display: none
+		&.select
+			&::before
+				display: none
+			.select-link
+				display: inline-block
+				width: 100%
+				cursor: pointer
+				font-size: 20px
+				font-weight: 300
+				line-height: 1
+				color: $link-color
+				padding: 3px 10px
+				+tr(color .3s)
+				&:after
+					opacity: 1
+					+tr(opacity .3s)
+			.select-carret
+				display: block
+				width: 16px
+				height: 9px
+				position: absolute
+				top: 8px
+				right: 10px
+				font-size: 0
+				transform: rotate(180deg)
+				transition: transform .45s ease
+			.select-list
+				background-color: #F7F4F3
+				padding: 10px 0 20px
+				width: 100%
+				position: absolute
+				z-index: 5
+				left: 0
+				top: 27px
+				transform: translateX(-30%)
+				opacity: 0
+				visibility: hidden
+				transition: visibility 0s .5s,transform .45s ease, opacity .45s ease, box-shadow .2s
+				&__item
+					font-size: 20px
+					font-weight: 300
+					line-height: 2
+					cursor: pointer
+					padding: 0 10px
+					+tr(background-color .35s)
+					cursor: pointer
+					&:hover
+						background-color: $bg-brend
+					&:active
+						background-color: #eae1dd
+			&.focus
+				.select-carret
+					transform: none
+				.select-list
+					transform: none
+					opacity: 1
+					visibility: visible
+					box-shadow: 0 2px 10px 0 rgba(76, 70, 68, 0.15)
+					transition: visible 0s ,transform .6s ease-out, opacity .4s .1s ease-out, box-shadow .2s .5s
+			&.has-success
+				.select-link
+					color: $color
+					&:after
+						opacity: 0
+
+	&-label
+		font-size: inherit
+		line-height: inherit
+		position: absolute
+		top: 0
+		left: 10px
+		color: $link-color
+		transition: font-size .2s, left .2s, top .2s, opacity .2s ease-in
+		transition-delay: .6s
+		z-index: 3
+	&-row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+.input-item
+	.help-block
+		position: absolute
+		right: 0
+		top: 0
+		z-index: 6
+		transition: top .2s .5s
+		&.form-error
+			color: $error-color
+			font-size: $font-size
+			line-height: 1.33
+	&.focus
+		.help-block
+			top: -23px
+			transition-delay: 0s
+	&.select
+		.help-block
+			top: -23px
+
+.dz-remove
+	display: block
+	width: 11px
+	height: 11px
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMi42MyAyMS45MiI+PHRpdGxlPmNyb3NzLVg8L3RpdGxlPjxwYXRoIGQ9Ik0xNSwxMy41OSw1LjEsMy42OWwtLjcxLjcxLDkuOSw5LjlMMy42OSwyNC45bC43MS43MUwxNSwxNSwyNS42MSwyNS42MWwuNzEtLjcxTDE1LjcxLDE0LjI5bDkuOS05LjktLjcxLS43MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjY5IC0zLjY5KSIvPjwvc3ZnPg==)
+	background-repeat: no-repeat
+	background-position: (50%, 50%)
