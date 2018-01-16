@@ -2,6 +2,6 @@ ProjectTitle: Inmodels desctope
 
 PageList:
 - file: home.html
-  ready: 1
+  ready: 90
 - file: ui.html
-  ready: 40
+  ready: 95

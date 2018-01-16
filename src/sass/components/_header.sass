@@ -7,45 +7,76 @@
 	z-index: 5
 	visibility: hidden
 	padding: 40px
-	.navigation
+
+.navigation
+	width: 100%
+	height: 100%
+	position: relative
+	&-burger
+		display: block
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: stretch
+		width: 20px
+		height: 20px
+		background-color: transparent
+		visibility: visible
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 1
+		transition: opacity .3s .3s, visibility 0s .2s
+		&__item
+			display: block
+			width: 100%
+			height: 2px
+			background-color: $color
+	&-lang
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 12px
+		font-weight: normal
+		line-height: 1.67
+		letter-spacing: 3px
+		text-transform: uppercase
+		visibility: visible
+		color: $color
+	&-logo
+		display: block
+		width: 20px
+		height: 112px
+		position: absolute
+		left: 0
+		bottom: 0
+		visibility: visible
+		color: $color
+	&-link
 		width: 100%
-		height: 100%
-		position: relative
+		text-align: center
+		text-transform: uppercase
+		font-size: 12px
+		line-height: 1.67
+		letter-spacing: 3px
+		&__devider
+			display: inline-block
+			width: 60px
+			height: 1px
+			background-color: $link-color
+			margin-bottom: 4px
+		&:hover &__item
+				color: $link-color
+		& &__item
+			color: $color
+			&:hover
+				color: $color
+		& > *:not(:first-child)
+			margin-left: 40px
+
+.menu-mobile
+	.navigation
 		&-burger
-			display: block
-			display: flex
-			flex-direction: column
-			justify-content: space-between
-			align-items: stretch
-			width: 20px
-			height: 20px
-			background-color: transparent
-			visibility: visible
-			position: absolute
-			top: 0
-			left: 0
-			&__item
-				display: block
-				width: 100%
-				height: 2px
-				background-color: $color
-		&-lang
-			position: absolute
-			top: 0
-			right: 0
-			font-size: 12px
-			font-weight: normal
-			line-height: 1.67
-			letter-spacing: 3px
-			text-transform: uppercase
-			visibility: visible
-			color: $color
-		&-logo
-			display: block
-			width: 20px
-			height: 112px
-			position: absolute
-			left: 0
-			bottom: 0
-			visibility: visible
-			color: $color
+			opacity: 0
+			visibility: hidden
+			transition: opacity .1s 0s, visibility 0s .1s
