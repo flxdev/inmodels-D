@@ -61,4 +61,23 @@ export default function initPopUp() {
     _this.f.openPopup(_popup);
     return false;
   });
+
+  window.DOM = {
+    body: $('body'),
+    html: $('html'),
+    __prevScrollTop: 0,
+    hideScroll: function() {
+      // let top = $(window).scrollTop();
+      this.__prevScrollTop = $(window).scrollTop();
+      this.body.css('top',-this.__prevScrollTop + 'px');
+      window.scroll(0, this.__prevScrollTop);
+      this.body.addClass('menu-mobile');
+    },
+    showScroll: function() {
+      this.body.removeClass('menu-mobile');
+      this.__prevScrollTop && (window.scroll(0, this.__prevScrollTop));
+      this.__prevScrollTop = null;
+    }
+  };
+
 }

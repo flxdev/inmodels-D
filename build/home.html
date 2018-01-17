@@ -2,84 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index_Page</title>
+    <title>Index Page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f0eae8">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="Index_Page">
-    <script type="text/javascript">
-      ! function(e)
-      {
-        function t(o)
-        {
-          if (n[o]) return n[o].exports;
-          var c = n[o] = {
-            exports:
-            {},
-            id: o,
-            loaded: !1
-          };
-          return e[o].call(c.exports, c, c.exports, t), c.loaded = !0, c.exports
-        }
-        var n = {};
-        return t.m = e, t.c = n, t.p = "/assets/", t(0)
-      }(
-      {
-        0: function(e, t, n)
-        {
-          n(18), n(19)
-        },
-        18: function(e, t)
-        {
-          ! function()
-          {
-            "use strict";
-
-            function e(e, t, n)
-            {
-              e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-            }
-
-            function t(e)
-            {
-              return window.localStorage && localStorage.font_css_cache
-            }
-
-            function n()
-            {
-              if (window.localStorage && window.XMLHttpRequest)
-                if (t(c)) o(localStorage.font_css_cache);
-                else
-                {
-                  var e = new XMLHttpRequest;
-                  e.open("GET", c, !0), e.onreadystatechange = function()
-                  {
-                    4 === e.readyState && (o(e.responseText), localStorage.font_css_cache = e.responseText, localStorage.font_css_cache_file = c)
-                  }, e.send()
-                }
-              else
-              {
-                var n = document.createElement("link");
-                n.href = c, n.rel = "stylesheet", n.type = "text/css", document.getElementsByTagName("head")[0].appendChild(n), document.cookie = "font_css_cache"
-              }
-            }
-
-            function o(e)
-            {
-              var t = document.createElement("style");
-              t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
-            }
-            var c = window.fonts_href || "../css/font.css";
-            window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
-          }()
-        },
-        19: function(e, t) {}
-      });
-
-    </script>
+  <body class="index-page">
     <div class="svg-defs-container" style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="carret" viewBox="0 0 16 8.98">
@@ -99,7 +30,7 @@
       </svg>
     </div>
     <!--BEGIN out-->
-    <div class="out Index_Page">
+    <div class="out">
       <div class="page__outer">
         <div class="page__wrapper">
           <header class="page__header--wrap">
@@ -140,16 +71,14 @@
           <main class="page__content">
             <div id="barba-wrapper">
               <div class="barba-container" data-namespace="index">
-                <div class="index-page">
-                  <div class="block block--fullpage">
-                    <div class="block__bg block__video">
-                      <div class="video-container">
-                        <video class="fillWidth" autoplay="" loop="" data-src="img/video.mp4" type="video/mp4"></video>
-                      </div>
+                <div class="block block--fullpage">
+                  <div class="block__bg block__video">
+                    <div class="video-container">
+                      <video class="fillWidth" autoplay="" loop="" data-src="img/video.mp4" type="video/mp4"></video>
                     </div>
-                    <div class="block-content">
-                      <h1>F i n d t h e b e a u t y i n s i d e</h1>
-                    </div>
+                  </div>
+                  <div class="block-content">
+                    <h1>F i n d t h e b e a u t y i n s i d e</h1>
                   </div>
                 </div>
               </div>
@@ -172,32 +101,38 @@
           </div>
           <div class="modal-menu-inner">
             <div class="navigation-link quest-links">
-              <a class="navigation-link__item" href="#">Business request</a>
-              <a class="navigation-link__item" href="">Become a model</a>
+              <div class="navigation-link-wrap">
+                <a class="navigation-link__item" href="#">Business request</a>
+                <a class="navigation-link__item" href="">Become a model</a>
+              </div>
             </div>
             <div class="pages-links">
-              <a class="pages-links__item" href="#">Agency
+              <a class="pages-links__item" href="#">
+                <span>Agency</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">Models
+              <a class="pages-links__item" href="#">
+                <span>Models</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">Gallery
+              <a class="pages-links__item" href="#">
+                <span>Gallery</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">Contacts
+              <a class="pages-links__item" href="#">
+                <span>Contacts</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">

@@ -1,0 +1,53 @@
+---
+title: Become a model
+bodyClass: contacts-page
+//- outClass: Index_Page
+---
+extends layouts/_layout
+block content
+
+	#barba-wrapper
+		.barba-container(data-namespace="contacts")
+			.block
+				.block-grid
+					aside.aside.bg-brend.js-stick-parent
+						.aside-content.js-stick
+							h1 Become a model
+							p.text-middle Agency «INMODELS» is always interested in new faces. If you are interested in the work of the model and you meet the specified criteria, please use the form below.
+							h4 Options
+							p.text You are between 13 and 22 years old, height from 170 to 182 cm, waist up to 63 cm, hips up to 92 cm
+							h4 Additionally
+							p.text
+								| Attach to the questionnaire photos of the person without make-up (full face, profile, 3/4) and a full-length photograph in a swimsuit. If you have a portfolio, send it to us at 
+								a(href="mailto:info@inmodels.by") info@inmodels.by 
+								| with their contact information.
+							+button('Become a model')
+					main.main.bg-white
+						.main-content
+							.form-block
+								form(action="#").js-validate
+									.input-row
+										.input-item.c2
+											input.input-field(type="text"
+												id="user-name")
+											label.input-label(for="user-name") Name
+										.input-item.c2
+											input.input-field(type="tel"
+												id="user-tel")
+											label.input-label(for="user-tel") Phone
+										.input-item
+											input.input-field(type="email"
+												id="user-email")
+											label.input-label(for="user-email") Email
+										.input-item
+											textarea.input-field(type="text"
+												id="user-msg"
+												rows="1.5")
+											label.input-label(for="user-msg") Message
+										.input-item.c2.drop-item(action="/upload")
+											.dz-message 
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Attach file
+										.input-item.c2.input-bttn
+											+button('send a message')

@@ -1,0 +1,54 @@
+---
+title: Contact us
+bodyClass: contacts-page
+//- outClass: Index_Page
+---
+extends layouts/_layout
+block content
+
+	#barba-wrapper
+		.barba-container(data-namespace="contacts")
+			.block
+				.block-grid
+					aside.aside.bg-brend.js-stick-parent
+						.aside-content.js-stick
+							h1 Contact us
+							h4 address
+							p.text-middle 210035, Smolenskaya 5-1, shopping center "Europe" office 103. Vitebsk, Belarus
+							a(href="#")
+							h4 Contact
+							.contacts-wrap
+								a.link(href="tel:+375(29)6336069") +375 (29) 633 60 69
+								a.link(href="tel:+375(33)6006069") +375 (33) 600 60 69
+								a.link(href="mailto:info@inmodels.by") info@inmodels.by
+							+button('Become a model')
+					main.main.bg-white
+						.main-content
+							.form-block
+								form(action="#").js-validate
+									.input-row
+										.input-item.c2
+											input.input-field(type="text"
+												id="user-name")
+											label.input-label(for="user-name") Name
+										.input-item.c2
+											input.input-field(type="tel"
+												id="user-tel")
+											label.input-label(for="user-tel") Phone
+										.input-item
+											input.input-field(type="email"
+												id="user-email")
+											label.input-label(for="user-email") Email
+										.input-item
+											textarea.input-field(type="text"
+												id="user-msg"
+												rows="1.5")
+											label.input-label(for="user-msg") Message
+										.input-item.c2.drop-item(action="/upload")
+											.dz-message 
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Attach file
+										.input-item.c2.input-bttn
+											+button('send a message')
+									

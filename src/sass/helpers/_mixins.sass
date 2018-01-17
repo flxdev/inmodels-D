@@ -88,13 +88,14 @@ $units: 1px !default;
 		overflow: hidden
 
 // fast font-family
-=font($alias, $name)
+=font($alias, $name, $weight)
 	@font-face
 		font-family: $alias
-		src: url("../fonts/" + $name + ".eot")
-		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype")
-		font-weight: normal
+		src: url("../fonts/" + $name + ".woff2")
+		src: url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".eot") format("embedded-opentype"),  url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: $weight
 		font-style: normal
+		
 // usage:
 //+font(black, cytiapro-black-webfont)
 

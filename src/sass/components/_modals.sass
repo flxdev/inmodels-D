@@ -101,16 +101,28 @@
 			height: 100%
 			position: relative
 			z-index: 2
-			+vertical
-			padding-top: 53px
-			padding-bottom: 45px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			// +vertical
+			// padding-top: 53px
+			// padding-bottom: 45px
 			.pages-links
 				display: inline-flex
+				justify-content: space-between
 				vertical-align: middle
+				align-self: center
 				width: 100%
 				max-width: 1200px
 				padding: 0 27px
-				justify-content: space-between
+				margin-top: -50px
+				&:hover 
+					.pages-links__item
+						span
+							opacity: .3
+						&:hover
+							span
+								opacity: 1
 				&__item
 					display: inline-block
 					font-size: 50px
@@ -120,7 +132,11 @@
 					opacity: 0
 					z-index: 1
 					transform: translateY(20px)
-					transition: opacity .1s .0s, transform .0s .1s
+					transition: opacity .1s .0s, transform .0s .1s, font-size .3s
+					+r(1281)
+						font-size: 40px
+					span
+						transition: opacity .35s .1s
 					.hov-decor
 						position: absolute
 						height: 100vh
@@ -129,6 +145,10 @@
 						top: 0
 						pointer-events: none
 						z-index: -1
+						+r(1281)
+							max-width: 300px
+							&-inner
+								right: 20px
 						&-inner
 							position: absolute
 							top: 0
@@ -149,40 +169,57 @@
 								opacity: 0
 								transform: none
 								transform-origin: 0 0
-								transition: transform .4s, visibility 0s .25s, opacity .1s .3s
+								transition: transform .4s, visibility 0s .1s, opacity .1s .3s
 							img
 								height: 100%
+								width: auto
 								position: absolute
 								top: 0
 								left: 0
 								opacity: 0
 								transform: translateX(-20px)
 								transition: transform .2s 0s, opacity .2s 0s
+					&::before
+						content: ''
+						display: block
+						height: 1px
+						width: 50px
+						background-color: $color
+						margin-left: 4px
+						margin-bottom: 35px
+						transform: scaleX(0)
+						transform-origin: 0
+						transition: transform .2s 0s
 					&:hover
+						&::before
+							transform: none
+							transition: transform .4s .1s
 						& .hov-decor
 							&-inner
 								&::after
 									visibility: visible
 									transform: scaleX(0)
 									opacity: 1
-									transition-delay: 0s
+									transition: transform .5s .1s, visibility 0s 0s, opacity .2s .1s
 								img
-									transition: transform .3s .2s, opacity .2s .2s
+									transition: transform .5s .15s, opacity .2s .15s
 									opacity: 1
 									transform: none
 			
 			.navigation-link
-				position: absolute
-				z-index: 2
+				// position: absolute
+				// z-index: 2
 				&.quest-links
-					left: 0
-					top: 27px
+					// left: 0
+					// top: 27px
+					padding-top: 27px
 					opacity: 0
 					transform: translateY(-20px)
 					transition: transform .3s .1s, opacity .3s .1s
 				&.social-links
-					left: 0
-					bottom: 24px
+					// left: 0
+					// bottom: 24px
+					padding-bottom: 25px
 					opacity: 0
 					transform: translateY(20px)
 					transition: transform .3s .1s, opacity .3s .1s

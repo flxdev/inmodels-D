@@ -20,7 +20,6 @@ export default function initDropzone() {
         autoDiscover:false,
         //acceptedFiles: _.hasClass('image')? '.jpg,.png,.webp' : '.doc,.docx,.pdf',
       });
-      console.log('lalal');
     });
   }
 

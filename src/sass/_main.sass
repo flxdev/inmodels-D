@@ -22,3 +22,48 @@
 		letter-spacing: 40px
 		padding-top: 102px
 		text-align: justify
+
+.aside
+	text-align: right
+	&-content
+		display: inline-flex
+		flex-direction: column
+		align-items: flex-start
+		min-height: 100vh
+		height: auto
+		width: 100%
+		max-width: 360px
+		padding-right: 40px
+		padding-top: 120px
+		text-align: left
+		h4
+			margin-top: 45px
+			margin-bottom: 25px
+			color: $light-brend
+		.contacts-wrap
+			margin-bottom: 110px
+			a
+				display: block
+				margin: 10px 0
+				color: $color
+				&[href^=mail]
+					color: $link-color
+					margin: 20px 0
+		.bttn
+			margin-bottom: 40px
+			margin-top: auto
+
+.main
+	text-align: left
+	min-height: 100vh
+	padding-left: 120px
+	padding-top: 120px
+	&-content
+		display: inline-block
+		vertical-align: middle
+		
+.contacts-page
+	.main
+		padding-top: 0
+		+vertical
+		text-align: left

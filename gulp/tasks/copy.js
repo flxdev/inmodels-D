@@ -1,11 +1,11 @@
 import gulp from 'gulp';
 import config from '../config.js';
 
-// gulp.task('copy:fonts', function() {
-//     return gulp
-//         .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
-//         .pipe(gulp.dest(config.dest.fonts));
-// });
+gulp.task('copy:fonts', function() {
+    return gulp
+        .src(config.src.fonts + '/*.{ttf,eot,woff,woff2}')
+        .pipe(gulp.dest(config.dest.fonts));
+});
 
 gulp.task('copy:lib', () => gulp
   .src(`${config.src.lib}/**/*.*`)
@@ -28,6 +28,6 @@ gulp.task('copy', [
   'copy:img',
   // 'copy:rootfiles',
   // 'copy:lib',
-  // 'copy:fonts'
+  'copy:fonts'
 ]);
 gulp.task('copy:watch', () => gulp.watch(`${config.src.img}/*`, ['copy']));

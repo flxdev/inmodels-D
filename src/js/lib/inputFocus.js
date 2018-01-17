@@ -1,3 +1,5 @@
+import autosize from 'autosize';
+
 export default function setInputFocus() {
   
   let inputs = $('.input-item');
@@ -50,5 +52,5 @@ export default function setInputFocus() {
       });
     });
   }
-
+  autosize($('textarea'));
 }
