@@ -1,0 +1,28 @@
+.cap
+	display: none
+	position: fixed
+	z-index: 20
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: $bg-brend
+	&__inner
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		text-align: center
+		.text-big
+			margin-bottom: 50px
+	&__image
+		display: inline-block
+		width: 92px
+		height: 182px
+		background-image: url(../img/mob-icon.svg)
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: 50% 50%
+		margin-bottom: 36px
+	+r(960)
+		display: block

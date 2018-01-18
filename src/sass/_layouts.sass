@@ -5,8 +5,8 @@
 	box-sizing: border-box
 	&--fullpage
 		width: 100%
-		height: 100%
-		min-height: 100vh
+		height: 100vh
+		// min-height: 100vh
 		background-color: $bg-brend
 	&--fullpage &__bg
 		width: 100%
@@ -20,6 +20,12 @@
 		height: 70vh
 		background-color: $bg-brend
 	&__video
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
 		.video-container
 			position: relative
 			bottom: 0%
@@ -48,7 +54,7 @@
 		position: relative
 		z-index: 2
 		width: 100%
-		max-width: 1020px
+		max-width: 1200px
 		margin: 0 auto
 	&-grid
 		position: relative
@@ -59,11 +65,11 @@
 		align-items: stretch
 		.aside
 			width: 42%
-			padding-left: 20px
+			padding-left: 80px
 		.main
 			width: 58%
 			min-height: 100vh
-			padding-right: 20px
+			padding-right: 25px
 
 .bg-white
 	background-color: $bg-color

@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="error-404">
+  <body class="error">
     <script type="text/javascript">
       ! function(e)
       {
@@ -142,12 +142,18 @@
             <div id="barba-wrapper">
               <div class="barba-container" data-namespace="index">
                 <div class="block block--fullpage">
-                  <div class="block__bg"></div>
-                  <div class="block-content">
-                    <div class="error-title">404</div>
-                    <div class="error-message">
-                      <div class="text-big">Sorry, the page you requested does not exist. </div>
-                      <div class="text-big">Go to the main page.</div>
+                  <div class="block-content error-wrap">
+                    <div class="error-wrap-inner">
+                      <div class="error-title">404</div>
+                      <div class="error-message">
+                        <p class="text-big">Sorry, the page you requested does not exist. </p>
+                        <a class="text-big" href="#">Go to the main page.</a>
+                      </div>
+                    </div>
+                    <div class="navigation-link social-links">
+                      <a class="navigation-link__item" href="#">facebook</a>
+                      <a class="navigation-link__item" href="#">instagram</a>
+                      <a class="navigation-link__item" href="#">vkontakte</a>
                     </div>
                   </div>
                 </div>
@@ -218,6 +224,15 @@
             <a class="link-dev" href="http://flxmd.by/" target="_blank">Made in Flex.media</a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="cap">
+      <div class="cap__inner">
+        <div class="cap__image"></div>
+        <div class="text-big">Please open the mobile version.</div>
+        <button class="bttn  transparent">
+          <span>go over</span>
+        </button>
       </div>
     </div>
     <!--LOAD SCRIPTS-->
