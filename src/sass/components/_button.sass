@@ -7,10 +7,7 @@
 	font-weight: normal
 	line-height: normal
 	padding: 22px 33px 23px 33px
-	background-color: $bg-brend
-	color: $color
 	position: relative
-	border: 1px solid $color
 	+tr(color .35s)
 	span
 		display: inline-block
@@ -25,47 +22,21 @@
 		top: 0
 		right: 0
 		z-index: 1
-		background-color: $color
-		transition: width .25s ease-in, background-color .2s
+		transition: width .3s ease-in, background-color .2s
 	&:hover
-		color: #e0dfdf
 		&:before
 			width: 100%
-	&:active
-		color: $color
-		&:before
-			background-color: $bg-brend
 	&.w100
 		width: 100%
-.bg-white
-	.bttn
+	&.normal
 		background-color: $color
 		color: $btn-color
-		position: relative
-		+tr(color .35s)
-		span
-			display: inline-block
-			position: relative
-			z-index: 2
 		&:before
-			content: ''
-			display: block
-			height: 100%
-			width: 0
-			position: absolute
-			top: 0
-			right: 0
-			z-index: 1
 			background-color: $hover-color
-			transition: width .3s ease-in, background-color .2s
-		&:hover
-			&:before
-				width: 100%
 		&:active
 			&:before
 				background-color: $color
-.bg-darken
-	.bttn
+	&.reverse
 		border: 1px solid #e5dfdc
 		background-color: $bg-darken
 		color: #8d8786
@@ -77,6 +48,20 @@
 			color: #8d8786
 			&:before
 				background-color: $bg-darken
+	&.transparent
+		background-color: transparent
+		color: $color
+		border: 1px solid $color
+		&:before
+			background-color: $color
+		&:hover
+			color: #e0dfdf
+			&:before
+				width: 100%
+		&:active
+			color: $color
+			&:before
+				background-color: $bg-brend
 
 .clear-bttn
 	display: block

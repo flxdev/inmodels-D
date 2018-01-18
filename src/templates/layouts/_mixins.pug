@@ -8,7 +8,7 @@ mixin icon(name, modClass)
 
 mixin button(text, add_class)
 	if add_class == undefined
-		- var add_class = ''
+		- var add_class = 'normal'
 	else
 		- var add_class = ' ' + add_class
 	button(class="bttn "+add_class)

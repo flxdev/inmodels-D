@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>404</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f0eae8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/font.css">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body class="error-404">
+    <script type="text/javascript">
+      ! function(e)
+      {
+        function t(o)
+        {
+          if (n[o]) return n[o].exports;
+          var c = n[o] = {
+            exports:
+            {},
+            id: o,
+            loaded: !1
+          };
+          return e[o].call(c.exports, c, c.exports, t), c.loaded = !0, c.exports
+        }
+        var n = {};
+        return t.m = e, t.c = n, t.p = "/assets/", t(0)
+      }(
+      {
+        0: function(e, t, n)
+        {
+          n(18), n(19)
+        },
+        18: function(e, t)
+        {
+          ! function()
+          {
+            "use strict";
 
+            function e(e, t, n)
+            {
+              e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+            }
+
+            function t(e)
+            {
+              return window.localStorage && localStorage.font_css_cache
+            }
+
+            function n()
+            {
+              if (window.localStorage && window.XMLHttpRequest)
+                if (t(c)) o(localStorage.font_css_cache);
+                else
+                {
+                  var e = new XMLHttpRequest;
+                  e.open("GET", c, !0), e.onreadystatechange = function()
+                  {
+                    4 === e.readyState && (o(e.responseText), localStorage.font_css_cache = e.responseText, localStorage.font_css_cache_file = c)
+                  }, e.send()
+                }
+              else
+              {
+                var n = document.createElement("link");
+                n.href = c, n.rel = "stylesheet", n.type = "text/css", document.getElementsByTagName("head")[0].appendChild(n), document.cookie = "font_css_cache"
+              }
+            }
+
+            function o(e)
+            {
+              var t = document.createElement("style");
+              t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
+            }
+            var c = window.fonts_href || "../css/font.css";
+            window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
+          }()
+        },
+        19: function(e, t) {}
+      });
+
+    </script>
+    <div class="svg-defs-container" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="carret" viewBox="0 0 16 8.98">
+          <path fill="currentcolor" d="M8 0L0 8.21l.75.77L8 1.54l7.25 7.44.75-.77L8 0z" data-name="UI Kit" />
+        </symbol>
+        <symbol id="cross" viewBox="0 0 30 30">
+          <path fill="currentcolor" stroke="currentcolor" d="M16 14V0h-1v14H0v1h15v15h1V15h14v-1z" data-name="UI Kit" />
+        </symbol>
+        <symbol id="logo" viewBox="0 0 20 112">
+          <title>logo</title>
+          <path d="M15.36 3.33a3.82 3.82 0 0 0-1.72.29c-1.64.89-2.47 2.7-3.53 4.28S7.64 11 4.92 11a5.39 5.39 0 0 1-3.67-1.41A5.65 5.65 0 0 1 0 5.6v-.11c0-2 .47-3.42 1.39-4.25A6.59 6.59 0 0 1 5.83 0h1v3.24h-1a6.46 6.46 0 0 0-2.89.43 2 2 0 0 0-1 1.81c0 1.64 1.28 2.18 2.69 2.18a3.82 3.82 0 0 0 1.72-.29C7.86 6.58 8.64 5 9.64 3.45 10.81 1.67 12.22 0 15.08 0a5.39 5.39 0 0 1 3.67 1.41A5.65 5.65 0 0 1 20 5.4v.11c0 2-.47 3.42-1.39 4.25A6.59 6.59 0 0 1 14.17 11h-1V7.76h1a6.46 6.46 0 0 0 2.89-.43 2 2 0 0 0 1-1.81c-.06-1.67-1.31-2.19-2.7-2.19zM0 20v-3.06h17.8V12H20v8H0zm2.2 13H0v-8h2.2v5h6.7v-5h2.2v5h6.7v-5H20v8H2.2zm7.8 5H5.45a5.63 5.63 0 0 0-4 1.28C.48 40.16 0 41.82 0 44.17V50h20v-5.83c0-2.38-.48-4-1.41-4.89a5.59 5.59 0 0 0-4-1.28zm-6.5 3.54h13a1.77 1.77 0 0 1 1.67 1.85v3H1.86v-3a1.77 1.77 0 0 1 1.67-1.85zm15 23.11c-.95.91-2.5 1.35-4.62 1.35H6.13c-2.13 0-3.68-.44-4.67-1.35S0 62.2 0 60s.5-3.74 1.46-4.65S4 54 6.13 54h7.75c2.13 0 3.67.44 4.67 1.35S20 57.8 20 60s-.5 3.74-1.46 4.65zm-8-2.2h3.4a6.56 6.56 0 0 0 3-.47 2.43 2.43 0 0 0 0-4 6.48 6.48 0 0 0-3-.47H6.1a6.55 6.55 0 0 0-3 .47 2.43 2.43 0 0 0 0 4 6.48 6.48 0 0 0 3 .47zM0 74.26V70h20v3.12H5.31L20 77v3L5.31 83.91H20V87H0v-4.26l16-4.23zM0 95v-3h20v2.89L6.38 101H20v3H0v-2.89L13.62 95zm0 17v-3h20v3z"
+            fill="#4c4644" />
+        </symbol>
+        <symbol id="loupe" viewBox="0 0 19.29 19.29">
+          <path fill="none" stroke="currentcolor" stroke-width="2" d="M.7 18.59l6.44-6.44.7.53a6.5 6.5 0 1 0-1.23-1.23l.53.7z" data-name="UI Kit" />
+        </symbol>
+      </svg>
+    </div>
+    <!--BEGIN out-->
+    <div class="out">
+      <div class="page__outer">
+        <div class="page__wrapper">
+          <header class="page__header--wrap">
+            <!--BEGIN header-->
+            <div class="header-inner">
+              <div class="navigation">
+                <div class="navigation-burger js-popup-button" title="menu" data-modal="modal-menu">
+                  <span class="navigation-burger__item"></span>
+                  <span class="navigation-burger__item"></span>
+                  <span class="navigation-burger__item"></span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">about agency</a>
+                  </li>
+                  <li>
+                    <a href="#">for models</a>
+                  </li>
+                  <li>
+                    <a href="#">for partners</a>
+                  </li>
+                </ul>
+                <a class="navigation-lang" href="#">рус</a>
+                <div class="navigation-link">
+                  <a class="navigation-link__item" href="#">Business request</a>
+                  <span class="navigation-link__devider"></span>
+                  <a class="navigation-link__item" href="">Become a model</a>
+                </div>
+                <a class="navigation-logo" href="/">
+                  <svg class="logo">
+                    <use xlink:href="#logo"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!--END header-->
+          </header>
+          <main class="page__content">
+            <div id="barba-wrapper">
+              <div class="barba-container" data-namespace="index">
+                <div class="block block--fullpage">
+                  <div class="block__bg"></div>
+                  <div class="block-content">
+                    <div class="error-title">404</div>
+                    <div class="error-message">
+                      <div class="text-big">Sorry, the page you requested does not exist. </div>
+                      <div class="text-big">Go to the main page.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer class="page__footer"></footer>
+        </div>
+      </div>
+    </div>
+    <!--END out-->
+    <div class="modals">
+      <div class="modal-layout js-popup-container" data-modal="modal-menu">
+        <div class="modal-container modal-menu">
+          <div class="modal-menu__l-1"></div>
+          <div class="modal-menu__l-2"></div>
+          <div class="pop-close closePopup">
+            <svg class="cross">
+              <use xlink:href="#cross"></use>
+            </svg>
+          </div>
+          <div class="modal-menu-inner">
+            <div class="navigation-link quest-links">
+              <div class="navigation-link-wrap">
+                <a class="navigation-link__item" href="#">Business request</a>
+                <a class="navigation-link__item" href="">Become a model</a>
+              </div>
+            </div>
+            <div class="pages-links">
+              <a class="pages-links__item" href="#">
+                <span>Agency</span>
+                <div class="hov-decor">
+                  <div class="hov-decor-inner">
+                    <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
+                  </div>
+                </div>
+              </a>
+              <a class="pages-links__item" href="#">
+                <span>Models</span>
+                <div class="hov-decor">
+                  <div class="hov-decor-inner">
+                    <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
+                  </div>
+                </div>
+              </a>
+              <a class="pages-links__item" href="#">
+                <span>Gallery</span>
+                <div class="hov-decor">
+                  <div class="hov-decor-inner">
+                    <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
+                  </div>
+                </div>
+              </a>
+              <a class="pages-links__item" href="#">
+                <span>Contacts</span>
+                <div class="hov-decor">
+                  <div class="hov-decor-inner">
+                    <img src="img/kate-by-andrews-kovas-7.png" srcset="img/kate-by-andrews-kovas-7@2x.png 2x, img/kate-by-andrews-kovas-7@3x.png 3x">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="navigation-link social-links">
+              <a class="navigation-link__item" href="#">facebook</a>
+              <a class="navigation-link__item" href="#">instagram</a>
+              <a class="navigation-link__item" href="#">vkontakte</a>
+            </div>
+            <a class="link-dev" href="http://flxmd.by/" target="_blank">Made in Flex.media</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--LOAD SCRIPTS-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

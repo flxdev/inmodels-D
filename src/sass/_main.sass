@@ -26,16 +26,22 @@
 .aside
 	text-align: right
 	&-content
-		display: inline-flex
-		flex-direction: column
-		align-items: flex-start
+		width: 100%
 		min-height: 100vh
 		height: auto
-		width: 100%
-		max-width: 360px
-		padding-right: 40px
-		padding-top: 120px
-		text-align: left
+		position: relative
+		padding-top: 100px
+		padding-bottom: 120px
+		&-wrap
+			height: 100%
+			width: 100%
+			max-width: 360px
+			padding-right: 40px
+			margin-left: auto
+			margin-right: 0
+			text-align: left
+			box-sizing: border-box
+
 		h4
 			margin-top: 45px
 			margin-bottom: 25px
@@ -50,20 +56,35 @@
 					color: $link-color
 					margin: 20px 0
 		.bttn
-			margin-bottom: 40px
-			margin-top: auto
-
+			margin: 0
+			position: absolute
+			bottom: 40px
+			left: 0
 .main
 	text-align: left
 	min-height: 100vh
-	padding-left: 120px
+	padding-left: 100px
 	padding-top: 120px
 	&-content
 		display: inline-block
 		vertical-align: middle
 		
-.contacts-page
+.contacts-page, .form-models-success
 	.main
 		padding-top: 0
 		+vertical
 		text-align: left
+
+.form-models
+	.main
+		padding-top: 130px
+		padding-bottom: 130px
+
+.form-success
+	width: 100%
+	max-width: 520px
+	&__title
+		margin-bottom: 20px
+	&__msg
+		margin-bottom: 50px
+

@@ -10,7 +10,77 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="contacts-page">
+  <body class="form-models">
+    <script type="text/javascript">
+      ! function(e)
+      {
+        function t(o)
+        {
+          if (n[o]) return n[o].exports;
+          var c = n[o] = {
+            exports:
+            {},
+            id: o,
+            loaded: !1
+          };
+          return e[o].call(c.exports, c, c.exports, t), c.loaded = !0, c.exports
+        }
+        var n = {};
+        return t.m = e, t.c = n, t.p = "/assets/", t(0)
+      }(
+      {
+        0: function(e, t, n)
+        {
+          n(18), n(19)
+        },
+        18: function(e, t)
+        {
+          ! function()
+          {
+            "use strict";
+
+            function e(e, t, n)
+            {
+              e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+            }
+
+            function t(e)
+            {
+              return window.localStorage && localStorage.font_css_cache
+            }
+
+            function n()
+            {
+              if (window.localStorage && window.XMLHttpRequest)
+                if (t(c)) o(localStorage.font_css_cache);
+                else
+                {
+                  var e = new XMLHttpRequest;
+                  e.open("GET", c, !0), e.onreadystatechange = function()
+                  {
+                    4 === e.readyState && (o(e.responseText), localStorage.font_css_cache = e.responseText, localStorage.font_css_cache_file = c)
+                  }, e.send()
+                }
+              else
+              {
+                var n = document.createElement("link");
+                n.href = c, n.rel = "stylesheet", n.type = "text/css", document.getElementsByTagName("head")[0].appendChild(n), document.cookie = "font_css_cache"
+              }
+            }
+
+            function o(e)
+            {
+              var t = document.createElement("style");
+              t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
+            }
+            var c = window.fonts_href || "../css/font.css";
+            window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
+          }()
+        },
+        19: function(e, t) {}
+      });
+
+    </script>
     <div class="svg-defs-container" style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="carret" viewBox="0 0 16 8.98">
@@ -70,56 +140,173 @@
           </header>
           <main class="page__content">
             <div id="barba-wrapper">
-              <div class="barba-container" data-namespace="contacts">
+              <div class="barba-container" data-namespace="form-models">
                 <div class="block">
                   <div class="block-grid">
-                    <aside class="aside bg-brend js-stick-parent">
-                      <div class="aside-content js-stick">
-                        <h1>Become a model</h1>
-                        <p class="text-middle">Agency «INMODELS» is always interested in new faces. If you are interested in the work of the model and you meet the specified criteria, please use the form below.</p>
-                        <h4>Options</h4>
-                        <p class="text">You are between 13 and 22 years old, height from 170 to 182 cm, waist up to 63 cm, hips up to 92 cm</p>
-                        <h4>Additionally</h4>
-                        <p class="text">Attach to the questionnaire photos of the person without make-up (full face, profile, 3/4) and a full-length photograph in a swimsuit. If you have a portfolio, send it to us at
-                          <a href="mailto:info@inmodels.by">info@inmodels.by </a>with their contact information.</p>
-                        <button class="bttn ">
-                          <span>Become a model</span>
-                        </button>
+                    <div class="aside bg-brend">
+                      <div class="aside-content-wrap js-stick-parent">
+                        <div class="aside-content js-stick">
+                          <h1>Become a model</h1>
+                          <p class="text-middle">Agency «INMODELS» is always interested in new faces. If you are interested in the work of the model and you meet the specified criteria, please use the form below.</p>
+                          <h4>Options</h4>
+                          <p class="text">You are between 13 and 22 years old, height from 170 to 182 cm, waist up to 63 cm, hips up to 92 cm</p>
+                          <h4>Additionally</h4>
+                          <p class="text">Attach to the questionnaire photos of the person without make-up (full face, profile, 3/4) and a full-length photograph in a swimsuit. If you have a portfolio, send it to us at
+                            <a href="mailto:info@inmodels.by">info@inmodels.by</a>&nbsp; with their contact information.</p>
+                        </div>
                       </div>
-                    </aside>
-                    <main class="main bg-white">
+                    </div>
+                    <div class="main bg-white">
                       <div class="main-content">
                         <div class="form-block">
                           <form class="js-validate" action="#">
+                            <div class="form-block__title">Your data</div>
                             <div class="input-row">
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="user-name">
-                                <label class="input-label" for="user-name">Name</label>
+                                <input class="input-field" type="text" id="model-name">
+                                <label class="input-label" for="model-name">Name</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="tel" id="user-tel">
-                                <label class="input-label" for="user-tel">Phone</label>
+                                <input class="input-field" type="text" id="model-surname">
+                                <label class="input-label" for="model-surname">Surname</label>
                               </div>
-                              <div class="input-item">
-                                <input class="input-field" type="email" id="user-email">
-                                <label class="input-label" for="user-email">Email</label>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-local">
+                                <label class="input-label" for="model-local">City / country</label>
                               </div>
-                              <div class="input-item">
-                                <textarea class="input-field" type="text" id="user-msg" rows="1.5"></textarea>
-                                <label class="input-label" for="user-msg">Message</label>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-age">
+                                <label class="input-label" for="model-age">Age</label>
+                              </div>
+                            </div>
+                            <div class="form-block__title">options</div>
+                            <div class="input-row">
+                              <div class="input-item c4">
+                                <input class="input-field" type="text" id="model-height">
+                                <label class="input-label" for="model-height">Height</label>
+                              </div>
+                              <div class="input-item c4">
+                                <input class="input-field" type="tel" id="model-bust">
+                                <label class="input-label" for="model-bust">Bust</label>
+                              </div>
+                              <div class="input-item c4">
+                                <input class="input-field" type="text" id="model-waist">
+                                <label class="input-label" for="model-waist">Waist</label>
+                              </div>
+                              <div class="input-item c4">
+                                <input class="input-field" type="text" id="model-hips">
+                                <label class="input-label" for="model-hips">Hips</label>
+                              </div>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-eyes" data-validation="required" data-validation-error-msg="required field">
+                                <label class="input-label" for="model-eyes">Eyes color</label>
+                              </div>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-hair" data-validation="required" data-validation-error-msg="required field">
+                                <label class="input-label" for="model-hair">Hair color</label>
+                              </div>
+                            </div>
+                            <div class="form-block__title">Сontacts</div>
+                            <div class="input-row">
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-phone" data-validation="required" data-validation-error-msg="required field">
+                                <label class="input-label" for="model-email">Phone</label>
+                              </div>
+                              <div class="input-item c2">
+                                <input class="input-field" type="email" id="model-email">
+                                <label class="input-label" for="model-email">Email</label>
+                              </div>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-vk" data-validation="required" data-validation-error-msg="required field">
+                                <label class="input-label" for="model-vk">Link vk.com</label>
+                              </div>
+                              <div class="input-item c2">
+                                <input class="input-field" type="text" id="model-insta" data-validation="required" data-validation-error-msg="required field">
+                                <label class="input-label" for="model-insta">Link Instagram</label>
+                              </div>
+                              <div class="input-item c2 select">
+                                <input class="input-field" type="hidden" id="language" data-validation="required" data-validation-error-msg="required select">
+                                <span class="select-link">Knowledge of English</span>
+                                <span class="select-carret">
+                                  <svg class="carret">
+                                    <use xlink:href="#carret"></use>
+                                  </svg>
+                                </span>
+                                <ul class="select-list">
+                                  <li class="select-list__item">Elementary</li>
+                                  <li class="select-list__item">Pre-Intermediate</li>
+                                  <li class="select-list__item">Intermediate</li>
+                                  <li class="select-list__item">Upper-Intermediate</li>
+                                  <li class="select-list__item">Advanced</li>
+                                  <li class="select-list__item">Proficiency</li>
+                                </ul>
+                              </div>
+                              <div class="input-item c2 select">
+                                <input class="input-field" type="hidden" id="ability" data-validation="required" data-validation-error-msg="required select">
+                                <span class="select-link">Ability to work abroad</span>
+                                <span class="select-carret">
+                                  <svg class="carret">
+                                    <use xlink:href="#carret"></use>
+                                  </svg>
+                                </span>
+                                <ul class="select-list">
+                                  <li class="select-list__item">Elementary</li>
+                                  <li class="select-list__item">Pre-Intermediate</li>
+                                  <li class="select-list__item">Intermediate </li>
+                                  <li class="select-list__item">Upper-Intermediate</li>
+                                  <li class="select-list__item">Advanced</li>
+                                  <li class="select-list__item">Proficiency</li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="form-block__title">photo</div>
+                            <div class="input-row">
+                              <div class="input-item c2 drop-item" action="/upload">
+                                <div class="dz-message">
+                                  <div class="input-label">
+                                    <span class="drop-item__icon">
+                                      <svg class="cross">
+                                        <use xlink:href="#cross"></use>
+                                      </svg>
+                                    </span>Add photo face</div>
+                                </div>
                               </div>
                               <div class="input-item c2 drop-item" action="/upload">
                                 <div class="dz-message">
-                                  <span class="drop-item__icon">
-                                    <svg class="cross">
-                                      <use xlink:href="#cross"></use>
-                                    </svg>
-                                  </span>
-                                  <div class="input-label">Attach file</div>
+                                  <div class="input-label">
+                                    <span class="drop-item__icon">
+                                      <svg class="cross">
+                                        <use xlink:href="#cross"></use>
+                                      </svg>
+                                    </span>Add profile photo *</div>
                                 </div>
                               </div>
-                              <div class="input-item c2 input-bttn">
-                                <button class="bttn ">
+                              <div class="input-item c2 drop-item" action="/upload">
+                                <div class="dz-message">
+                                  <div class="input-label">
+                                    <span class="drop-item__icon">
+                                      <svg class="cross">
+                                        <use xlink:href="#cross"></use>
+                                      </svg>
+                                    </span>Add photo 3/4 *</div>
+                                </div>
+                              </div>
+                              <div class="input-item c2 drop-item" action="/upload">
+                                <div class="dz-message">
+                                  <div class="input-label">
+                                    <span class="drop-item__icon">
+                                      <svg class="cross">
+                                        <use xlink:href="#cross"></use>
+                                      </svg>
+                                    </span>Add photo in full length *</div>
+                                </div>
+                              </div>
+                              <div class="input-item input-textarea">
+                                <textarea class="input-field" type="text" id="user-msg" rows="1.5" data-validation="length" data-validation-length="1-500" data-validation-error-msg="required field"></textarea>
+                                <label class="input-label" for="user-msg">Note</label>
+                              </div>
+                              <div class="input-item input-bttn">
+                                <button class="bttn  normal w100">
                                   <span>send a message</span>
                                 </button>
                               </div>
@@ -127,7 +314,7 @@
                           </form>
                         </div>
                       </div>
-                    </main>
+                    </div>
                   </div>
                 </div>
               </div>

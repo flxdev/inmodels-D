@@ -4,16 +4,16 @@ PageList:
 - file: home.html
   ready: 97
 - file:  6-0-contacts.html
-  ready: 90
+  ready: 97
 - file:  7-0-Become-model.html
-  ready: 70
+  ready: 97
 - file:  7-1-Thank-you.html
-  ready: 0
+  ready: 50
 - file:  4-0-agency.html
   ready: 0
 - file:  404.html
-  ready: 0
+  ready: 10
 - file:  Mob.html
-  ready: 0
+  ready: 10
 - file: ui.html
-  ready: 97
+  ready: 100

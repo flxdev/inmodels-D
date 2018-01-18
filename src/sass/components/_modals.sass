@@ -165,11 +165,13 @@
 								position: absolute
 								top: 0
 								left: 0
-								visibility: hidden
-								opacity: 0
 								transform: none
 								transform-origin: 0 0
-								transition: transform .4s, visibility 0s .1s, opacity .1s .3s
+								// visibility: hidden
+								// opacity: 0
+								// transition: transform .4s, visibility 0s .1s, opacity .1s .3s
+								transition: transform .3s
+							img
 							img
 								height: 100%
 								width: auto
@@ -178,7 +180,7 @@
 								left: 0
 								opacity: 0
 								transform: translateX(-20px)
-								transition: transform .2s 0s, opacity .2s 0s
+								transition: transform .3s 0s, opacity .2s .1s
 					&::before
 						content: ''
 						display: block
@@ -197,12 +199,14 @@
 						& .hov-decor
 							&-inner
 								&::after
-									visibility: visible
 									transform: scaleX(0)
-									opacity: 1
-									transition: transform .5s .1s, visibility 0s 0s, opacity .2s .1s
+									// visibility: visible
+									// opacity: 1
+									// transition: transform .5s .1s, visibility 0s 0s, opacity .2s .1s
+									transition: transform .4s
 								img
-									transition: transform .5s .15s, opacity .2s .15s
+									// transition: transform .5s .15s, opacity .2s .15s
+									transition: transform .25s .1s, opacity .2s
 									opacity: 1
 									transform: none
 			
