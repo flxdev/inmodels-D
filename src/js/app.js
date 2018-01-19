@@ -5,6 +5,8 @@ import formValidator from './lib/formValidator';
 import showVideo from './lib/homeVideo';
 import initPopUp from './lib/initPopUp';
 import stickInit from './lib/stickInit';
+import youtubeVideo from './lib/youtubeVideo';
+import initGallery from './lib/initGallery';
 
 
 setInputFocus();
@@ -14,3 +16,5 @@ initDropzone();
 showVideo();
 initPopUp();
 stickInit();
+youtubeVideo();
+initGallery();

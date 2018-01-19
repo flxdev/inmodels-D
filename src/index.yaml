@@ -11,8 +11,10 @@ PageList:
   ready: 98
 - file:  4-0-agency.html
   ready: 10
-- file:  5-1-gallery-news.html
+- file:  5-0-gallery.html
   ready: 10
+- file:  5-1-gallery-news.html
+  ready: 90
 - file:  404.html
   ready: 100
 - file: ui.html

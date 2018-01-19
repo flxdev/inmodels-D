@@ -1,0 +1,46 @@
+---
+title: Gallery
+bodyClass: gallery
+//- outClass: Index_Page
+---
+extends layouts/_layout
+block content
+
+	#barba-wrapper
+		.barba-container(data-namespace="gallery")
+			.block
+				.block__bg
+				.block-content
+					h1 gallery
+					.gallery-filter.js-isotope-filter
+						a.gallery-filter__item(href="#", data-filter="*") #all
+						a.gallery-filter__item(href="#", data-filter=".newface") #newface
+						a.gallery-filter__item(href="#", data-filter=".shooting") #shooting
+						a.gallery-filter__item(href="#", data-filter=".editorial") #editorial
+						a.gallery-filter__item(href="#", data-filter=".campaign") #campaign
+						a.gallery-filter__item(href="#", data-filter=".show") #show
+						a.gallery-filter__item(href="#", data-filter=".video") #video
+						
+					.gallery-wrap.js-isotope-wrap
+						a.gallery-item.js-isotope-item.newface.shooting(href="#")
+							img(src="img/gallery-1.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.shooting(href="#")
+							img(src="img/gallery-2.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.editorial(href="#")
+							img(src="img/gallery-3.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.newface.shooting(href="#")
+							img(src="img/gallery-4.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.shooting.editorial(href="#")
+							img(src="img/gallery-5.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.editorial(href="#")
+							img(src="img/gallery-6.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.video(href="#")
+							img(src="img/gallery-7.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.campaign(href="#")
+							img(src="img/gallery-1.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.show(href="#")
+							img(src="img/gallery-2.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.campaign(href="#")
+							img(src="img/gallery-5.jpg", alt="gallery-item")
+						a.gallery-item.js-isotope-item.show(href="#")
+							img(src="img/gallery-6.jpg", alt="gallery-item")

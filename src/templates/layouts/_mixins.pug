@@ -13,3 +13,13 @@ mixin button(text, add_class)
 		- var add_class = ' ' + add_class
 	button(class="bttn "+add_class)
 		span= text
+
+mixin share-block
+	.share-block.bg-darken
+		.share-block__title share
+		.share-block__link
+			a.link-social(href="#") Facebook
+			a.link-social(href="#") Twitter
+			a.link-social(href="#") Google +
+		.share-block__bttn
+			+button('business request', 'reverse')
