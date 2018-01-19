@@ -6,13 +6,11 @@ import showVideo from './lib/homeVideo';
 import initPopUp from './lib/initPopUp';
 import stickInit from './lib/stickInit';
 
-(async() => {
-  setInputFocus();
-  clearSearchField();
-  formValidator();
-  initDropzone();
-  showVideo();
-  initPopUp();
-  stickInit();
-  
-})();
+
+setInputFocus();
+clearSearchField();
+formValidator();
+initDropzone();
+showVideo();
+initPopUp();
+stickInit();
