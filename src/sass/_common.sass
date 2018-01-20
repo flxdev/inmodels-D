@@ -51,14 +51,19 @@ p, .text
 	font-weight: normal
 	line-height: 2
 	font-style: normal
-.text-big
-	font-size: 26px
-	font-weight: 300
-	line-height: 1.62
+	strong
+		font-size: inherit
+		font-weight: 500
 .text-middle
 	font-size: 20px
 	font-weight: 300
 	line-height: 1.5
+.text-big
+	font-size: 26px
+	font-weight: 300
+	line-height: 1.62
+.sub-title
+	color: $light-brend
 form
 	width: 100%
 
@@ -71,7 +76,21 @@ img
 			width: 100%
 			max-width: 100%
 			height: auto
-
+blockquote
+	text-align: center
+	width: 100%
+	position: relative
+	padding-top: 80px
+	&::before
+		content: '\201D'
+		display: block
+		width: 100%
+		text-align: center
+		font-family: Georgia
+		font-size: 120px
+		line-height: 1
+		position: absolute
+		top: 0
 .youtube
 	display: block
 	width: 100%
@@ -139,4 +158,3 @@ img
 	img
 		object-fit: cover
 		max-height: 100%
-

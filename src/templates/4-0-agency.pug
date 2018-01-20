@@ -1,14 +1,46 @@
 ---
-title: About us
-bodyClass: about-page
+title: About Agency
+bodyClass: about
 //- outClass: Index_Page
 ---
 extends layouts/_layout
 block content
 
 	#barba-wrapper
-		.barba-container(data-namespace="about-page")
+		.barba-container(data-namespace="about-agency")
 			.block
 				.block__bg
 				.block-content
-					h1 hello
+					.about-menu
+						ul.about-menu__list
+							li.about-menu__item
+								a.about-menu__link.active(href="#") about agency
+							li.about-menu__item
+								a.about-menu__link(href="#") for models
+							li.about-menu__item
+								a.about-menu__link(href="#") for partners
+					.about-content
+						.about-content__row
+							.about-content__cell.cell-title
+								h1 About agency
+								img(src="img/about-agency.jpg", alt="about-agency")
+							.about-content__cell.cell-text_r
+								.about-content__text
+									p.text-big INMODELS — mother model agency, opened in 2015 by two models — Inna Smirnova and Natalia Litvinenko
+									p.text 
+										strong The agency is engaged in the search for models, the development of their international careers, and works with girls from all the cities of Belarus.
+									p.text.sub-title The beginning
+									p.text Before opening the agency, we worked for a long time models in Italy, France, USA, China and other countries. During their work they learned about the problems and difficulties encountered by the models and learned to solve them.
+						blockquote.text-big.about-content__full-text We understood how the parent agency should work for the successful development of the model. We wanted to change the approach of the work of the parent agencies, pay special attention to friendly relations with both models and with foreign agencies.
+						.about-content__row
+							.about-content__cell.cell-text_l
+								.about-content__text
+									p.text
+										strong In 2015 we decided to open our agency INMODELS. At this time, Tatiana Sokolovskaya joined our team.
+									p.text She was the most popular Internet blog about Belarusian models and worked as a model agent. We were united by interest and love of fashion.
+							.about-content__cell
+								img(src="img/about-2.jpg", alt="about about")
+					.link-footer
+						a.link-big.active(href="#") about agency
+						a.link-big(href="#") for models
+						a.link-big(href="#") for partners

@@ -115,12 +115,14 @@
 	color: $color
 	text-decoration: none
 	+tr(color .3s ease)
-	&:visited
-		color: $light-brend
 	&:hover
 		color: $hover-color
 	&:active
 		color: $color
+	&.active
+		color: $light-brend
+		pointer-events: none
+
 
 .link-social
 	font-size: 26px

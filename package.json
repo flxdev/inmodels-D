@@ -73,6 +73,7 @@
     "slick-carousel": "^1.6.0",
     "sticky-kit": "^1.1.3",
     "sumoselect": "^3.0.3",
+    "swiper": "^4.1.0",
     "through2": "^2.0.3",
     "uglifyjs-webpack-plugin": "^1.1.4",
     "vide": "^0.5.1",
