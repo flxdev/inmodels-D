@@ -46,7 +46,7 @@
 				.link-dev
 					transform: rotate(-90deg) translateY(0)
 					opacity: 1
-					transition-delay: .1s
+					transition: transform .3s .15s, opacity .3s .15s
 				@for $i from 1 to 7
 					.pages-links__item:nth-child(n+#{$i})
 						opacity: 1
@@ -222,6 +222,8 @@
 			.navigation-link
 				// position: absolute
 				// z-index: 2
+				&__item
+					font-size: 12px
 				&.quest-links
 					// left: 0
 					// top: 27px

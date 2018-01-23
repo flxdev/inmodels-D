@@ -1,3 +1,4 @@
+import validator from 'jquery-form-validator';
 import autosize from 'autosize';
 
 export default function setInputFocus() {

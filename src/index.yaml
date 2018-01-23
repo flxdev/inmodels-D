@@ -3,20 +3,22 @@ ProjectTitle: Inmodels desktop
 PageList:
 - file: home.html
   ready: 97
+- file: 2-0-models.html
+  ready: 2
+- file:  4-0-agency.html
+  ready: 85
+- file:  4-1-agency-models.html
+  ready: 85
+- file:  5-0-gallery.html
+  ready: 10
+- file:  5-1-gallery-news.html
+  ready: 90
 - file:  6-0-contacts.html
   ready: 97
 - file:  7-0-Become-model.html
   ready: 97
 - file:  7-1-Thank-you.html
   ready: 98
-- file:  4-0-agency.html
-  ready: 10
-- file:  4-1-agency-models.html
-  ready: 10
-- file:  5-0-gallery.html
-  ready: 10
-- file:  5-1-gallery-news.html
-  ready: 90
 - file:  404.html
   ready: 100
 - file: ui.html

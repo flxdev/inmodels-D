@@ -81,6 +81,10 @@
 				color: $light-brend
 			&::before
 				display: none
+			label
+				span
+					font-size: 40px
+					line-height: 26px
 			.input-field
 				padding: 3px 50px 14px 20px
 				&::-webkit-search-cancel-button
@@ -91,10 +95,11 @@
 					opacity: 0
 					top: 0
 					left: 16px
+					visibility: hidden
 					transform: none
 					font-size: inherit
 					line-height: inherit
-					transition-delay: 0s
+					transition: font-size .15s 0s, transform .15s 0s, opacity .15s 0s ease-in, visibility 0s .2s
 			&.editing
 				&::after
 					width: 100%
@@ -102,10 +107,11 @@
 					opacity: 0
 					top: 0
 					left: 16px
+					visibility: hidden
 					transform: none
 					font-size: inherit
 					line-height: inherit
-					transition-delay: 0s
+					transition: font-size .15s 0s, transform .15s 0s, opacity .15s 0s ease-in, visibility 0s .2s
 		&.input-textarea
 			label
 				top: 0
@@ -280,9 +286,10 @@
 		left: 10px
 		color: $link-color
 		transform: none
-		transition: font-size .2s, transform .2s, opacity .2s ease-in
+		transition: font-size .2s, transform .2s, opacity .2s ease-in, visibility 0s .2s
 		transition-delay: .6s
 		z-index: 6
+		visibility: visible
 	&-row
 		display: flex
 		justify-content: space-between

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Gallery</title>
+    <title>Models</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f0eae8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="gallery">
+  <body class="models">
     <script type="text/javascript">
       ! function(e)
       {
@@ -129,171 +129,207 @@
           </header>
           <main class="page__content">
             <div id="barba-wrapper">
-              <div class="barba-container" data-namespace="gallery">
-                <div class="block">
-                  <div class="block__bg"></div>
+              <div class="barba-container" data-namespace="models">
+                <div class="block bg-brend">
                   <div class="block-content">
-                    <div class="gallery-page">
-                      <h1 class="gallery-page__title">gallery</h1>
-                      <div class="gallery-filter js-isotope-filter">
-                        <a class="gallery-filter__item" href="#" data-filter="*">#all</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".newface">#newface</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".shooting">#shooting</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".editorial">#editorial</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".campaign">#campaign</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".show">#show</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".video">#video</a>
+                    <div class="models-page">
+                      <div class="search-block" id="search-block">
+                        <div class="form-search">
+                          <form>
+                            <div class="input-item search-field">
+                              <input class="input-field" type="search" id="searching" />
+                              <label class="input-label" for="searching">
+                                <span>|</span>Search by name</label>
+                              <button class="clear-bttn">
+                                <span class="clear-bttn__icon">
+                                  <svg class="cross">
+                                    <use xlink:href="#cross"></use>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
                       </div>
-                      <div class="gallery-wrap js-isotope-wrap">
-                        <div class="stamp-gallery stamp1"></div>
-                        <div class="stamp-gallery stamp2"></div>
-                        <a class="gallery-item editorial video" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-1.jpg" alt="gallery-item" />
+                      <div class="models-wrap">
+                        <div class="stamp-models stamp1"></div>
+                        <div class="stamp-models stamp2"></div>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-1.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
                           </div>
                         </a>
-                        <a class="gallery-item newface campaign" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-2.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-2.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Olia Viartsiukhova</div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-3.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-3.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Masha Pronenko</div>
                           </div>
                         </a>
-                        <a class="gallery-item video show" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-4.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-4.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Anastasia Viartsiukhova</div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-5.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-5.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-6.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-6.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Alena Viartsiukhova</div>
                           </div>
                         </a>
-                        <a class="gallery-item newface editorial show" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-7.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-7.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-8.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-8.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Anastasia Viartsiukhova</div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-1.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-1.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sergey</div>
                           </div>
                         </a>
-                        <a class="gallery-item video show" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-2.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-2.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Vasili </div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-3.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-8.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Anastasia Viartsiukhova</div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
-                          <div class="gallery-item__img">
-                            <img src="img/gallery-4.jpg" alt="gallery-item" />
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-1.jpg" alt="models-item" />
                           </div>
-                          <div class="gallery-item__info">
-                            <div class="gallery-item__date">20 dec 2017</div>
-                            <div class="gallery-item__desc">
-                              <div class="gallery-item__title">Sasha Pronenko</div>
-                              <div class="gallery-item__short">For POLOGEORGIS furs collections</div>
-                            </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
                           </div>
                         </a>
-                      </div>
-                      <div class="gallery-page__footer">
-                        <a class="link-big add-gallery-item" href="#">load more</a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-2.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Olia Viartsiukhova</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-3.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Masha Pronenko</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-4.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Anastasia Viartsiukhova</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-5.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-6.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Alena Viartsiukhova</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-7.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sasha Pronenko</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-8.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Dima Viartsiukhova</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-1.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Sergey</div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-2.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Vasili </div>
+                          </div>
+                        </a>
+                        <a class="models-item " href="#">
+                          <div class="models-item__img">
+                            <img src="img/models-8.jpg" alt="models-item" />
+                          </div>
+                          <div class="models-item__info">
+                            <div class="models-item__title">Anastasia Viartsiukhova</div>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>

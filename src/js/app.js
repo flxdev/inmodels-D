@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import setInputFocus from './lib/inputFocus';
 import clearSearchField from './lib/clearSearchField';
 import initDropzone from './lib/initDropzone';
@@ -7,7 +8,8 @@ import initPopUp from './lib/initPopUp';
 import stickInit from './lib/stickInit';
 import youtubeVideo from './lib/youtubeVideo';
 import initGallery from './lib/initGallery';
-import initSliders from './lib/initSliders';
+import initModels from './lib/initModels';
+import initAboutSliders from './lib/initSliders';
 
 setInputFocus();
 clearSearchField();
@@ -18,4 +20,6 @@ initPopUp();
 stickInit();
 youtubeVideo();
 initGallery();
-initSliders();
+initModels();
+initAboutSliders();
+

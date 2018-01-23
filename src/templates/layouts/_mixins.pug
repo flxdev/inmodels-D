@@ -23,3 +23,37 @@ mixin share-block
 			a.link-social(href="#") Google +
 		.share-block__bttn
 			+button('business request', 'reverse')
+
+mixin gallery-item(img, date, title, short, add_class)
+	a(href="#" class='gallery-item '+ add_class)
+		.gallery-item__img
+			img(src="img/"+img, alt="gallery-item")
+		.gallery-item__info
+			.gallery-item__date= date
+			.gallery-item__desc
+				.gallery-item__title= title
+				.gallery-item__short= short
+
+mixin models-item(img, name, add_class)
+	if add_class == undefined
+		- var add_class = ''
+	else
+		- var add_class = ' ' + add_class
+	a(href="#" class='models-item '+ add_class)
+		.models-item__img
+			img(src="img/"+img, alt="models-item")
+		.models-item__info
+			.models-item__title= name
+
+mixin search-block
+	.search-block#search-block
+		.form-search
+			form
+				.input-item.search-field
+					input.input-field(type="search" id="searching")
+					label.input-label(for="searching")
+						span |
+						| Search by name
+					button.clear-bttn
+						span._icon
+							+icon('cross')

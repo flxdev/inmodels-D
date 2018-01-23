@@ -1,4 +1,3 @@
-import validator from 'jquery-form-validator';
 
 export default function formValidator() {
   let _form = $('.js-validate');
