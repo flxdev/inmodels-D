@@ -57,7 +57,6 @@ export default function initPopUp() {
     e.preventDefault();
     var _b = $(this),
       _popup = _this.c.popup.filter('[data-modal="' + _b.data('modal') + '"]');
-    console.log('скидыщ');
     _this.f.openPopup(_popup);
     return false;
   });
@@ -71,10 +70,10 @@ export default function initPopUp() {
       this.__prevScrollTop = $(window).scrollTop();
       this.body.css('top',-this.__prevScrollTop + 'px');
       window.scroll(0, this.__prevScrollTop);
-      this.body.addClass('menu-mobile');
+      this.body.addClass('show-menu');
     },
     showScroll: function() {
-      this.body.removeClass('menu-mobile');
+      this.body.removeClass('show-menu');
       this.__prevScrollTop && (window.scroll(0, this.__prevScrollTop));
       this.__prevScrollTop = null;
     }

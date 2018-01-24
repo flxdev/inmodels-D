@@ -39,7 +39,7 @@ mixin models-item(img, name, add_class)
 		- var add_class = ''
 	else
 		- var add_class = ' ' + add_class
-	a(href="#" class='models-item '+ add_class)
+	a(href="#" class='models-item kek '+ add_class)
 		.models-item__img
 			img(src="img/"+img, alt="models-item")
 		.models-item__info
@@ -54,6 +54,9 @@ mixin search-block
 					label.input-label(for="searching")
 						span |
 						| Search by name
-					button.clear-bttn
+					button.clear-bttn(type="reset")
 						span._icon
 							+icon('cross')
+			.search-not-found
+				p Sorry, but nothing was found for your query 
+					span.not-found-result "result"

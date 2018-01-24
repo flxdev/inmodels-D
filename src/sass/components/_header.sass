@@ -32,6 +32,8 @@
 			width: 100%
 			height: 2px
 			background-color: $color
+			transform: none
+			transition: transform .35s .6s ease-out
 	&-lang
 		display: block
 		position: absolute
@@ -67,17 +69,19 @@
 		width: 20px
 		height: 20px
 	&-link
-		width: 100%
-		text-align: center
+		display: inline-block
 		text-transform: uppercase
-		font-size: 12px
 		line-height: 1.67
 		letter-spacing: 3px
 		transition: color .15s
 		position: relative
 		z-index: 2
+		&__item
+			font-size: 12px
 		&:hover &__item
-				color: $link-color
+			color: $link-color
+			-webkit-transform-style: preserve-3d
+   			-webkit-backface-visibility: hidden
 		& &__item
 			color: $color
 			&:hover
@@ -119,14 +123,22 @@
 			&:last-child
 				padding-left: 60px
 
-.menu-mobile
+.show-menu
 	.navigation
 		&-burger
 			opacity: 0
 			visibility: hidden
 			transition: opacity .1s 0s, visibility 0s .1s
+			&__item
+				&:first-child
+					transform: translateY(20px)
+					transition: 0s .1s
+			&__item
+				&:last-child
+					transform: translateY(-20px)
+					transition: 0s .1s
 
-.index-page, .error, .menu-mobile			
+.index-page, .error, .show-menu
 	.navigation-lang
 		visibility: visible
 		opacity: 1
@@ -136,3 +148,22 @@
 .models
 	.navigation-search
 		display: block
+
+.models, .about, .gallery
+	.header-inner
+		.navigation-link
+			visibility: visible
+			position: absolute
+			right: 23px
+			top: 0
+			transform: rotate(-90deg) translateY(0)
+			transform-origin: 100% 0
+			opacity: 1
+			transition: opacity .3s .6s, transform .3s .6s
+
+.show-menu
+	.header-inner
+		.navigation-link
+			transform: rotate(-90deg) translateY(40px)
+			opacity: 0
+			transition: opacity .3s 0s, transform .2s 0s

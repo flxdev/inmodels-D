@@ -15,6 +15,14 @@
 	width: 100%
 	max-width: 590px
 	margin: 0 auto
+	.search-not-found
+		opacity: 0
+		transform: translateY(20px)
+		transition: opacity .35s, transform .35s
+	&.not-found
+		.search-not-found
+			opacity: 1
+			transform: none
 .input
 	&-item
 		display: inline-block
@@ -52,7 +60,7 @@
 				width: 100%
 			label
 				font-size: 15px
-				transform: translate(-10px, -23px)
+				transform: translate(-10px, -40px)
 				transition-delay: 0s
 		input[data-validation] + *
 			&:after
@@ -61,14 +69,14 @@
 			&:after
 				content: ' *'
 		.input-field
-			padding: 3px 10px
+			padding: 12px 10px
 			position: relative
 			z-index: 5
 			background-color: inherit
 			font-weight: 300
 			&:focus ~ label
 				font-size: 15px
-				transform: translate(-10px, -23px)
+				transform: translate(-10px, -40px)
 				transition-delay: 0s
 				
 		&.search-field
@@ -145,6 +153,8 @@
 				top: 0
 				left: 0
 				color: $color
+				transform: none
+				+tr(transform .5s)
 				svg
 					stroke-width: 0
 					+tr(stroke-width .3s)
@@ -159,7 +169,7 @@
 				vertical-align: middle
 				cursor: pointer
 				font-size: 20px
-				line-height: 1
+				line-height: 30px
 				font-weight: 300
 				color: $link-color
 			&::before, &::after, .dz-success-mark, .dz-error-mark, .dz-image
@@ -206,6 +216,7 @@
 					cursor: pointer
 			&:hover
 				.drop-item__icon
+					transform: rotate(90deg)
 					svg
 						stroke-width: 1px
 		&.input-bttn
@@ -224,7 +235,7 @@
 				font-weight: 300
 				line-height: 1
 				color: $link-color
-				padding: 3px 10px
+				padding: 3px 10px 10px 10px
 				+tr(color .3s)
 				&:after
 					opacity: 1
@@ -246,7 +257,7 @@
 				position: absolute
 				z-index: 7
 				left: 0
-				top: 27px
+				top: 34px
 				transform: translateX(-30%)
 				opacity: 0
 				visibility: hidden
@@ -309,11 +320,11 @@
 			line-height: 1.33
 	&.focus, &.editing
 		.help-block
-			transform: translateY(-20px)
+			transform: translateY(-40px)
 			transition-delay: 0s
 	&.select
 		.help-block
-			transform: translateY(-20px)
+			transform: translateY(-25px)
 	&.input-textarea
 		.help-block
 			bottom: auto

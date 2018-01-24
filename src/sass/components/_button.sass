@@ -72,12 +72,16 @@
 	top: 5px
 	z-index: 6
 	background: transparent
+	transform: none
+	+tr(transform .3s)
 	svg
 		stroke-width: 0
-		+tr(stroke-width .3s)
+		+tr(stroke-width .5s)
 	&:hover &__icon
 		svg
 			stroke-width: 1px
+	&:hover		
+		transform: rotate(90deg)
 	&__icon
 		transform: rotate(45deg)
 		display: block
