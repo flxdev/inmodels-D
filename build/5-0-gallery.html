@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="gallery">
+  <body>
     <script type="text/javascript">
       ! function(e)
       {
@@ -100,6 +100,10 @@
       </svg>
     </div>
     <!--BEGIN out-->
+    <div class="page-loader">
+      <div class="page-elem white"></div>
+      <div class="page-elem blend"></div>
+    </div>
     <div class="out">
       <div class="page__outer">
         <div class="page__wrapper">
@@ -113,7 +117,7 @@
                   <span class="navigation-burger__item"></span>
                 </div>
                 <a class="navigation-lang" href="#">рус</a>
-                <a class="navigation-logo" href="/">
+                <a class="navigation-logo" href="/home.html">
                   <svg class="logo">
                     <use xlink:href="#logo"></use>
                   </svg>
@@ -123,10 +127,10 @@
                     <use xlink:href="#loupe"></use>
                   </svg>
                 </a>
-                <div class="navigation-link quest-links">
+                <div class="navigation-link header-links">
                   <div class="navigation-link-wrap">
-                    <a class="navigation-link__item" href="#">Business request</a>
-                    <a class="navigation-link__item" href="">Become a model</a>
+                    <a class="navigation-link__item" href="/6-0-contacts.html">Business request</a>
+                    <a class="navigation-link__item" href="/7-0-Become-model.html">Become a model</a>
                   </div>
                 </div>
               </div>
@@ -136,24 +140,23 @@
           <main class="page__content">
             <div id="barba-wrapper">
               <div class="barba-container" data-namespace="gallery">
-                <div class="block">
-                  <div class="block__bg"></div>
+                <div class="block bg-brend">
                   <div class="block-content">
                     <div class="gallery-page">
                       <h1 class="gallery-page__title">gallery</h1>
                       <div class="gallery-filter js-isotope-filter">
-                        <a class="gallery-filter__item" href="#" data-filter="*">#all</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".newface">#newface</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".shooting">#shooting</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".editorial">#editorial</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".campaign">#campaign</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".show">#show</a>
-                        <a class="gallery-filter__item" href="#" data-filter=".video">#video</a>
+                        <button class="gallery-filter__item no-barba" data-filter="*">#all</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".newface">#newface</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".shooting">#shooting</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".editorial">#editorial</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".campaign">#campaign</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".show">#show</button>
+                        <button class="gallery-filter__item no-barba" data-filter=".video">#video</button>
                       </div>
-                      <div class="gallery-wrap js-isotope-wrap">
+                      <div class="gallery-wrap ajax-list">
                         <div class="stamp-gallery stamp1"></div>
                         <div class="stamp-gallery stamp2"></div>
-                        <a class="gallery-item editorial video" href="#">
+                        <a class="gallery-item editorial video" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-1.jpg" alt="gallery-item" />
                           </div>
@@ -165,7 +168,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item newface campaign" href="#">
+                        <a class="gallery-item newface campaign" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-2.jpg" alt="gallery-item" />
                           </div>
@@ -177,7 +180,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
+                        <a class="gallery-item show shooting newface" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-3.jpg" alt="gallery-item" />
                           </div>
@@ -189,7 +192,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item video show" href="#">
+                        <a class="gallery-item video show" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-4.jpg" alt="gallery-item" />
                           </div>
@@ -201,7 +204,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial" href="#">
+                        <a class="gallery-item editorial editorial" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-5.jpg" alt="gallery-item" />
                           </div>
@@ -213,7 +216,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
+                        <a class="gallery-item editorial editorial campaign" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-6.jpg" alt="gallery-item" />
                           </div>
@@ -225,7 +228,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item newface editorial show" href="#">
+                        <a class="gallery-item newface editorial show" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-7.jpg" alt="gallery-item" />
                           </div>
@@ -237,7 +240,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
+                        <a class="gallery-item show shooting newface" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-8.jpg" alt="gallery-item" />
                           </div>
@@ -249,7 +252,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
+                        <a class="gallery-item editorial editorial campaign" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-1.jpg" alt="gallery-item" />
                           </div>
@@ -261,7 +264,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item video show" href="#">
+                        <a class="gallery-item video show" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-2.jpg" alt="gallery-item" />
                           </div>
@@ -273,7 +276,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item show shooting newface" href="#">
+                        <a class="gallery-item show shooting newface" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-3.jpg" alt="gallery-item" />
                           </div>
@@ -285,7 +288,7 @@
                             </div>
                           </div>
                         </a>
-                        <a class="gallery-item editorial editorial campaign" href="#">
+                        <a class="gallery-item editorial editorial campaign" href="/5-1-gallery-news.html">
                           <div class="gallery-item__img">
                             <img src="img/gallery-4.jpg" alt="gallery-item" />
                           </div>
@@ -297,9 +300,9 @@
                             </div>
                           </div>
                         </a>
-                      </div>
-                      <div class="gallery-page__footer">
-                        <a class="link-big add-gallery-item" href="#">load more</a>
+                        <div class="ajax-pager-wrap lazy gallery-page__footer">
+                          <a class="link-big ajax-pager-link no-barba" href="gallery-add.html" data-wrapper-class="gallery-wrap">load more</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -325,37 +328,37 @@
           <div class="modal-menu-inner">
             <div class="navigation-link quest-links">
               <div class="navigation-link-wrap">
-                <a class="navigation-link__item" href="#">Business request</a>
-                <a class="navigation-link__item" href="">Become a model</a>
+                <a class="navigation-link__item modal-link" href="/6-0-contacts.html">Business request</a>
+                <a class="navigation-link__item modal-link" href="/7-0-Become-model.html">Become a model</a>
               </div>
             </div>
             <div class="pages-links">
-              <a class="pages-links__item" href="#">
-                <span>Agency</span>
+              <a class="pages-links__item" href="/4-0-agency.html">
+                <span class="modal-link">Agency</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Models</span>
+              <a class="pages-links__item" href="/2-0-models.html">
+                <span class="modal-link">Models</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Gallery</span>
+              <a class="pages-links__item" href="/5-0-gallery.html">
+                <span class="modal-link">Gallery</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Contacts</span>
+              <a class="pages-links__item" href="/6-0-contacts.html">
+                <span class="modal-link">Contacts</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">

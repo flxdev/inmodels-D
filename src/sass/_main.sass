@@ -5,7 +5,7 @@
 @import components/cap
 @import components/shareblock
 @import components/sliders
-
+@import components/pageLoader
 
 .ui-block
 	padding: 10px
@@ -18,30 +18,44 @@
 			text-align: center
 			padding: 10px
 
-.index-page
-	&-title
+.index-title
+	&-wrap
 		width: 100%
-		max-width: 1100px
-		margin: 0 auto
+		height: 100%
 		position: relative
 		z-index: 2
 		padding: 0 80px
-		h1
+		display: inline-block
+		+vertical
+	&-inner
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 1100px
+		text-align: left
+		span
 			font-size: 62px
 			font-weight: 100
 			line-height: 3.23
-			letter-spacing: 40px
-			padding-top: 102px
-			text-align: justify
+			letter-spacing: 80px
+			text-transform: uppercase
+			+r(1100)
+				letter-spacing: 60px
+			+rm(1441)
+				letter-spacing: 90px
+	&-item
+		&--1
+			display: flex
+			span
+				display: inline-block
+				&:last-child
+					margin-left: auto
+					margin-right: 0
+
+		&--2
+			span
+				display: block
 .aside
-	&-footer
-		width: 100%
-		max-width: 400px
-		text-align: left
-		margin-left: auto
-		margin-right: 0
-		padding-top: 80px
-		padding-bottom: 135px
 	.contacts-wrap
 		margin-bottom: 110px
 		a
@@ -51,12 +65,6 @@
 			&[href^=mail]
 				color: $link-color
 				margin: 20px 0
-		
-.contacts-page, .form-models-success
-	.main
-		padding-top: 0
-		+vertical
-		text-align: left
 
 .form-success
 	width: 100%
@@ -88,7 +96,6 @@
 					left: 75%
 			&.hide-stamp
 				display: none
-
 		.models-item
 			display: inline-block
 			width: calc(25% - 10px)
@@ -127,6 +134,10 @@
 						opacity: 1
 						transition: transform .3s .2s, opacity .2s .2s
 						transform: none
+			&.hide-model
+				border: 1px solid red
+			.hide-wrap-model
+				visible: hidden
 	.search-block
 		height: 0
 		padding: 0
@@ -136,6 +147,11 @@
 			padding-top: 50px
 			padding-bottom: 130px
 			opacity: 1
+	.ajax-pager-wrap
+		position: absolute
+		bottom: 0
+		left: 0
+
 .gallery-page
 	padding-top: 110px
 	&__title
@@ -143,18 +159,23 @@
 	&__footer
 		text-align: center
 		width: 100%
-		padding: 170px 0 135px 0
+		&.ajax-pager-wrap
+			position: absolute
+			bottom: -100px
+			left: 0
 	.gallery-filter
 		margin: 60px -5px 75px -5px
 		&__item 
 			display: inline-block
 			padding: 5px
+			background-color: transparent
 			&:not(:first-child)
 				margin-left: 5.5%
 	.gallery-wrap
 		font-size: 0
-		margin: 0 -5px
+		margin: 0 -10px
 		position: relative
+		margin-bottom: 200px
 		.stamp-gallery
 			position: absolute
 			width: 30%
@@ -166,10 +187,12 @@
 				right: 0
 		.gallery-item
 			display: inline-block
-			width: calc(33% - 10px)
+			width: calc(33% - 20px)
 			position: relative
-			margin: 5px
+			margin: 10px
 			font-size: 0
+			&.hide-gallery
+				border: 1px solid red
 			&__date
 				color: rgba(#ffffff, .6)
 				font-size: 14px
@@ -227,6 +250,7 @@
 .gallery-news
 	.main
 		padding-left: 0
+		padding-bottom: 380px
 	&-title
 		margin-bottom: 40px
 		letter-spacing: normal
@@ -248,6 +272,19 @@
 		& > * 
 			&:not(:last-child)
 				margin-bottom: 20px
+	&-footer
+		width: 100%
+		text-align: left
+		margin-left: auto
+		position: absolute
+		bottom: 130px
+		left: 0
+		opacity: 0
+		transform: translateY(40px)
+		transition: opacity .3s .4s, transform .4s .4s
+		&.animate
+			opacity: 1
+			transform: none
 
 .about-menu
 	padding-left: 6.66%
@@ -285,6 +322,7 @@
 			pointer-events: none
 			&::before
 				transform: scaleX(1)
+
 .about-content
 	padding-left: 6.66%
 	padding-top: 135px
@@ -299,15 +337,16 @@
 		position: relative
 		width: 50%
 		display: inline-block
-		text-align: right
 		h1
 			position: absolute
 			top: 45px
 			left: 40px
 			text-align: left
+			z-index: 2
 		img
 			max-width: 480px
 		&.cell-title
+			text-align: right
 			img
 				max-width: 460px
 		&.cell-text_r
@@ -318,6 +357,11 @@
 			padding-top: 20px
 			padding-left: 14.5%
 			padding-right: 20px
+		&.cell-img_r
+			padding-left: 70px
+			z-index: -1
+		&.cell-img_l
+			padding-right: 70px
 	&__text
 		width: 100%
 		max-width: 360px
@@ -331,19 +375,20 @@
 			margin-bottom: 50px
 			font-weight: normal
 			line-height: 1.54
-		.sub-title
+		.sub-title--offset
 			margin-top: 110px
 			margin-bottom: 30px
 	&__slider
 		font-size: 20px
-		background-color: $bg-dark
 		width: 100%
 		max-width: 840px
 		margin-right: 0
 		margin-left: auto
 		margin-top: 160px
-		padding: 40px 90px 30px 90px
 		position: relative
+		&-wrap
+			background-color: $bg-dark
+			padding: 40px 90px 30px 90px
 		&-msg
 			position: absolute
 			top: -60px
@@ -395,12 +440,172 @@
 					left: 0
 .about	
 	.link-footer
-		padding: 175px 6.66%
+		margin: 175px 0
+		padding: 0 6.66%
+		&-inner
+			display: flex
+			justify-content: space-between
+			opacity: 0
+			transform: translateY(40px)
+			transition: opacity .3s .4s, transform .4s .4s
+			&.animate
+				opacity: 1
+				transform: none
+
+.line-decor
+	display: block
+	position: relative
+	&::before
+		content: ''
+		display: block
+		width: 100px
+		height: 1px
+		background-color: $color
+		position: absolute
+		top: 14px
+		z-index: 2
+	&.line_l
+		&::before
+			left: -53%
+	&.line_r
+		&::before
+			right: -43%
+
+.block-inner
+	.aside
 		display: flex
-		justify-content: space-between
+		padding-bottom: 40px
+.inner
+	&-title
+		width: 47%
+		display: block
+		position: relative
+		&-wrap
+			transform: rotate(-90deg)
+			width: 100%
+			position: absolute
+			bottom: -125px
+			transform-origin: 0 0
+			left: -40px
+			h1
+				text-transform: none
+				text-align: left			
+	&-info
+		width: 53%
+		text-align: left
+		padding-top: 110px
+		overflow-y: auto
+		display: flex
+		flex-direction: column
+		&__item
+			&:not(:last-child)
+				margin-bottom: 25px
+		// @for $i from 1 to 10
+		// 	.inner-info__item:nth-child(n+#{$i})
+		// 		opacity: 1
+		// 		transform: none
+		// 		transition: opacity .3s, transform .4s
+		// 		transition-delay: 0.2s * $i
+		&__title,
+		&__desc
+			line-height: 1.33
+		&__link
+			margin-top: auto
+			margin-bottom: 0
+			a
+				display: block
+				margin-top: 15px
+
+/* swiper */
+.inner-slider
+	height: 100%
+	padding-bottom: 120px
+	.swiper-wrapper
+		height: 100%
+		.swiper-slide
+			height: 100%
+			width: 100%
+			max-width: 450px
+			overflow: hidden
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+			&.swiper-slide-video
+				max-width: 98%
+				background-color: #000000
+				+vertical
+				.youtube
+					background-color: #000000
+					display: inline-block
+					vertical-align: middle
+			&.swiper-slide-social
+				margin-right: 40px
+				max-width: 60%
+				display: flex
+				.share-block
+					display: flex
+					flex-direction: column
+					width: 100%
+					&__link
+						margin: 0
+					&__bttn
+						margin: auto 0 0 0
+	&.swiper-container-horizontal
+		& >.swiper-scrollbar
+			bottom: 70px
+			left: 20px
+			width: 100%
+			max-width: 560px
+			background: transparent
+			height: 1px;
+			.swiper-scrollbar-drag
+				height: 100%
+				position: relative
+				background: #ffffff
+				left: 0
+				top: 0
+		.swiper-pagination
+			visibility: hidden
+			display: none
+
+		.swiper-navigation
+			position: absolute
+			text-align: left
+			bottom: 30px
+			left: 20px
+			display: flex
+			justify-content: space-between
+			width: 100%
+			max-width: 560px
+			.slide-target
+				display: inline-block
+				background-color: transparent
+				font-size: 12px
+				text-transform: uppercase
+				color: $link-color
+				
+				line-height: 1.67
+				letter-spacing: 3px
+				&.active
+					color: $btn-color
 
 
-
+/* ligtgallery */
+.lg-backdrop
+	background-color: rgba( #000000, .95)
+.lg-object
+	transform: none !important
+.lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current,
+.lg-css3.lg-slide.lg-use-css3 .lg-item.lg-next-slide,
+.lg-css3.lg-slide.lg-use-css3 .lg-item.lg-prev-slide 
+	transition: transform .2s ease, opacity .2s ease
+body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object.lg-image
+	transform: none
+	opacity: 0
+	// transition: transform .25s cubic-bezier(0,0,.25,1) 0s, opacity .25s ease !important
+body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete.lg-current .lg-object.lg-image
+	opacity: 1
 
 .error
 	&-wrap
@@ -411,6 +616,7 @@
 		padding-top: 60px
 		padding-bottom: 35px
 		&-inner
+			width: 100%
 			text-align: center
 			margin: auto
 		.social-links
@@ -423,3 +629,5 @@
 		margin-bottom: 34px
 	&-message
 		width: 100%
+
+

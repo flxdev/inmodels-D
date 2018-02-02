@@ -1,4 +1,4 @@
-import validator from 'jquery-form-validator';
+import validator from 'jquery-form-validator/form-validator/jquery.form-validator.min.js';
 import autosize from 'autosize';
 
 export default function setInputFocus() {

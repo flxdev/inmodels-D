@@ -5,6 +5,8 @@ PageList:
   ready: 97
 - file: 2-0-models.html
   ready: 75
+- file: 3-0-inner.html
+  ready: 58
 - file:  4-0-agency.html
   ready: 90
 - file:  4-1-agency-models.html

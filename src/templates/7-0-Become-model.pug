@@ -1,202 +1,206 @@
 ---
 title: Become a model
-bodyClass: form-models
+//- bodyClass: form-models
 //- outClass: Index_Page
 ---
 extends layouts/_layout
 block content
 
-	#barba-wrapper
-		.barba-container(data-namespace="form-models")
-			.block
-				.block-grid
-					.aside.bg-brend
-						.aside-content-wrap.js-stick-parent
-							.aside-content.js-stick
-								h1 Become a model
-								p.text-middle Agency «INMODELS» is always interested in new faces. If you are interested in the work of the model and you meet the specified criteria, please use the form below.
-								h4 Options
-								p.text You are between 13 and 22 years old, height from 170 to 182 cm, waist up to 63 cm, hips up to 92 cm
-								h4 Additionally
-								p.text
-									| Attach to the questionnaire photos of the person without make-up (full face, profile, 3/4) and a full-length photograph in a swimsuit. If you have a portfolio, send it to us at 
-									a(href="mailto:info@inmodels.by") info@inmodels.by
-									|&nbsp; with their contact information.
-					.main.bg-white
-						.main-content
-							.form-block
-								form(action="#").js-validate
-									.form-block__title Your data
-									.input-row
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-name"
-												)
-											label.input-label(for="model-name") Name
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-surname"
-												)
-											label.input-label(for="model-surname") Surname
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-local"
-												)
-											label.input-label(for="model-local") City / country
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-age"
-												)
-											label.input-label(for="model-age") Age
-									.form-block__title options
-									.input-row
-										.input-item.c4
-											input.input-field(
-												type="text"
-												id="model-height"
-												)
-											label.input-label(for="model-height") Height
-										.input-item.c4
-											input.input-field(
-												type="tel"
-												id="model-bust"
-												)
-											label.input-label(for="model-bust") Bust
-										.input-item.c4
-											input.input-field(
-												type="text"
-												id="model-waist"
-												)
-											label.input-label(for="model-waist") Waist
-										.input-item.c4
-											input.input-field(
-												type="text"
-												id="model-hips"
-												)
-											label.input-label(for="model-hips") Hips
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-eyes"
-												data-validation="required"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="model-eyes") Eyes color
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-hair"
-												data-validation="required"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="model-hair") Hair color
-									.form-block__title Сontacts
-									.input-row
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-phone"
-												data-validation="required"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="model-email") Phone
-										.input-item.c2
-											input.input-field(
-												type="email"
-												id="model-email"
-												)
-											label.input-label(for="model-email") Email
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-vk"
-												data-validation="required"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="model-vk") Link vk.com
-										.input-item.c2
-											input.input-field(
-												type="text"
-												id="model-insta"
-												data-validation="required"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="model-insta") Link Instagram
-										.input-item.c2.select
-											input.input-field(
-												type="hidden"
-												id="language"
-												data-validation="required"
-												data-validation-error-msg="required select"
-												)
-											span.select-link Knowledge of English
-											span.select-carret
-												+icon('carret')
-											ul.select-list
-												li._item Elementary
-												li._item Pre-Intermediate
-												li._item Intermediate
-												li._item Upper-Intermediate
-												li._item Advanced
-												li._item Proficiency
-										.input-item.c2.select
-											input.input-field(
-												type="hidden" 
-												id="ability" 
-												data-validation="required"
-												data-validation-error-msg="required select"
-												)
-											span.select-link Ability to work abroad
-											span.select-carret
-												+icon('carret')
-											ul.select-list
-												li._item Elementary
-												li._item Pre-Intermediate
-												li._item Intermediate 
-												li._item Upper-Intermediate
-												li._item Advanced
-												li._item Proficiency
-										
-									.form-block__title photo
-									.input-row
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add photo face
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add profile photo *
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add photo 3/4 *
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add photo in full length *
-										.input-item.input-textarea
-											textarea.input-field(
-												type="text"
-												id="user-msg"
-												rows="1.5"
-												data-validation="length"
-												data-validation-length="1-500"
-												data-validation-error-msg="required field"
-												)
-											label.input-label(for="user-msg") Note
-										.input-item.input-bttn
-											+button('send a message', 'normal w100')
+	.barba-container(data-namespace="contacts")
+		.block
+			.block-grid
+				.aside.bg-brend
+					.aside-content-wrap.js-stick-parent
+						.aside-content.js-stick
+							h1 Become a model
+							p.text-middle Agency «INMODELS» is always interested in new faces. If you are interested in the work of the model and you meet the specified criteria, please use the form below.
+							h4 Options
+							p.text You are between 13 and 22 years old, height from 170 to 182 cm, waist up to 63 cm, hips up to 92 cm
+							h4 Additionally
+							p.text
+								| Attach to the questionnaire photos of the person without make-up (full face, profile, 3/4) and a full-length photograph in a swimsuit. If you have a portfolio, send it to us at 
+								a(href="mailto:info@inmodels.by") info@inmodels.by
+								|&nbsp; with their contact information.
+				.main.bg-white
+					.main-content
+						.form-block
+							form(action="#").js-validate
+								.form-block__title Your data
+								.input-row
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-name"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-name") Name
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-surname"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-surname") Surname
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-local"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-local") City / country
+									.input-item.c2
+										input.input-field(
+											type="number"
+											id="model-age"
+											)
+										label.input-label(for="model-age") Age
+								.form-block__title options
+								.input-row
+									.input-item.c4
+										input.input-field(
+											type="number"
+											id="model-height"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-height") Height
+									.input-item.c4
+										input.input-field(
+											type="number"
+											id="model-bust"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-bust") Bust
+									.input-item.c4
+										input.input-field(
+											type="number"
+											id="model-waist"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-waist") Waist
+									.input-item.c4
+										input.input-field(
+											type="number"
+											id="model-hips"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-hips") Hips
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-eyes"
+											)
+										label.input-label(for="model-eyes") Eyes color
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-hair"
+											)
+										label.input-label(for="model-hair") Hair color
+								.form-block__title Сontacts
+								.input-row
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-phone"
+											)
+										label.input-label(for="model-email") Phone
+									.input-item.c2
+										input.input-field(
+											type="email"
+											id="model-email"
+											data-validation="required"
+											data-validation-error-msg="required field"
+											)
+										label.input-label(for="model-email") Email
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-vk"
+											)
+										label.input-label(for="model-vk") Link vk.com
+									.input-item.c2
+										input.input-field(
+											type="text"
+											id="model-insta"
+											)
+										label.input-label(for="model-insta") Link Instagram
+									.input-item.c2.select
+										input.input-field(
+											type="hidden"
+											id="language"
+											)
+										span.select-link Knowledge of English
+										span.select-carret
+											+icon('carret')
+										ul.select-list
+											li._item Elementary
+											li._item Pre-Intermediate
+											li._item Intermediate
+											li._item Upper-Intermediate
+											li._item Advanced
+											li._item Proficiency
+									.input-item.c2.select
+										input.input-field(
+											type="hidden" 
+											id="ability"
+											)
+										span.select-link Ability to work abroad
+										span.select-carret
+											+icon('carret')
+										ul.select-list
+											li._item Elementary
+											li._item Pre-Intermediate
+											li._item Intermediate 
+											li._item Upper-Intermediate
+											li._item Advanced
+											li._item Proficiency
 									
+								.form-block__title photo
+								.input-row
+									.input-item.c2.drop-item(action="/upload")
+										.dz-message 
+											.input-label
+												span.drop-item__icon
+													+icon('cross')
+												input.input-field(
+													type="hidden"
+													id="photos"
+													data-validation="required"
+													data-validation-error-msg="required upload file"
+													)
+												.input-label Add photo face
+									.input-item.c2.drop-item(action="/upload")
+										.dz-message 
+											.input-label
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add profile photo
+									.input-item.c2.drop-item(action="/upload")
+										.dz-message 
+											.input-label
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add photo 3/4
+									.input-item.c2.drop-item(action="/upload")
+										.dz-message 
+											.input-label
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add photo in full length
+									.input-item.input-textarea
+										textarea.input-field(
+											type="text"
+											id="user-msg"
+											rows="1.5"
+											)
+										label.input-label(for="user-msg") Note
+									.input-item.input-bttn
+										+button('send a message', 'normal w100')
+								

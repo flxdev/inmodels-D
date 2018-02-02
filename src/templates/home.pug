@@ -1,24 +1,21 @@
 ---
 title: Index Page
-bodyClass: index-page
+//- bodyClass: index-page
 //- outClass: Index_Page
 ---
 extends layouts/_layout
 block content
-	//- .block
-	//- 	._element
-	//- 		.-modificator
-	//- 			#app
-	//- 				h1 hello
-	//- 	.inner._element
-	//- 		._in-element
-	//- 			h2 qq
-	#barba-wrapper
-		.barba-container(data-namespace="index")
-			.block.-fullpage
-				._video
-					.video-container
-						//- (style="background-image:url('img/video.jpg')")
-						//- video.fillWidth(autoplay='', loop='',data-src='img/video.mp4', type='video/mp4')
-				.index-page-title
-					h1 Find the beauty inside
+	
+	.barba-container(data-namespace="index")
+		.block.-fullpage
+			._video
+				.video-container(style="background-image:url('img/video.jpg')")
+					video.fillWidth(autoplay='', loop='',data-src='img/video.mp4', type='video/mp4')
+			.index-title-wrap
+				.index-title-inner
+					.index-title-item--1
+						span Find
+						span the 
+					.index-title-item--2
+						span beauty
+						span inside

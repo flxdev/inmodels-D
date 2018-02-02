@@ -1,9 +1,9 @@
 .modals
 	visibility: hidden
 	pointer-events: none
-	position: absolute
-	top: -1000px
-	left: -1000px
+	// position: absolute
+	// top: -1000px
+	// left: -1000px
 
 .modal	
 	&-layout
@@ -23,6 +23,24 @@
 		&.active
 			visibility: visible
 			transition-delay: .2s
+			&.hide-anim
+				.modal-menu-inner 
+					.pages-links__item
+						.hov-decor
+							&-inner
+								&:before
+									transform: none
+					.navigation-link.quest-links
+						transition: opacity .3s .3s, transform .3s .3s !important
+						transform: translateY(-50px) !important
+						opacity: 0
+					.pages-links
+						opacity: 0 !important
+						transition: opacity .3s .3s !important
+					.navigation-link.social-links
+						transition: opacity .3s .55s, transform .3s .55s !important
+						transform: translateY(50px) !important
+						opacity: 0 !important
 			.modal-menu
 				&__l-1, &__l-2
 					&::before
@@ -183,9 +201,23 @@
 								top: 0
 								left: 0
 								transform: none
-								transform-origin: 0 0
+								transform-origin: left center
 								transition: transform .3s
 								z-index: 0
+							&::before
+								content: ''
+								display: block
+								width: 100%
+								height: 100%
+								background-color: $bg-color
+								position: absolute
+								top: 0
+								right: 0
+								transform: none
+								transform-origin: right center
+								transition: transform .3s
+								z-index: 1
+								transform: scaleY(1) scaleX(0)
 							img
 								height: 100%
 								width: auto
@@ -207,7 +239,7 @@
 							transition: opacity .1s 0s
 							&-inner
 								&::after
-									transform: scaleX(0)
+									transform: scaleX(0) scaleY(1)
 									// visibility: visible
 									// opacity: 1
 									// transition: transform .5s .1s, visibility 0s 0s, opacity .2s .1s

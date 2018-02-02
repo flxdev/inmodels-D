@@ -19,6 +19,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="search"],
+input[type="number"],
 textarea
     -webkit-appearance: none
     display: inline-block
@@ -32,6 +33,13 @@ button
     &::-moz-focus-inner
         padding: 0
         border: 0
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    margin: 0
+input[type="number"]
+    -moz-appearance: textfield
+
 textarea
     overflow: auto
     border: none

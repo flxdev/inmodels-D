@@ -70,11 +70,11 @@ export default (env) => {
       }),
 
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jquery: 'jquery',
-        jQuery: 'jquery',
-        'window.jquery': 'jquery',
-        'window.jQuery': 'jquery'
+        $: 'jquery/dist/jquery.js',
+        jquery: 'jquery/dist/jquery.js',
+        jQuery: 'jquery/dist/jquery.js',
+        'window.jquery': 'jquery/dist/jquery.js',
+        'window.jQuery': 'jquery/dist/jquery.js'
       }),
 
       new webpack.NoEmitOnErrorsPlugin(),
@@ -97,7 +97,7 @@ export default (env) => {
       new UglifyJsPlugin({
         uglifyOptions: {
           ie8: false,
-          ecma: 5,
+          // ecma: 5,
         },
         // output: {
         //   comments: false,

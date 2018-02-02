@@ -22,10 +22,11 @@ mixin share-block
 			a.link-social(href="#") Twitter
 			a.link-social(href="#") Google +
 		.share-block__bttn
-			+button('business request', 'reverse')
+			a(href="6-0-contacts.html").bttn.reverse
+									span business request
 
 mixin gallery-item(img, date, title, short, add_class)
-	a(href="#" class='gallery-item '+ add_class)
+	a(href="/5-1-gallery-news.html" class='gallery-item '+ add_class)
 		.gallery-item__img
 			img(src="img/"+img, alt="gallery-item")
 		.gallery-item__info
@@ -39,7 +40,7 @@ mixin models-item(img, name, add_class)
 		- var add_class = ''
 	else
 		- var add_class = ' ' + add_class
-	a(href="#" class='models-item kek '+ add_class)
+	a(href="/3-0-inner.html" class='models-item '+ add_class)
 		.models-item__img
 			img(src="img/"+img, alt="models-item")
 		.models-item__info

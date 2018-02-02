@@ -1,0 +1,30 @@
+.page
+	&-loader
+		+coverdiv
+		position: fixed
+		z-index: 10
+		display: none
+
+		&.page-load
+			display: block
+			
+	&-elem
+		+coverdiv
+		position: fixed
+		transform-origin: bottom center
+		transform: scaleX(1) scaleY(0)
+		z-index: 11
+		&.white
+			background-color: #fff
+			// z-index: 101
+		&.blend
+			z-index: 12
+			background-color: $bg-brend
+			// z-index: 101
+
+
+		
+
+
+
+	

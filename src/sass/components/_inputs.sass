@@ -11,6 +11,12 @@
 		font-weight: normal
 		&:not(:first-child)
 			margin-top: 50px
+		transform: translateY(40px)
+		opacity: 0
+		transition: opacity .3s .3s, transform .6s .3s
+		&.animate
+			opacity: 1
+			transform: none
 .form-search
 	width: 100%
 	max-width: 590px
@@ -33,6 +39,9 @@
 		border-bottom: 1px solid $hover-color
 		position: relative
 		margin-bottom: 50px
+		transform: translateY(20px)
+		opacity: 0
+		transition: opacity .3s .3s, transform .4s .3s
 		&::before, &::after
 			content: ''
 			display: block
@@ -122,8 +131,8 @@
 					transition: font-size .15s 0s, transform .15s 0s, opacity .15s 0s ease-in, visibility 0s .2s
 		&.input-textarea
 			label
-				top: 0
-				bottom: auto
+				top: auto
+				bottom: 10px
 		&.c2
 			width: 45.83%
 		&.c4
@@ -137,6 +146,7 @@
 			border-color: $error-color
 			&::before
 				background-color: $bg-error
+				width: 100%
 			&::after
 				background-color: $error-color
 		&.drop-item
@@ -288,12 +298,16 @@
 					color: $color
 					&:after
 						opacity: 0
-
+		&.animate
+			opacity: 1
+			transform: none
+		
 	&-label
+		cursor: text
 		font-size: inherit
 		line-height: inherit
 		position: absolute
-		bottom: 10px
+		bottom: 13px
 		left: 10px
 		color: $link-color
 		transform: none
@@ -310,25 +324,28 @@
 	.help-block
 		position: absolute
 		right: 0
-		bottom: 10px
+		top: -20px
 		z-index: 6
-		transform: none
-		transition: transform .2s .5s
+		opacity: 1
+		transition: opacity .2s .7s
 		&.form-error
 			color: $error-color
 			font-size: $font-size
 			line-height: 1.33
 	&.focus, &.editing
 		.help-block
-			transform: translateY(-40px)
+			opacity: 0
 			transition-delay: 0s
 	&.select
 		.help-block
-			transform: translateY(-25px)
+			opacity: 0
 	&.input-textarea
 		.help-block
 			bottom: auto
 			top: 0
+	&.drop-item.focus
+		.help-block
+			opacity: 1
 .dz-remove
 	display: block
 	width: 11px

@@ -1,28 +1,20 @@
 ---
 title: 404
-bodyClass: error
+//- bodyClass: error
 //- outClass: Index_Page
 ---
 extends layouts/_layout
 block content
-	//- .block
-	//- 	._element
-	//- 		.-modificator
-	//- 			#app
-	//- 				h1 hello
-	//- 	.inner._element
-	//- 		._in-element
-	//- 			h2 qq
-	#barba-wrapper
-		.barba-container(data-namespace="index")
-			.block.-fullpage
-				.block-content.error-wrap
-					.error-wrap-inner
-						.error-title 404
-						.error-message
-							p.text-big Sorry, the page you requested does not exist. 
-							a(href="#").text-big Go to the main page.
-					.navigation-link.social-links
-						a.navigation-link__item(href="#") facebook
-						a.navigation-link__item(href="#") instagram
-						a.navigation-link__item(href="#") vkontakte
+
+	.barba-container(data-namespace="error")
+		.block.-fullpage
+			.block-content.error-wrap
+				.error-wrap-inner
+					.error-title 404
+					.error-message
+						p.text-big Sorry, the page you requested does not exist. 
+						a(href="#").text-big Go to the main page.
+				.navigation-link.social-links
+					a.navigation-link__item(href="#") facebook
+					a.navigation-link__item(href="#") instagram
+					a.navigation-link__item(href="#") vkontakte

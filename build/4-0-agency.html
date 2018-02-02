@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="about">
+  <body>
     <script type="text/javascript">
       ! function(e)
       {
@@ -100,6 +100,10 @@
       </svg>
     </div>
     <!--BEGIN out-->
+    <div class="page-loader">
+      <div class="page-elem white"></div>
+      <div class="page-elem blend"></div>
+    </div>
     <div class="out">
       <div class="page__outer">
         <div class="page__wrapper">
@@ -113,7 +117,7 @@
                   <span class="navigation-burger__item"></span>
                 </div>
                 <a class="navigation-lang" href="#">рус</a>
-                <a class="navigation-logo" href="/">
+                <a class="navigation-logo" href="/home.html">
                   <svg class="logo">
                     <use xlink:href="#logo"></use>
                   </svg>
@@ -123,10 +127,10 @@
                     <use xlink:href="#loupe"></use>
                   </svg>
                 </a>
-                <div class="navigation-link quest-links">
+                <div class="navigation-link header-links">
                   <div class="navigation-link-wrap">
-                    <a class="navigation-link__item" href="#">Business request</a>
-                    <a class="navigation-link__item" href="">Become a model</a>
+                    <a class="navigation-link__item" href="/6-0-contacts.html">Business request</a>
+                    <a class="navigation-link__item" href="/7-0-Become-model.html">Become a model</a>
                   </div>
                 </div>
               </div>
@@ -135,28 +139,28 @@
           </header>
           <main class="page__content">
             <div id="barba-wrapper">
-              <div class="barba-container" data-namespace="about-agency">
-                <div class="block">
+              <div class="barba-container" data-namespace="about">
+                <div class="block about">
                   <div class="block__bg"></div>
                   <div class="block-content">
                     <div class="about-menu">
                       <ul class="about-menu__list">
                         <li class="about-menu__item">
-                          <a class="about-menu__link active" href="#">about agency</a>
+                          <a class="about-menu__link active" href="/4-0-agency.html">about agency</a>
                         </li>
                         <li class="about-menu__item">
-                          <a class="about-menu__link" href="#">for models</a>
+                          <a class="about-menu__link" href="/4-1-agency-models.html">for models</a>
                         </li>
                         <li class="about-menu__item">
-                          <a class="about-menu__link" href="#">for partners</a>
+                          <a class="about-menu__link" href="/4-2-partners.html">for partners</a>
                         </li>
                       </ul>
                     </div>
                     <div class="about-content">
                       <div class="about-content__row">
                         <div class="about-content__cell cell-title">
-                          <h1>About agency</h1>
-                          <img src="img/about-agency.jpg" alt="about-agency">
+                          <h1 class="rellax" data-rellax-speed="-2">About agency</h1>
+                          <img class="rellax" data-rellax-speed="2" src="img/about-agency.jpg" alt="about-agency">
                         </div>
                         <div class="about-content__cell cell-text_r">
                           <div class="about-content__text">
@@ -164,8 +168,8 @@
                             <p class="text">
                               <strong>The agency is engaged in the search for models, the development of their international careers, and works with girls from all the cities of Belarus.</strong>
                             </p>
-                            <p class="text sub-title">The beginning</p>
-                            <p class="text">Before opening the agency, we worked for a long time models in Italy, France, USA, China and other countries. During their work they learned about the problems and difficulties encountered by the models and learned to solve
+                            <p class="text sub-title sub-title--offset">The beginning</p>
+                            <p class="text text line-decor line_l">Before opening the agency, we worked for a long time models in Italy, France, USA, China and other countries. During their work they learned about the problems and difficulties encountered by the models and learned to solve
                               them.</p>
                           </div>
                         </div>
@@ -174,22 +178,24 @@
                         foreign agencies.</blockquote>
                       <div class="about-content__row">
                         <div class="about-content__cell cell-text_l">
-                          <div class="about-content__text">
-                            <p class="text">
+                          <div class="about-content__text rellax" data-rellax-speed="-1" data-rellax-zindex="3">
+                            <p class="text text line-decor line_r">
                               <strong>In 2015 we decided to open our agency INMODELS. At this time, Tatiana Sokolovskaya joined our team.</strong>
                             </p>
                             <p class="text">She was the most popular Internet blog about Belarusian models and worked as a model agent. We were united by interest and love of fashion.</p>
                           </div>
                         </div>
-                        <div class="about-content__cell">
+                        <div class="about-content__cell cell-img_r rellax" data-rellax-speed="1" data-rellax-zindex="1">
                           <img src="img/about-2.jpg" alt="about about">
                         </div>
                       </div>
                     </div>
                     <div class="link-footer">
-                      <a class="link-big active" href="#">about agency</a>
-                      <a class="link-big" href="#">for models</a>
-                      <a class="link-big" href="#">for partners</a>
+                      <div class="link-footer-inner">
+                        <a class="link-big active" href="/4-0-agency.html">about agency</a>
+                        <a class="link-big" href="/4-1-agency-models.html">for models</a>
+                        <a class="link-big" href="/4-2-partners.html">for partners</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -214,37 +220,37 @@
           <div class="modal-menu-inner">
             <div class="navigation-link quest-links">
               <div class="navigation-link-wrap">
-                <a class="navigation-link__item" href="#">Business request</a>
-                <a class="navigation-link__item" href="">Become a model</a>
+                <a class="navigation-link__item modal-link" href="/6-0-contacts.html">Business request</a>
+                <a class="navigation-link__item modal-link" href="/7-0-Become-model.html">Become a model</a>
               </div>
             </div>
             <div class="pages-links">
-              <a class="pages-links__item" href="#">
-                <span>Agency</span>
+              <a class="pages-links__item" href="/4-0-agency.html">
+                <span class="modal-link">Agency</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Models</span>
+              <a class="pages-links__item" href="/2-0-models.html">
+                <span class="modal-link">Models</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Gallery</span>
+              <a class="pages-links__item" href="/5-0-gallery.html">
+                <span class="modal-link">Gallery</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Contacts</span>
+              <a class="pages-links__item" href="/6-0-contacts.html">
+                <span class="modal-link">Contacts</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">

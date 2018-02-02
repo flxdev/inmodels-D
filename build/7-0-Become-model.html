@@ -10,7 +10,7 @@
     <link rel="stylesheet" media="all" href="css/font.css">
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
-  <body class="form-models">
+  <body>
     <script type="text/javascript">
       ! function(e)
       {
@@ -100,6 +100,10 @@
       </svg>
     </div>
     <!--BEGIN out-->
+    <div class="page-loader">
+      <div class="page-elem white"></div>
+      <div class="page-elem blend"></div>
+    </div>
     <div class="out">
       <div class="page__outer">
         <div class="page__wrapper">
@@ -113,7 +117,7 @@
                   <span class="navigation-burger__item"></span>
                 </div>
                 <a class="navigation-lang" href="#">рус</a>
-                <a class="navigation-logo" href="/">
+                <a class="navigation-logo" href="/home.html">
                   <svg class="logo">
                     <use xlink:href="#logo"></use>
                   </svg>
@@ -123,10 +127,10 @@
                     <use xlink:href="#loupe"></use>
                   </svg>
                 </a>
-                <div class="navigation-link quest-links">
+                <div class="navigation-link header-links">
                   <div class="navigation-link-wrap">
-                    <a class="navigation-link__item" href="#">Business request</a>
-                    <a class="navigation-link__item" href="">Become a model</a>
+                    <a class="navigation-link__item" href="/6-0-contacts.html">Business request</a>
+                    <a class="navigation-link__item" href="/7-0-Become-model.html">Become a model</a>
                   </div>
                 </div>
               </div>
@@ -135,7 +139,7 @@
           </header>
           <main class="page__content">
             <div id="barba-wrapper">
-              <div class="barba-container" data-namespace="form-models">
+              <div class="barba-container" data-namespace="contacts">
                 <div class="block">
                   <div class="block-grid">
                     <div class="aside bg-brend">
@@ -158,69 +162,69 @@
                             <div class="form-block__title">Your data</div>
                             <div class="input-row">
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-name">
+                                <input class="input-field" type="text" id="model-name" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-name">Name</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-surname">
+                                <input class="input-field" type="text" id="model-surname" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-surname">Surname</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-local">
+                                <input class="input-field" type="text" id="model-local" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-local">City / country</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-age">
+                                <input class="input-field" type="number" id="model-age">
                                 <label class="input-label" for="model-age">Age</label>
                               </div>
                             </div>
                             <div class="form-block__title">options</div>
                             <div class="input-row">
                               <div class="input-item c4">
-                                <input class="input-field" type="text" id="model-height">
+                                <input class="input-field" type="number" id="model-height" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-height">Height</label>
                               </div>
                               <div class="input-item c4">
-                                <input class="input-field" type="tel" id="model-bust">
+                                <input class="input-field" type="number" id="model-bust" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-bust">Bust</label>
                               </div>
                               <div class="input-item c4">
-                                <input class="input-field" type="text" id="model-waist">
+                                <input class="input-field" type="number" id="model-waist" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-waist">Waist</label>
                               </div>
                               <div class="input-item c4">
-                                <input class="input-field" type="text" id="model-hips">
+                                <input class="input-field" type="number" id="model-hips" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-hips">Hips</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-eyes" data-validation="required" data-validation-error-msg="required field">
+                                <input class="input-field" type="text" id="model-eyes">
                                 <label class="input-label" for="model-eyes">Eyes color</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-hair" data-validation="required" data-validation-error-msg="required field">
+                                <input class="input-field" type="text" id="model-hair">
                                 <label class="input-label" for="model-hair">Hair color</label>
                               </div>
                             </div>
                             <div class="form-block__title">Сontacts</div>
                             <div class="input-row">
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-phone" data-validation="required" data-validation-error-msg="required field">
+                                <input class="input-field" type="text" id="model-phone">
                                 <label class="input-label" for="model-email">Phone</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="email" id="model-email">
+                                <input class="input-field" type="email" id="model-email" data-validation="required" data-validation-error-msg="required field">
                                 <label class="input-label" for="model-email">Email</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-vk" data-validation="required" data-validation-error-msg="required field">
+                                <input class="input-field" type="text" id="model-vk">
                                 <label class="input-label" for="model-vk">Link vk.com</label>
                               </div>
                               <div class="input-item c2">
-                                <input class="input-field" type="text" id="model-insta" data-validation="required" data-validation-error-msg="required field">
+                                <input class="input-field" type="text" id="model-insta">
                                 <label class="input-label" for="model-insta">Link Instagram</label>
                               </div>
                               <div class="input-item c2 select">
-                                <input class="input-field" type="hidden" id="language" data-validation="required" data-validation-error-msg="required select">
+                                <input class="input-field" type="hidden" id="language">
                                 <span class="select-link">Knowledge of English</span>
                                 <span class="select-carret">
                                   <svg class="carret">
@@ -237,7 +241,7 @@
                                 </ul>
                               </div>
                               <div class="input-item c2 select">
-                                <input class="input-field" type="hidden" id="ability" data-validation="required" data-validation-error-msg="required select">
+                                <input class="input-field" type="hidden" id="ability">
                                 <span class="select-link">Ability to work abroad</span>
                                 <span class="select-carret">
                                   <svg class="carret">
@@ -264,6 +268,7 @@
                                         <use xlink:href="#cross"></use>
                                       </svg>
                                     </span>
+                                    <input class="input-field" type="hidden" id="photos" data-validation="required" data-validation-error-msg="required upload file">
                                     <div class="input-label">Add photo face</div>
                                   </div>
                                 </div>
@@ -276,7 +281,7 @@
                                         <use xlink:href="#cross"></use>
                                       </svg>
                                     </span>
-                                    <div class="input-label">Add profile photo *</div>
+                                    <div class="input-label">Add profile photo</div>
                                   </div>
                                 </div>
                               </div>
@@ -288,7 +293,7 @@
                                         <use xlink:href="#cross"></use>
                                       </svg>
                                     </span>
-                                    <div class="input-label">Add photo 3/4 *</div>
+                                    <div class="input-label">Add photo 3/4</div>
                                   </div>
                                 </div>
                               </div>
@@ -300,12 +305,12 @@
                                         <use xlink:href="#cross"></use>
                                       </svg>
                                     </span>
-                                    <div class="input-label">Add photo in full length *</div>
+                                    <div class="input-label">Add photo in full length</div>
                                   </div>
                                 </div>
                               </div>
                               <div class="input-item input-textarea">
-                                <textarea class="input-field" type="text" id="user-msg" rows="1.5" data-validation="length" data-validation-length="1-500" data-validation-error-msg="required field"></textarea>
+                                <textarea class="input-field" type="text" id="user-msg" rows="1.5"></textarea>
                                 <label class="input-label" for="user-msg">Note</label>
                               </div>
                               <div class="input-item input-bttn">
@@ -341,37 +346,37 @@
           <div class="modal-menu-inner">
             <div class="navigation-link quest-links">
               <div class="navigation-link-wrap">
-                <a class="navigation-link__item" href="#">Business request</a>
-                <a class="navigation-link__item" href="">Become a model</a>
+                <a class="navigation-link__item modal-link" href="/6-0-contacts.html">Business request</a>
+                <a class="navigation-link__item modal-link" href="/7-0-Become-model.html">Become a model</a>
               </div>
             </div>
             <div class="pages-links">
-              <a class="pages-links__item" href="#">
-                <span>Agency</span>
+              <a class="pages-links__item" href="/4-0-agency.html">
+                <span class="modal-link">Agency</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Models</span>
+              <a class="pages-links__item" href="/2-0-models.html">
+                <span class="modal-link">Models</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Gallery</span>
+              <a class="pages-links__item" href="/5-0-gallery.html">
+                <span class="modal-link">Gallery</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
                   </div>
                 </div>
               </a>
-              <a class="pages-links__item" href="#">
-                <span>Contacts</span>
+              <a class="pages-links__item" href="/6-0-contacts.html">
+                <span class="modal-link">Contacts</span>
                 <div class="hov-decor">
                   <div class="hov-decor-inner">
                     <img src="img/kate-img.jpg">
