@@ -522,17 +522,28 @@
 	padding-bottom: 120px
 	.swiper-wrapper
 		height: 100%
+		cursor: move
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: grab;
+		&:active,&:focus
+			cursor: -webkit-grabbing;
+			cursor: -moz-grabbing;
+			cursor:  grabbing;
 		.swiper-slide
 			height: 100%
-			width: 100%
-			max-width: 450px
+			width: auto !important
+			// max-width: 450px
 			overflow: hidden
+			.item
+				height: 100%
 			img
 				height: 100%
-				width: 100%
+				width: auto !important
 				object-fit: cover
 			&.swiper-slide-video
-				max-width: 98%
+				width: 100%	!important
+				max-width: 80%
 				background-color: #000000
 				+vertical
 				.youtube
@@ -594,6 +605,12 @@
 /* ligtgallery */
 .lg-backdrop
 	background-color: rgba( #000000, .95)
+.lg 
+	* 
+		+nosel
+	.lg-toolbar
+		&.lg-group
+			background-color: transparent
 .lg-object
 	transform: none !important
 .lg-css3.lg-slide.lg-use-css3 .lg-item.lg-current,

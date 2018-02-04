@@ -16,26 +16,18 @@ import scrollAnimations from './lib/scrollAnimations';
 import initInnerSlider from './lib/initInnerSlider';
 import { TimelineMax, Sine} from 'gsap';
 
-// setInputFocus();
-// formValidator();
-// initDropzone();
-// showVideo();
-// stickInit();
-// youtubeVideo();
-// initGallery();
-// initModels();
-// initAboutSliders();
-// initRellaxParalax();
-
 
 var BarbaWitget = {
   init: function() {  
   	var scope = this;
     window.DOM.getScrollWidth();
-    console.log(window.DOM.menu);
     Barba.Pjax.start();
     Barba.Prefetch.init();
-
+    Barba.Dispatcher.on('transitionCompleted', (currentStatus, oldStatus, container) => {
+      setTimeout(() => {
+        scrollAnimations();
+      },300);
+    }); 
     var FadeTransition = Barba.BaseTransition.extend({
       start: function() {
         Promise
@@ -164,7 +156,7 @@ var about = Barba.BaseView.extend({
   	window.DOM.headerLinks.addClass('show-header-links');
     initAboutSliders();
     
-    scrollAnimations();
+    
   },
   onLeave: function() {
   	window.DOM.headerLinks.removeClass('show-header-links');
@@ -201,7 +193,6 @@ var galleryNews = Barba.BaseView.extend({
     initRellaxParalax();
     youtubeVideo();
     stickInit();
-    scrollAnimations();
   },
   onLeave: function() {
     window.DOM.headerLinks.removeClass('show-header-links');
@@ -220,7 +211,6 @@ var models = Barba.BaseView.extend({
   onEnterCompleted: function() {
   	window.DOM.headerLinks.addClass('show-header-links');
     window.DOM.navSearch.addClass('active');
-    scrollAnimations();
     initModels();
     // ajaxPagenation();
   },
@@ -242,7 +232,6 @@ var contacts = Barba.BaseView.extend({
     formValidator();
     initDropzone();
     setInputFocus();
-    scrollAnimations();
   },
   onLeaveComplete: function() {
   }
@@ -289,3 +278,6 @@ innerModel.init();
 error.init();
 initPopUp();
 BarbaWitget.init();
+window.onload = () => {
+  scrollAnimations();
+};

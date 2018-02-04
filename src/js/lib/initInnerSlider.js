@@ -14,10 +14,13 @@ export default function initInnerSlider() {
 
   	var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
+      // direction: 'horizontal',
       spaceBetween: 20,
       freeMode: true,
       freeModeMomentumBounce: false,
       freeModeSticky: true,
+      // grabCursor: true,
+      // mousewheel: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
