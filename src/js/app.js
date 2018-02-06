@@ -183,6 +183,7 @@ var about = Barba.BaseView.extend({
   	window.DOM.headerLinks.addClass('show-header-links');
     initAboutSliders();
     initRellaxParalax();
+    scrollAnimations();
     
   },
   onLeave: function() {
@@ -221,6 +222,7 @@ var galleryNews = Barba.BaseView.extend({
     youtubeVideo();
     stickInit();
     initRellaxParalax();
+    scrollAnimations();
   },
   onLeave: function() {
     window.DOM.headerLinks.removeClass('show-header-links');
@@ -240,7 +242,7 @@ var models = Barba.BaseView.extend({
   	window.DOM.headerLinks.addClass('show-header-links');
     window.DOM.navSearch.addClass('active');
     initModels();
-    // ajaxPagenation();
+    setInputFocus();
   },
   onLeave: function() {
     window.DOM.navSearch.removeClass('active');
@@ -260,6 +262,8 @@ var contacts = Barba.BaseView.extend({
     formValidator();
     initDropzone();
     setInputFocus();
+    scrollAnimations();
+
   },
   onLeaveComplete: function() {
   }
@@ -296,17 +300,19 @@ var error = Barba.BaseView.extend({
   }
 });
 
-index.init();
-about.init();
-gallery.init();
-galleryNews.init();
-models.init();
-contacts.init();
-innerModel.init();
-error.init();
-initPopUp();
-BarbaWitget.init();
-window.onload = () => {
-  scrollAnimations();
-  window.DOM.body.removeClass('loading');
-};
+$(document).ready(function() {
+  index.init();
+  about.init();
+  gallery.init();
+  galleryNews.init();
+  models.init();
+  contacts.init();
+  innerModel.init();
+  error.init();
+  initPopUp();
+  BarbaWitget.init();
+  window.onload = () => {
+    scrollAnimations();
+    window.DOM.body.removeClass('loading');
+  };
+});

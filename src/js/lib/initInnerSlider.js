@@ -40,7 +40,6 @@ export default function initInnerSlider() {
       .on('progress',debounce(() => {
         let active = $('.swiper-slide-visible').last();
         // let active = active.removeClass('swiper-slide-visible');
-        // console.log(active);;
         let trigger = active.data('link');
         let triggerIndex = active.index() + 1;
         pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');

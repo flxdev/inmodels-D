@@ -27,7 +27,6 @@ window.DOM = {
     this.body[0].appendChild(div);
     this.scrollWidth = div.offsetWidth - div.clientWidth;
     this.body[0].removeChild(div);
-    
   },
   hideScrollSimple: function() {
     if (this.body[0].offsetHeight < this.body[0].scrollHeight) {
@@ -48,16 +47,13 @@ window.DOM = {
     window.scroll(0, this.bodyScrollTop);
     this.body.addClass('show-menu');
     $('.js-stick').trigger('sticky_kit:recalc');
-
   },
   showScroll: function() {
   	this.body.removeClass('show-menu');
     this.bodyScrollTop && (window.scroll(0, this.bodyScrollTop));
     this.bodyScrollTop = null;
     this.body[0].style.paddingRight = '';
-    $('.js-stick').trigger('sticky_kit:recalc');
-
-    
+    $('.js-stick').trigger('sticky_kit:recalc'); 
   },
   addListenerMulti(el, s, fn) {
     s.split(' ').forEach(e => el.addEventListener(e, fn, window.DOM.passiveSupported ? { passive: true } : false));

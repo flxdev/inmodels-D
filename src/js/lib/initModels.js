@@ -116,8 +116,6 @@ export default function initModels() {
             if(($window.scrollTop() + $window.height()) > ($wrapper.offset().top + $wrapper.height()) && !busy) {
               busy = true;
               $('.' + ajaxPagerLinkClass).click();
-              console.log('has click');
-
             }
           });
         }
@@ -146,13 +144,15 @@ export default function initModels() {
             container.append(data);
 
             var h_model = document.querySelectorAll('.hide-model');
-            console.log(h_model.length);
             for (var i = 0, len = h_model.length; i<len; i++) {
               elem.appendChild(h_model[i]).classList.remove('hide-model');
             }
-            iso.appended( h_model );
-            iso.layout();
-
+            
+            setTimeout(function() {
+              iso.appended( h_model );
+              iso.arrange();
+              iso.layout();
+            }, 50);
             
 
             if($('.' + ajaxPagerWrapClass).hasClass(ajaxPagerLazyClass)) {

@@ -79,13 +79,14 @@ export default function initGallery() {
             container.append(data);
 
             var h_gallery = document.querySelectorAll('.hide-gallery');
-            console.log(h_gallery.length);
             for (var i = 0, len = h_gallery.length; i<len; i++) {
               elem.appendChild(h_gallery[i]).classList.remove('hide-gallery');
             }
-            iso.appended( h_gallery );
-            iso.arrange();
-            iso.layout();
+            setTimeout(function() {
+              iso.appended( h_gallery );
+              iso.arrange();
+              iso.layout();
+            }, 50);
             if($('.' + ajaxPagerWrapClass).hasClass(ajaxPagerLazyClass)) {
               // attachScrollPagination(wrapperClass);
               busy = false;
