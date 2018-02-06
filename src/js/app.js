@@ -16,13 +16,40 @@ import scrollAnimations from './lib/scrollAnimations';
 import initInnerSlider from './lib/initInnerSlider';
 import { TimelineMax, Sine} from 'gsap';
 
+var cbk = function(e) {
+  if(e.currentTarget.href === window.location.href) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+};
+function preventDbClick() {
+  var links = document.querySelectorAll('a[href]');
 
+  for(var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', cbk);
+  }
+}
 var BarbaWitget = {
   init: function() {  
   	var scope = this;
     window.DOM.getScrollWidth();
+    preventDbClick();
     Barba.Pjax.start();
     Barba.Prefetch.init();
+    Barba.Dispatcher.on('newPageReady', function(currentStatus) {
+      var link = currentStatus.url.split(window.location.origin)[1].substring(0);
+      var navigationLinks = document.querySelectorAll('.js-nav');
+      var navigationLinkIsActive = document.querySelectorAll('[href="' + link + '"]');
+
+      Array.prototype.forEach.call(navigationLinks, function(navigationLink) {
+        return navigationLink.classList.remove('active');
+      });
+      Array.prototype.forEach.call(navigationLinkIsActive, function(navigationLink) {
+        return navigationLink.classList.add('active');
+      });
+      preventDbClick();
+
+    }); 
     Barba.Dispatcher.on('transitionCompleted', (currentStatus, oldStatus, container) => {
       setTimeout(() => {
         scrollAnimations();
@@ -60,6 +87,9 @@ var BarbaWitget = {
           .to(window.DOM.pageLoaderW, 0.4, {
             scaleY: 1,
           })
+          .set(window.DOM.menu, {
+            className: '-=hide-anim'
+          })
           .to(window.DOM.pageLoaderB, 0.4, {
             scaleY: 1,
           });
@@ -84,9 +114,6 @@ var BarbaWitget = {
               _this.done();
               
               tlIn
-                .set(window.DOM.menu, {
-                  className: '-=hide-anim'
-                })
                 .set(blockContent, {
                   y: 150,
                   autoAlpha: 0,
@@ -152,10 +179,10 @@ var about = Barba.BaseView.extend({
     
   },
   onEnterCompleted: function() {
-    initRellaxParalax();
+
   	window.DOM.headerLinks.addClass('show-header-links');
     initAboutSliders();
-    
+    initRellaxParalax();
     
   },
   onLeave: function() {
@@ -190,9 +217,10 @@ var galleryNews = Barba.BaseView.extend({
   },
   onEnterCompleted: function() {
   	window.DOM.headerLinks.addClass('show-header-links');
-    initRellaxParalax();
+
     youtubeVideo();
     stickInit();
+    initRellaxParalax();
   },
   onLeave: function() {
     window.DOM.headerLinks.removeClass('show-header-links');
@@ -280,4 +308,5 @@ initPopUp();
 BarbaWitget.init();
 window.onload = () => {
   scrollAnimations();
+  window.DOM.body.removeClass('loading');
 };

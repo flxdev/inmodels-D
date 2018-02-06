@@ -1,32 +1,34 @@
 import Swiper from 'swiper/dist/js/swiper';
 import lightGallery from 'lightGallery/dist/js/lightgallery.min.js';
+import debounce from './debounce';
 
 export default function initInnerSlider() {
 
   let in_slider = $('.inner-slider');
   if (in_slider.length) {
 
-  	var slide_link = [];
+    const pagiTriggers = $('.swiper-navigation').find('.slide-target');
+    const slides = $('.swiper-slide');
+    const slidesLength = slides.length;
 
-  	$('.swiper-container .swiper-slide').each(function(i) {
-      slide_link.push($(this).data('link'));
-    });
-
-  	var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      // direction: 'horizontal',
+      direction: 'horizontal',
       spaceBetween: 20,
       freeMode: true,
       freeModeMomentumBounce: false,
-      freeModeSticky: true,
-      // grabCursor: true,
-      // mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function(index, className) {
-          return '<span class=" ' + className + ' ' + slide_link[index] + '">' + slide_link[index] + '</span>';
+      pagination: false,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      // slidesOffsetAfter: 500,
+      on: {
+        init: function() {
+          pagiTriggers.first().addClass('active');
         },
+      },
+      mousewheel: {
+        sensitivity: 1.2,
+        eventsTarged: '.block-inner'
       },
       scrollbar: {
         el: '.swiper-scrollbar',
@@ -34,16 +36,45 @@ export default function initInnerSlider() {
       },
     });
 
-    swiper.on('transitionEnd', function() {
-      let trigger = $('.swiper-slide-active').data('link');
-      $('.' + trigger).addClass('active').siblings().removeClass('active');
-    });
+    swiper
+      .on('progress',debounce(() => {
+        let active = $('.swiper-slide-visible').last();
+        // let active = active.removeClass('swiper-slide-visible');
+        // console.log(active);;
+        let trigger = active.data('link');
+        let triggerIndex = active.index() + 1;
+        pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+        //   if(triggerIndex + 1 === slidesLength) {
+        //     pagiTriggers.removeClass('active').last().addClass('active');
+        //   }
+      }));
+    // .on('reachEnd',() => {
+    //   // setTimeout(() => {
+    //   let trigger = $('.swiper-slide').last().data('link');
+    //   pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+    //   // },5);
+    //   return false;
+    // })
+    // .on('reachBeginning',() => {
+    //   // setTimeout(() => {
+    //   let trigger = $('.swiper-slide').first().data('link');
+    //   pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+    //   // },5);
 
-    $('.slide-target').on('click', function(e) {
-    	e.preventDefault();
-    	swiper.slideTo(0);
-    	// let bttn_class = $(this).data('slide');
-    	// $('.swiper-pagination-bullet.' + bttn_class)[0].click();
+    // });
+
+    pagiTriggers.each(function() {
+      let _ = $(this);
+      _.on('click',() => {
+        let target = _.data('slide');
+        let realInd = swiper.realIndex;
+        let neededItems = slides.filter(`[data-link="${target}"]`);
+        let neededItemsIndex = neededItems.first().index();
+        setTimeout(() => {
+          swiper.slideTo(neededItemsIndex);    
+        },20);
+
+      });
     });
 
     in_slider.lightGallery({

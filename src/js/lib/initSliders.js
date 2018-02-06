@@ -4,7 +4,6 @@ export default function initAboutSliders() {
 
   let aboutSlider = $('.about-slider');
   if(aboutSlider.length) {
-    console.log(' go go swiper ranger ');
     let about_slider = new Swiper (aboutSlider, {
       direction: 'horizontal',
       loop: false,

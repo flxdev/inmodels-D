@@ -88,7 +88,7 @@
 			&.stamp1
 				left: 0
 			&.stamp2
-				left: 52%
+				left: 50%
 			&.re-stamp
 				&.stamp1
 					left: 25%
@@ -475,6 +475,9 @@
 	.aside
 		display: flex
 		padding-bottom: 40px
+	.main
+		&.bg-dark
+			height: calc(100% + 1px)
 .inner
 	&-title
 		width: 47%
@@ -520,21 +523,42 @@
 .inner-slider
 	height: 100%
 	padding-bottom: 120px
+	.navigation-link
+		bottom: 29px
+		right: 31px
+		position: absolute
+		line-height: 1.67;
+		&__item
+			color: $link-color
+			&:after
+				background: $link-color !important
+			&:hover
+				color: #fff 
+				&:after
+					background: #fff !important
+	.navigation-link-wrap:hover .navigation-link__item:first-child:not(:hover):after
+		background: #fff !important
 	.swiper-wrapper
 		height: 100%
-		cursor: move
-		cursor: -webkit-grab;
-		cursor: -moz-grab;
-		cursor: grab;
+		// cursor: move
+		// cursor: -webkit-grab;
+		// cursor: -moz-grab;
+		// cursor: grab;
+		-moz-transform-style: preserve-3d
 		&:active,&:focus
-			cursor: -webkit-grabbing;
-			cursor: -moz-grabbing;
-			cursor:  grabbing;
+			// cursor: -webkit-grabbing;
+			// cursor: -moz-grabbing;
+			// cursor:  grabbing;
+
 		.swiper-slide
 			height: 100%
 			width: auto !important
 			// max-width: 450px
 			overflow: hidden
+			margin-right: 20px
+			&.slide-placeholder
+				margin-right: 0 !important
+				width: 250px !important
 			.item
 				height: 100%
 			img
@@ -595,9 +619,10 @@
 				font-size: 12px
 				text-transform: uppercase
 				color: $link-color
-				
+				+tr(color .3s)
 				line-height: 1.67
 				letter-spacing: 3px
+				cursor: pointer
 				&.active
 					color: $btn-color
 

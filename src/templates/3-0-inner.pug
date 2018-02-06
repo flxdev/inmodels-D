@@ -73,13 +73,22 @@ block content
 								.youtube(data-embed='VLP4UqTDgwY')
 									.play-button
 										.play-button-icon
+							.swiper-slide.swiper-slide-video(data-link="video-bttn")
+								.youtube(data-embed='VLP4UqTDgwY')
+									.play-button
+										.play-button-icon
 							.swiper-slide.swiper-slide-social(data-link="social-bttn")
 								+share-block
-						.swiper-pagination
+							//должен всегда быть пустым и последним
+							//- .swiper-slide.slide-placeholder
 						.swiper-scrollbar
 						.swiper-navigation
-							button.portfolio-bttn.slide-target.active(data-slide="swiper-slide-portfolio") portfolio
-							button.editorial-bttn.slide-target(data-slide="swiper-slide-editorial") editorial
-							button.polaroids-bttn.slide-target(data-slide="swiper-slide-polaroids") polaroids
-							button.video-bttn.slide-target(data-slide="swiper-slide-video") video
-							button.social-bttn.slide-target(data-slide="swiper-slide-social") social
+							.slide-target(data-slide="portfolio-bttn") portfolio
+							.slide-target(data-slide="editorial-bttn") editorial
+							.slide-target(data-slide="polaroids-bttn") polaroids
+							.slide-target(data-slide="video-bttn") video
+							.slide-target(data-slide="social-bttn") social
+						.navigation-link
+							.navigation-link-wrap
+								a.navigation-link__item(href="#") Previous
+								a.navigation-link__item(href="#") Next
