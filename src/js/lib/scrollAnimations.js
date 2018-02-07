@@ -41,14 +41,14 @@ export default function scrollAnimations() {
         el.classList.remove('animate');
       });
   }
-  let g_link_footer = $('.gallery-news-footer');
-  if(g_link_footer.length) {
-    inView('.gallery-news-footer')
-      .on('enter', function(el) {
-        el.classList.add('animate');
-      }).on('exit', function(el) {
-        el.classList.remove('animate');
-      });
-  }
+  // let g_link_footer = $('.gallery-news-footer');
+  // if(g_link_footer.length) {
+  //   inView('.gallery-news-footer')
+  //     .on('enter', function(el) {
+  //       el.classList.add('animate');
+  //     }).on('exit', function(el) {
+  //       el.classList.remove('animate');
+  //     });
+  // }
 
 }

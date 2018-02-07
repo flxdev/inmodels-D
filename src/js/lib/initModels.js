@@ -147,9 +147,10 @@ export default function initModels() {
             for (var i = 0, len = h_model.length; i<len; i++) {
               elem.appendChild(h_model[i]).classList.remove('hide-model');
             }
-            
+            iso.appended( h_model );
+            console.log('add models');
             setTimeout(function() {
-              iso.appended( h_model );
+              
               iso.arrange();
               iso.layout();
             }, 50);
@@ -196,17 +197,18 @@ export default function initModels() {
       if(scrolled > el_off) {
         $('html, body').animate({scrollTop: el_off}, 300);
         el_input.focus();
-        return false;
+        busy = true;
       } else {
         $(el_scroll).removeClass('active');
-        return false;
+        busy = false;
       }
     } else {
       $(el_scroll).addClass('active');
       $('html, body').animate({scrollTop: el_off}, 300);
       el_input.focus();
-      return false;
+      busy = true;
     }
+    console.log(busy);
   });
 
   

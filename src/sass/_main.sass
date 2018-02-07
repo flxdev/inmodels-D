@@ -66,20 +66,24 @@
 				color: $link-color
 				margin: 20px 0
 
-.form-success
+.block-success
 	width: 100%
 	max-width: 520px
+	display: none
 	&__title
 		margin-bottom: 20px
 	&__msg
 		margin-bottom: 50px
 
+
 .models-page
+	border-bottom: 1px solid transparent
 	.models-wrap
 		font-size: 0
 		margin: 0 -5px
 		position: relative
 		padding-top: 30px
+		padding-bottom: 40px
 		.stamp-models
 			position: absolute
 			width: 23%
@@ -102,6 +106,7 @@
 			position: relative
 			margin: 5px
 			font-size: 0
+			overflow: hidden
 			&__title
 				color: #ffffff
 				font-size: 36px
@@ -128,12 +133,18 @@
 				background-color: rgba($color, .5)
 				opacity: 0
 				transition: opacity .4s
-				&:hover
+			img
+				transition: transform .4s
+			&:hover 
+				.models-item__info
 					opacity: 1
-					.models-item__title
-						opacity: 1
-						transition: transform .3s .2s, opacity .2s .2s
-						transform: none
+				.models-item__title
+					opacity: 1
+					transition: transform .3s .2s, opacity .2s .2s
+					transform: none
+				img
+					transform: scale(1.03)
+					
 			&.hide-model
 				border: 1px solid red
 			.hide-wrap-model
@@ -154,6 +165,7 @@
 
 .gallery-page
 	padding-top: 110px
+	border-bottom: 1px solid transparent
 	&__title
 		font-size: 50px
 	&__footer
@@ -169,6 +181,10 @@
 			display: inline-block
 			padding: 5px
 			background-color: transparent
+			font-size: 15px
+			line-height: 2
+			letter-spacing: normal
+			color: $color
 			&:not(:first-child)
 				margin-left: 5.5%
 	.gallery-wrap
@@ -236,7 +252,7 @@
 					opacity: 1
 					.gallery-item__date
 						opacity: 1
-						transition: transform .4s .6s, opacity .2s .6s
+						transition: transform .3s .2s, opacity .2s .2s
 						transform: none
 					.gallery-item__title
 						opacity: 1
@@ -244,13 +260,14 @@
 						transform: none
 					.gallery-item__short
 						opacity: 1
-						transition: transform .3s .3s, opacity .2s .3s
+						transition: transform .4s .3s, opacity .3s .3s
 						transform: none
 
 .gallery-news
 	.main
 		padding-left: 0
-		padding-bottom: 380px
+		padding-bottom: 20px
+		padding-right: 80px
 	&-title
 		margin-bottom: 40px
 		letter-spacing: normal
@@ -263,7 +280,10 @@
 		margin-bottom: 75px
 		text-transform: uppercase
 	&-description
-		margin-bottom: 50px
+		margin-bottom: 30px
+		.text-big
+			font-weight: normal
+			line-height: 1.54
 	&-content
 		width: 100%
 		max-width: 720px
@@ -277,12 +297,13 @@
 		text-align: left
 		margin-left: auto
 		position: absolute
-		bottom: 130px
+		bottom: 35px
 		left: 0
 		opacity: 0
 		transform: translateY(40px)
-		transition: opacity .3s .4s, transform .4s .4s
-		&.animate
+		transition: opacity .3s 3s, transform .4s 3s
+		z-index: 4
+		&.visible
 			opacity: 1
 			transform: none
 
@@ -333,16 +354,27 @@
 	&__row
 		display: flex
 		align-items: flex-end
+		+r(1150)
+			align-items: flex-start
 	&__cell
 		position: relative
 		width: 50%
 		display: inline-block
 		h1
 			position: absolute
-			top: 45px
+			top: 25px
 			left: 40px
 			text-align: left
 			z-index: 2
+			// &:before
+			// 	content: ''
+			// 	display: block
+			// 	position: absolute
+			// 	top: 9px
+			// 	right: -350px
+			// 	height: 1px
+			// 	width: 130%
+			// 	background: red
 		img
 			max-width: 480px
 		&.cell-title
@@ -378,6 +410,13 @@
 		.sub-title--offset
 			margin-top: 110px
 			margin-bottom: 30px
+	&__slide
+		height: 100%
+		img
+			width: auto
+			height: 100%
+			object-fit: cover
+
 	&__slider
 		font-size: 20px
 		width: 100%
@@ -406,6 +445,14 @@
 				margin-top: 53px
 				padding-left: 23px
 				padding-right: 23px
+			+r(1200)
+				padding: 50px 40px 40px 40px
+				right: -50px
+				bottom: -55px
+				left: auto
+				top: auto
+				.bttn
+					margin-top: 35px
 		& .swiper-wrapper
 			padding-bottom: 30px
 		& .swiper-slide
@@ -438,9 +485,19 @@
 					position: absolute
 					top: 50%
 					left: 0
+		.swiper-button-prev,
+		.swiper-button-next
+			background: transparent
+			width: 35%
+			height: 96%
+			transform: translateY(-50%)
+		.swiper-button-next
+			right: 0
+		.swiper-button-prev
+			left: 0
 .about	
 	.link-footer
-		margin: 175px 0
+		margin: 40px 0
 		padding: 0 6.66%
 		&-inner
 			display: flex
@@ -451,6 +508,12 @@
 			&.animate
 				opacity: 1
 				transform: none
+			& > a
+				display: block
+				width: 30%
+				padding: 60px 0
+				text-align: center
+
 
 .line-decor
 	display: block
@@ -483,6 +546,9 @@
 		width: 47%
 		display: block
 		position: relative
+		opacity: 0
+		transform: translateX(20px)
+		transition: opacity .1s .0s, transform .0s .1s
 		&-wrap
 			transform: rotate(-90deg)
 			width: 100%
@@ -501,28 +567,53 @@
 		display: flex
 		flex-direction: column
 		&__item
+			display: inline-block
+			width: 70%
+			opacity: 0
+			transform: translateX(20px)
+			transition: opacity .1s .0s, transform .0s .1s
 			&:not(:last-child)
 				margin-bottom: 25px
-		// @for $i from 1 to 10
-		// 	.inner-info__item:nth-child(n+#{$i})
-		// 		opacity: 1
-		// 		transform: none
-		// 		transition: opacity .3s, transform .4s
-		// 		transition-delay: 0.2s * $i
+		
 		&__title,
 		&__desc
 			line-height: 1.33
 		&__link
+			display: inline-block
+			width: 60%
 			margin-top: auto
 			margin-bottom: 0
+			opacity: 0
+			transform: translateX(20px)
+			transition: opacity .1s .0s, transform .0s .1s
 			a
 				display: block
 				margin-top: 15px
-
+	&-wrap
+		display: flex
+		&.active
+			@for $i from 1 to 10
+				.inner-info__item:nth-child(n+#{$i})
+					opacity: 1
+					transform: none
+					transition: opacity .3s, transform .4s
+					transition-delay: 0.2s * $i
+			.inner-title
+				opacity: 1
+				transform: none
+				transition: opacity .3s, transform .4s
+				transition-delay: .5s
+			.inner-info__link
+				opacity: 1
+				transform: none
+				transition: opacity .3s, transform .4s
+				transition-delay: .5s
 /* swiper */
 .inner-slider
 	height: 100%
 	padding-bottom: 120px
+	+r(1200)
+		padding-top: 40px
 	.navigation-link
 		bottom: 29px
 		right: 31px
@@ -536,20 +627,23 @@
 				color: #fff 
 				&:after
 					background: #fff !important
+		+r(1200)
+			top: 0
+			bottom: auto
 	.navigation-link-wrap:hover .navigation-link__item:first-child:not(:hover):after
 		background: #fff !important
 	.swiper-wrapper
 		height: 100%
+		margin-left: 20px
+		-moz-transform-style: preserve-3d
 		// cursor: move
 		// cursor: -webkit-grab;
 		// cursor: -moz-grab;
 		// cursor: grab;
-		-moz-transform-style: preserve-3d
-		&:active,&:focus
-			// cursor: -webkit-grabbing;
-			// cursor: -moz-grabbing;
-			// cursor:  grabbing;
-
+		// &:active,&:focus
+		// 	// cursor: -webkit-grabbing;
+		// 	// cursor: -moz-grabbing;
+		// 	// cursor:  grabbing;
 		.swiper-slide
 			height: 100%
 			width: auto !important
@@ -561,6 +655,7 @@
 				width: 250px !important
 			.item
 				height: 100%
+				cursor: pointer
 			img
 				height: 100%
 				width: auto !important
@@ -671,5 +766,4 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete.lg-current 
 		margin-bottom: 34px
 	&-message
 		width: 100%
-
 

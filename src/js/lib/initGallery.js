@@ -82,8 +82,8 @@ export default function initGallery() {
             for (var i = 0, len = h_gallery.length; i<len; i++) {
               elem.appendChild(h_gallery[i]).classList.remove('hide-gallery');
             }
+            iso.appended( h_gallery );
             setTimeout(function() {
-              iso.appended( h_gallery );
               iso.arrange();
               iso.layout();
             }, 50);

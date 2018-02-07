@@ -44,5 +44,4 @@ export default function formValidator() {
       currentElementParentObject.find('.form-error').remove();
     }
   }
-
 }

@@ -115,7 +115,7 @@ var BarbaWitget = {
               
               tlIn
                 .set(blockContent, {
-                  y: 150,
+                  // y: 150,
                   autoAlpha: 0,
                 })
                 .to(window.DOM.pageLoaderB, 0.4, {
@@ -218,6 +218,7 @@ var galleryNews = Barba.BaseView.extend({
   },
   onEnterCompleted: function() {
   	window.DOM.headerLinks.addClass('show-header-links');
+    $('.gallery-news-footer').addClass('visible');
 
     youtubeVideo();
     stickInit();
@@ -226,6 +227,7 @@ var galleryNews = Barba.BaseView.extend({
   },
   onLeave: function() {
     window.DOM.headerLinks.removeClass('show-header-links');
+    $('.gallery-news-footer').removeClass('visible');
 
   },
   onLeaveComplete: function() {
@@ -273,13 +275,16 @@ var innerModel = Barba.BaseView.extend({
   namespace: 'inner-model',
   onEnter: function() {
   	window.DOM.navLogo.addClass('hide-nav-logo');
+    
   },
   onEnterCompleted: function() {
   	initInnerSlider();
   	youtubeVideo();
+    $('.inner-wrap').addClass('active');
   },
   onLeave: function() {
   	window.DOM.navLogo.removeClass('hide-nav-logo');
+    $('.inner-info').removeClass('active');
   },
   onLeaveComplete: function() {
   }
@@ -300,7 +305,12 @@ var error = Barba.BaseView.extend({
   }
 });
 
-$(document).ready(function() {
+// $(document).ready(function() {
+
+
+// });
+
+window.onload = () => {
   index.init();
   about.init();
   gallery.init();
@@ -311,8 +321,6 @@ $(document).ready(function() {
   error.init();
   initPopUp();
   BarbaWitget.init();
-  window.onload = () => {
-    scrollAnimations();
-    window.DOM.body.removeClass('loading');
-  };
-});
+  scrollAnimations();
+  window.DOM.body.removeClass('loading');
+};
