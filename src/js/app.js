@@ -74,6 +74,12 @@ var BarbaWitget = {
           tl.set(window.DOM.menu, {
             className: '+=hide-anim'
           });
+          tl.set(window.DOM.navLogo, {
+            className: '+=hide-anim'
+          });
+          tl.set(window.DOM.navLang, {
+            className: '+=hide-anim'
+          });
           this.delay = 1;
         } else {
           this.delay = 0;
@@ -84,13 +90,19 @@ var BarbaWitget = {
             delay: this.delay,
             className: '+=page-load'
           })
-          .to(window.DOM.pageLoaderW, 0.4, {
+          .to(window.DOM.pageLoaderW, 0.5, {
             scaleY: 1,
           })
           .set(window.DOM.menu, {
             className: '-=hide-anim'
           })
-          .to(window.DOM.pageLoaderB, 0.4, {
+          .set(window.DOM.navLogo, {
+            className: '-=hide-anim'
+          })
+          .set(window.DOM.navLang, {
+            className: '-=hide-anim'
+          })
+          .to(window.DOM.pageLoaderB, 0.6, {
             scaleY: 1,
           });
         return deferred.promise;
@@ -100,7 +112,8 @@ var BarbaWitget = {
         const _this = this;
         let newCont = $(this.newContainer);
         let oldCont = $(this.oldContainer);
-        let blockContent = newCont.find('.block-content');
+        let blockContent = newCont.find('.block-load');
+        let blockBg = newCont.find('.block__bg');
         window.scroll(0, 0);
         window.DOM.hideScroll();
         let tlIn = new TimelineMax();
@@ -115,25 +128,29 @@ var BarbaWitget = {
               
               tlIn
                 .set(blockContent, {
-                  // y: 150,
+                  y: 50,
                   autoAlpha: 0,
                 })
-                .to(window.DOM.pageLoaderB, 0.4, {
-                  scaleY: 0,
-                  transformOrigin:'top center',
-                  // clearProps:'all'
+                .set(blockBg, {
+                  y: -50,
+                  autoAlpha: 0,
                 })
                 .to(window.DOM.pageLoaderW, 0.4, {
                   scaleY: 0,
                   transformOrigin:'top center',
                   
                 })
+                .to(window.DOM.pageLoaderB, 0.4, {
+                  scaleY: 0,
+                  transformOrigin:'top center',
+                  // clearProps:'all'
+                })
+                
                 .to(blockContent, 0.5, {
                   y: 0,
                   autoAlpha: 1,
                   clearProps:'all',
                   onComplete: () => {
-
                     tlIn
                       .set(window.DOM.pageLoaderB, {
                         clearProps:'all'
@@ -146,7 +163,11 @@ var BarbaWitget = {
                       });
                     window.DOM.showScroll();
                   }
-                });
+                })
+                .to(blockBg, 0.5, {
+                  y: 0,
+                  autoAlpha: 1,
+                }, '-=0.2');
 
             }
           });

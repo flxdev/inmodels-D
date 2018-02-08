@@ -8,32 +8,33 @@ block content
 
 	.barba-container(data-namespace="gallery")
 		.block.bg-brend
-			.block-content
-				.gallery-page
-					h1.gallery-page__title gallery
-					.gallery-filter.js-isotope-filter
-						button.gallery-filter__item.no-barba(data-filter="*") #all
-						button.gallery-filter__item.no-barba(data-filter=".newface") #newface
-						button.gallery-filter__item.no-barba(data-filter=".shooting") #shooting
-						button.gallery-filter__item.no-barba(data-filter=".editorial") #editorial
-						button.gallery-filter__item.no-barba(data-filter=".campaign") #campaign
-						button.gallery-filter__item.no-barba(data-filter=".show") #show
-						button.gallery-filter__item.no-barba(data-filter=".video") #video
-						
-					.gallery-wrap.ajax-list
-						.stamp-gallery.stamp1
-						.stamp-gallery.stamp2
-						+gallery-item('gallery-1.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial video')
-						+gallery-item('gallery-2.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'newface campaign')
-						+gallery-item('gallery-3.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
-						+gallery-item('gallery-4.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'video show')
-						+gallery-item('gallery-5.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial')
-						+gallery-item('gallery-6.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
-						+gallery-item('gallery-7.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'newface editorial show')
-						+gallery-item('gallery-8.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
-						+gallery-item('gallery-1.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
-						+gallery-item('gallery-2.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'video show')
-						+gallery-item('gallery-3.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
-						+gallery-item('gallery-4.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
-						.ajax-pager-wrap.lazy.gallery-page__footer
-							a.link-big.ajax-pager-link.no-barba(href="gallery-add.html", data-wrapper-class="gallery-wrap") load more
+			.block-load
+				.block-content
+					.gallery-page
+						h1.gallery-page__title gallery
+						.gallery-filter.js-isotope-filter
+							button.gallery-filter__item.no-barba(data-filter="*") #all
+							button.gallery-filter__item.no-barba(data-filter=".newface") #newface
+							button.gallery-filter__item.no-barba(data-filter=".shooting") #shooting
+							button.gallery-filter__item.no-barba(data-filter=".editorial") #editorial
+							button.gallery-filter__item.no-barba(data-filter=".campaign") #campaign
+							button.gallery-filter__item.no-barba(data-filter=".show") #show
+							button.gallery-filter__item.no-barba(data-filter=".video") #video
+							
+						.gallery-wrap.ajax-list
+							.stamp-gallery.stamp1
+							.stamp-gallery.stamp2
+							+gallery-item('gallery-1.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial video')
+							+gallery-item('gallery-2.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'newface campaign')
+							+gallery-item('gallery-3.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
+							+gallery-item('gallery-4.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'video show')
+							+gallery-item('gallery-5.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial')
+							+gallery-item('gallery-6.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
+							+gallery-item('gallery-7.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'newface editorial show')
+							+gallery-item('gallery-8.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
+							+gallery-item('gallery-1.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
+							+gallery-item('gallery-2.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'video show')
+							+gallery-item('gallery-3.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'show shooting newface')
+							+gallery-item('gallery-4.jpg', '20 dec 2017', 'Sasha Pronenko', 'For POLOGEORGIS furs collections', 'editorial editorial campaign')
+							.ajax-pager-wrap.lazy.gallery-page__footer
+								a.link-big.ajax-pager-link.no-barba(href="gallery-add.html", data-wrapper-class="gallery-wrap") load more

@@ -8,88 +8,89 @@ block content
 
 	.barba-container(data-namespace="inner-model")
 		.block.-fullpage
-			.block-inner
-				.aside.bg-brend
-					.inner-wrap
-						.inner-title
-							.inner-title-wrap
-								h1 Anastasia Viartsiukhova
-						.inner-info
-							.inner-info-wrap
-								.inner-info__item
-									.inner-info__title.sub-title Height
-									.inner-info__desc.text 178
-								.inner-info__item
-									.inner-info__title.sub-title Bust
-									.inner-info__desc.text 80
-								.inner-info__item
-									.inner-info__title.sub-title Waist
-									.inner-info__desc.text 60
-								.inner-info__item
-									.inner-info__title.sub-title Hips
-									.inner-info__desc.text 88
-								.inner-info__item
-									.inner-info__title.sub-title Shoe size
-									.inner-info__desc.text 40
-								.inner-info__item
-									.inner-info__title.sub-title Hair color
-									.inner-info__desc.text brown
-								.inner-info__item
-									.inner-info__title.sub-title Eye color
-									.inner-info__desc.text green-gray
-							.inner-info__link
-								a(href="").link-menu Instagram
-								a(href="").link-menu Facebook
-				.main.bg-dark
-					.swiper-container.inner-slider
-						.swiper-wrapper
-							.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
-								.item(data-src="img/anastasia-1-big.jpg")
-									img(src="img/anastasia-1.jpg", alt="")
-							.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
-								.item(data-src="img/anastasia-2-big.jpg")
-									img(src="img/anastasia-2.jpg", alt="")
-							.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
-								.item(data-src="img/anastasia-1-big.jpg")
-									img(src="img/anastasia-1.jpg", alt="")
-							.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
-								.item(data-src="img/gallery-2.jpg")
-									img(src="img/gallery-2.jpg", alt="")
-							.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
-								.item(data-src="img/gallery-4.jpg")
-									img(src="img/gallery-4.jpg", alt="")
-							.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
-								.item(data-src="img/gallery-7.jpg")
-									img(src="img/gallery-7.jpg", alt="")
-							.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
-								.item(data-src="img/anastasia-2-big.jpg")
-									img(src="img/anastasia-2.jpg", alt="")
-							.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
-								.item(data-src="img/anastasia-1-big.jpg")
-									img(src="img/anastasia-1.jpg", alt="")
-							.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
-								.item(data-src="img/anastasia-2-big.jpg")
-									img(src="img/anastasia-2.jpg", alt="")
-							.swiper-slide.swiper-slide-video(data-link="video-bttn")
-								.youtube(data-embed='VLP4UqTDgwY')
-									.play-button
-										.play-button-icon
-							.swiper-slide.swiper-slide-video(data-link="video-bttn")
-								.youtube(data-embed='VLP4UqTDgwY')
-									.play-button
-										.play-button-icon
-							.swiper-slide.swiper-slide-social(data-link="social-bttn")
-								+share-block
-							//должен всегда быть пустым и последним
-							//- .swiper-slide.slide-placeholder
-						.swiper-scrollbar
-						.swiper-navigation
-							.slide-target(data-slide="portfolio-bttn") portfolio
-							.slide-target(data-slide="editorial-bttn") editorial
-							.slide-target(data-slide="polaroids-bttn") polaroids
-							.slide-target(data-slide="video-bttn") video
-							.slide-target(data-slide="social-bttn") social
-						.navigation-link
-							.navigation-link-wrap
-								a.navigation-link__item(href="3-0-inner-p.html") Previous
-								a.navigation-link__item(href="3-0-inner-n.html") Next
+			.block-load
+				.block-inner
+					.aside.bg-brend
+						.inner-wrap
+							.inner-title
+								.inner-title-wrap
+									h1 Anastasia Viartsiukhova
+							.inner-info
+								.inner-info-wrap
+									.inner-info__item
+										.inner-info__title.sub-title Height
+										.inner-info__desc.text 178
+									.inner-info__item
+										.inner-info__title.sub-title Bust
+										.inner-info__desc.text 80
+									.inner-info__item
+										.inner-info__title.sub-title Waist
+										.inner-info__desc.text 60
+									.inner-info__item
+										.inner-info__title.sub-title Hips
+										.inner-info__desc.text 88
+									.inner-info__item
+										.inner-info__title.sub-title Shoe size
+										.inner-info__desc.text 40
+									.inner-info__item
+										.inner-info__title.sub-title Hair color
+										.inner-info__desc.text brown
+									.inner-info__item
+										.inner-info__title.sub-title Eye color
+										.inner-info__desc.text green-gray
+								.inner-info__link
+									a(href="").link-menu Instagram
+									a(href="").link-menu Facebook
+					.main.bg-dark
+						.swiper-container.inner-slider
+							.swiper-wrapper
+								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+									.item(data-src="img/anastasia-1-big.jpg")
+										img(src="img/anastasia-1.jpg", alt="")
+								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+									.item(data-src="img/anastasia-2-big.jpg")
+										img(src="img/anastasia-2.jpg", alt="")
+								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+									.item(data-src="img/anastasia-1-big.jpg")
+										img(src="img/anastasia-1.jpg", alt="")
+								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+									.item(data-src="img/gallery-2.jpg")
+										img(src="img/gallery-2.jpg", alt="")
+								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+									.item(data-src="img/gallery-4.jpg")
+										img(src="img/gallery-4.jpg", alt="")
+								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+									.item(data-src="img/gallery-7.jpg")
+										img(src="img/gallery-7.jpg", alt="")
+								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+									.item(data-src="img/anastasia-2-big.jpg")
+										img(src="img/anastasia-2.jpg", alt="")
+								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+									.item(data-src="img/anastasia-1-big.jpg")
+										img(src="img/anastasia-1.jpg", alt="")
+								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+									.item(data-src="img/anastasia-2-big.jpg")
+										img(src="img/anastasia-2.jpg", alt="")
+								.swiper-slide.swiper-slide-video(data-link="video-bttn")
+									.youtube(data-embed='VLP4UqTDgwY')
+										.play-button
+											.play-button-icon
+								.swiper-slide.swiper-slide-video(data-link="video-bttn")
+									.youtube(data-embed='VLP4UqTDgwY')
+										.play-button
+											.play-button-icon
+								.swiper-slide.swiper-slide-social(data-link="social-bttn")
+									+share-block
+								//должен всегда быть пустым и последним
+								//- .swiper-slide.slide-placeholder
+							.swiper-scrollbar
+							.swiper-navigation
+								.slide-target(data-slide="portfolio-bttn") portfolio
+								.slide-target(data-slide="editorial-bttn") editorial
+								.slide-target(data-slide="polaroids-bttn") polaroids
+								.slide-target(data-slide="video-bttn") video
+								.slide-target(data-slide="social-bttn") social
+							.navigation-link
+								.navigation-link-wrap
+									a.navigation-link__item(href="3-0-inner-p.html") Previous
+									a.navigation-link__item(href="3-0-inner-n.html") Next

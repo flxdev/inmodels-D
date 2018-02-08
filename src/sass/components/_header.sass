@@ -54,6 +54,10 @@
 		transform-origin: 100% 0
 		opacity: 0
 		transition: transform .3s .1s, opacity .3s .1s, visibility 0s .3s
+		&.visible-lang
+			visibility: visible
+			opacity: 1
+			transform: none
 
 	&-logo
 		display: block
@@ -68,6 +72,7 @@
 		color: $color !important
 		// color: #000 
 		mix-blend-mode: difference
+		transition: opacity .3s, transform .3s, visibility 0s .3s
 		&.hide-nav-logo
 			opacity: 0
 			transform: translateX(-25px)
@@ -180,11 +185,22 @@
 			opacity: 0
 			transform: translateX(-25px)
 			transition: opacity .2s 0s, transform .2s 0s, visibility 0s .3s
-
-
-				
-.show-menu .navigation-lang, .navigation-lang.visible-lang
-	visibility: visible
-	opacity: 1
-	transform: none
-	transition: transform .3s .15s, opacity .3s .15s, visibility 0s .1s
+		&-logo
+			visibility: visible
+			opacity: 1
+			transform: none
+			transition: opacity .3s, transform .3s, visibility 0s
+			&.hide-anim
+				opacity: 0
+				transform: translateX(-25px)
+				visibility: hidden
+				transition: opacity .3s, transform .3s, visibility 0s .3s
+		&-lang
+			visibility: visible
+			opacity: 1
+			transform: none
+			transition: transform .3s .15s, opacity .3s .15s, visibility 0s .1s
+			&.hide-anim
+				transform: translateX(20px)
+				opacity: 0
+				transition: transform .3s .1s, opacity .3s .1s, visibility 0s .3s

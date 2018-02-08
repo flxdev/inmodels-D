@@ -8,30 +8,31 @@ block content
 
 	.barba-container(data-namespace="gallery-news")
 		.block.bg-brend.gallery-news
-			.block-grid
-				.aside
-					.aside-content-wrap.js-stick-parent
-						.aside-content.js-stick
-							.gallery-news-title
-								h1 Sasha Pronenko
-							.gallery-news-date 20 dec 2017
-							.gallery-news-description 
-								.text-big Sasha Pronenko for POLOGEORGIS furs collections
-							.gallery-news-info
-								p.text Model:
-									a(href="#") Sasha Pronenko
-								p.text Designer: Sveta Pantelу
-								p.text Brand: POLOGEORGIS
-							.gallery-news-footer
-								a.link-big(href="/5-0-gallery.html") back to gallery
-				.main
-					.main-content
-						.gallery-news-content
-							img(src="img/gal-news-1.jpg", alt="gallery news")
-							img(src="img/gal-news-2.jpg", alt="gallery news")
-							img(src="img/gal-news-3.jpg", alt="gallery news")
-							.youtube(data-embed='VLP4UqTDgwY')
-								.play-button
-									.play-button-icon
-							+share-block
+			.block-load
+				.block-grid
+					.aside
+						.aside-content-wrap.js-stick-parent
+							.aside-content.js-stick
+								.gallery-news-title
+									h1 Sasha Pronenko
+								.gallery-news-date 20 dec 2017
+								.gallery-news-description 
+									.text-big Sasha Pronenko for POLOGEORGIS furs collections
+								.gallery-news-info
+									p.text Model:
+										a(href="#") Sasha Pronenko
+									p.text Designer: Sveta Pantelу
+									p.text Brand: POLOGEORGIS
+								.gallery-news-footer
+									a.link-big(href="/5-0-gallery.html") back to gallery
+					.main
+						.main-content
+							.gallery-news-content
+								img(src="img/gal-news-1.jpg", alt="gallery news")
+								img(src="img/gal-news-2.jpg", alt="gallery news")
+								img(src="img/gal-news-3.jpg", alt="gallery news")
+								.youtube(data-embed='VLP4UqTDgwY')
+									.play-button
+										.play-button-icon
+								+share-block
 
