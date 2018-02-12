@@ -79,7 +79,7 @@ export default function setInputFocus() {
         $('form').fadeOut(400);
         $('.block-success').delay(450).fadeIn(400);
       }
-    }, 50);
+    }, 100);
 
     
   });
