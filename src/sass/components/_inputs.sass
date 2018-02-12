@@ -34,7 +34,7 @@
 	&-item
 		display: inline-block
 		width: 100%
-		font-size: 20px
+		font-size: 0
 		line-height: 1
 		font-weight: 300
 		border-bottom: 1px solid $hover-color
@@ -79,14 +79,21 @@
 			&:after
 				content: ' *'
 		.input-field
+			font-size: 20px
 			padding: 12px 10px
 			position: relative
 			z-index: 5
 			background-color: transparent
 			font-weight: 300
+			color: $color
 			&:focus ~ label
 				font-size: 15px
 				transform: translate(-10px, -40px)
+				transition-delay: 0s
+		textarea.input-field
+			&:focus ~ label
+				font-size: 15px
+				transform: translate(-10px, -35px)
 				transition-delay: 0s
 				
 		&.search-field
@@ -100,10 +107,12 @@
 			&::before
 				display: none
 			label
+				font-size: 26px
 				span
 					font-size: 40px
 					line-height: 26px
 			.input-field
+				font-size: 26px
 				padding: 3px 50px 14px 20px
 				&::-webkit-search-cancel-button
 					display: none
@@ -132,8 +141,8 @@
 					transition: font-size .15s 0s, transform .15s 0s, opacity .15s 0s ease-in, visibility 0s .2s
 		&.input-textarea
 			label
-				top: auto
-				bottom: 10px
+				top: 14px
+				bottom: auto
 		&.c2
 			width: 45.83%
 		&.c4
@@ -304,8 +313,8 @@
 			transform: none
 			transition-delay: 	.1s
 	&-label
+		font-size: 20px
 		cursor: text
-		font-size: inherit
 		line-height: inherit
 		position: absolute
 		bottom: 13px
@@ -342,8 +351,7 @@
 			opacity: 0
 	&.input-textarea
 		.help-block
-			bottom: auto
-			top: 0
+			top: -20px
 	&.drop-item.focus
 		.help-block
 			opacity: 1

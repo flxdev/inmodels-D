@@ -65,6 +65,7 @@ export default function initModels() {
     
 
     let clr_bttn = $('.clear-bttn').on('click', debounce( function() {
+      
       $('.clear-bttn').parent().removeClass('editing').find('input').val('').focus();
       let qsRegex = new RegExp( $quicksearch.val(), 'gi' );
       iso.arrange({
@@ -73,16 +74,22 @@ export default function initModels() {
         }
       });
       let searchField = document.querySelector('.form-search');
-      if(iso.filteredItems.length < 1) {
-        searchField.classList.add('not-found');
-        let searchFieldValue = $quicksearch.val();
-        $('.not-found-result').text('"' + searchFieldValue + '"');
-      } else {
-        searchField.classList.remove('not-found');
-      }
+      searchField.classList.remove('not-found');
+      $('.stamp-models').removeClass('hide-stamp re-stamp');
+      iso.stamp('.stamp-models');
       iso.arrange();
       iso.layout();
+
     }, 200 ));
+
+    $('.clear-bttn').on('click', function() {
+      let parent = $(this).parent(),
+        inpt = parent.find('input'),
+        inpt_val = inpt.val();
+      if(!inpt_val) {
+        $(this).parents('.active').removeClass('active');
+      }
+    });
     
     // debounce so filtering doesn't happen every millisecond
     function debounce( fn, threshold ) {

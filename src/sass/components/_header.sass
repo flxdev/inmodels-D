@@ -36,7 +36,25 @@
 			background-color: $color
 			transform: none
 			transition: transform .35s .6s ease-out
-
+		&.hide-nav-burger
+			visibility: hidden
+			transition: opacity 0s 0s, visibility 0s 0s
+	&-back
+		display: block
+		width: 20px
+		height: 20px
+		cursor: pointer
+		visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		transform: translateX(20px)
+		&.view-nav-back
+			opacity: 1
+			transform: none
+			visibility: visible
+			transition: opacity .3s 1.2s, transform .4s 1.2s, visibility 0s 1s
 		
 	&-lang
 		display: block
@@ -100,7 +118,7 @@
 		&__item
 			font-size: 12px
 		&:hover &__item
-			color: $link-color
+			color: rgba($link-color, .7)
 			-webkit-transform-style: preserve-3d
    			-webkit-backface-visibility: hidden
 		& &__item
@@ -128,6 +146,7 @@
 		&-wrap &__item
 			display: inline-block
 			position: relative
+			color: $color
 
 			&:first-child
 				padding-right: 60px

@@ -117,6 +117,7 @@ block content
 										.input-item.c2
 											input.input-field(
 												type="tel"
+												pattern=".+[0-9]"
 												id="model-phone"
 												)
 											label.input-label(for="model-email") Phone
@@ -175,34 +176,30 @@ block content
 									.input-row
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													input.input-field(
-														type="hidden"
-														id="photos"
-														data-validation="required"
-														data-validation-error-msg="required upload file"
-														)
-													.input-label Add photo face
+												span.drop-item__icon
+													+icon('cross')
+												input.input-field(
+													type="hidden"
+													id="photos"
+													data-validation="required"
+													data-validation-error-msg="required upload file"
+													)
+												.input-label Add photo face
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add profile photo
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add profile photo
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add photo 3/4
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add photo 3/4
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
-												.input-label
-													span.drop-item__icon
-														+icon('cross')
-													.input-label Add photo in full length
+												span.drop-item__icon
+													+icon('cross')
+												.input-label Add photo in full length
 										.input-item.input-textarea
 											textarea.input-field(
 												type="text"
