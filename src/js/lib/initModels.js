@@ -17,7 +17,7 @@ export default function initModels() {
       transitionDuration: '0.6s',
       hiddenStyle: {
         opacity: 0,
-        transform: 'translateY(40px)'
+        transform: 'translateY(25px)'
       },
       visibleStyle: {
         opacity: 1,
@@ -141,11 +141,11 @@ export default function initModels() {
         if($wrapper.length) {
           container.addClass(loadingClass);
           $.get($link.attr('href'), {'AJAX_PAGE' : 'Y'}, function(data) {
-            // if(isHistoryApiAvailable()) {
-            //   if($link.attr('href') !== window.location) {
-            //     window.history.pushState(null, null, $link.attr('href'));
-            //   }
-            // }
+            if(isHistoryApiAvailable()) {
+              if($link.attr('href') !== window.location) {
+                window.history.pushState(null, null, $link.attr('href'));
+              }
+            }
             
             $('.' + ajaxPagerWrapClass).remove();
             container.append(data);
@@ -155,12 +155,10 @@ export default function initModels() {
               elem.appendChild(h_model[i]).classList.remove('hide-model');
             }
             iso.appended( h_model );
-            console.log('add models');
-            setTimeout(function() {
-              
+            setTimeout(function() {            
               iso.arrange();
               iso.layout();
-            }, 50);
+            }, 70);
             
 
             if($('.' + ajaxPagerWrapClass).hasClass(ajaxPagerLazyClass)) {
@@ -173,7 +171,7 @@ export default function initModels() {
         }
       };
 
-    // function isHistoryApiAvailable() {return!(!window.history||!history.pushState);}
+    function isHistoryApiAvailable() {return!(!window.history||!history.pushState);}
 
     $(function() {
     

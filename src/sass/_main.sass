@@ -611,7 +611,9 @@
 /* swiper */
 .inner-slider
 	height: 100%
+	width: 100%
 	padding-bottom: 120px
+	padding-right: 20px !important
 	+r(1200)
 		padding-top: 40px
 	.navigation-link
@@ -634,34 +636,23 @@
 		background: #fff !important
 	.swiper-wrapper
 		height: 100%
+		width: 100%
 		margin-left: 20px
 		-moz-transform-style: preserve-3d
-		// cursor: move
-		// cursor: -webkit-grab;
-		// cursor: -moz-grab;
-		// cursor: grab;
-		// &:active,&:focus
-		// 	// cursor: -webkit-grabbing;
-		// 	// cursor: -moz-grabbing;
-		// 	// cursor:  grabbing;
 		.swiper-slide
 			height: 100%
-			width: auto !important
+			width: auto
 			// max-width: 450px
 			overflow: hidden
-			margin-right: 20px
-			&.slide-placeholder
-				margin-right: 0 !important
-				width: 250px !important
 			.item
 				height: 100%
 				cursor: pointer
 			img
 				height: 100%
-				width: auto !important
+				width: auto 
 				object-fit: cover
 			&.swiper-slide-video
-				width: 100%	!important
+				width: 100%	
 				max-width: 80%
 				background-color: #000000
 				+vertical
@@ -670,17 +661,23 @@
 					display: inline-block
 					vertical-align: middle
 			&.swiper-slide-social
-				margin-right: 40px
-				max-width: 60%
+				width: 100% 
+				max-width: 30%
+				margin-right: 20px !important
 				display: flex
 				.share-block
 					display: flex
 					flex-direction: column
 					width: 100%
+					padding: 80px 40px
 					&__link
 						margin: 0
 					&__bttn
 						margin: auto 0 0 0
+				+r(1400)
+					max-width: 35%
+				+r(1200)
+					max-width: 45%
 	&.swiper-container-horizontal
 		& >.swiper-scrollbar
 			bottom: 70px

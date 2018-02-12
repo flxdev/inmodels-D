@@ -13,14 +13,12 @@ export default function initInnerSlider() {
 
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
-      direction: 'horizontal',
+      // direction: 'horizontal',
       spaceBetween: 20,
       freeMode: true,
-      freeModeMomentumBounce: false,
-      pagination: false,
+      // pagination: false,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      // slidesOffsetAfter: 500,
       on: {
         init: function() {
           pagiTriggers.first().addClass('active');
