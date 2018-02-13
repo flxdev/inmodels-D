@@ -89,7 +89,7 @@
 		transform: none
 		color: $color !important
 		// color: #000 
-		mix-blend-mode: difference
+		-mos-transform-style: preserve-3d
 		transition: opacity .3s, transform .3s, visibility 0s .3s
 		&.hide-nav-logo
 			opacity: 0
@@ -117,14 +117,13 @@
 		z-index: 2
 		&__item
 			font-size: 12px
-		&:hover &__item
-			color: rgba($link-color, .7)
-			-webkit-transform-style: preserve-3d
-   			-webkit-backface-visibility: hidden
+		// &:hover &__item
+		// 	color: rgba($link-color, .7)
+		// 	-webkit-transform-style: preserve-3d
+  //  			-webkit-backface-visibility: hidden
 		& &__item
 			color: $color
-			&:hover
-				color: $color
+			
 		& > *:not(:first-child)
 			margin-left: 40px
 		&-wrap
@@ -133,6 +132,9 @@
 			+clr
 			&:hover
 				.navigation-link__item
+					color: rgba($link-color, .7)
+					-webkit-transform-style: preserve-3d
+		   			-webkit-backface-visibility: hidden
 					&:first-child
 						&:hover
 							&::after
@@ -142,6 +144,9 @@
 							&::after
 								background-color: $color
 								transform: translateX(25px) scaleX(.9)
+			& .navigation-link__item
+				&:hover
+					color: $color
 							
 		&-wrap &__item
 			display: inline-block

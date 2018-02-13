@@ -85,30 +85,51 @@ var BarbaWitget = {
             className: '+=hide-anim'
           });
           this.delay = 1;
+          tl
+            .set(window.DOM.pageLoader, {
+              delay: this.delay,
+              className: '+=page-load'
+            })
+            .to(window.DOM.pageLoaderW, 0.5, {
+              scaleY: 1,
+            })
+            .set(window.DOM.menu, {
+              className: '-=hide-anim'
+            })
+            .set(window.DOM.navLogo, {
+              className: '-=hide-anim'
+            })
+            .set(window.DOM.navLang, {
+              className: '-=hide-anim'
+            })
+            .to(window.DOM.pageLoaderB, 0.6, {
+              scaleY: 1,
+            });
         } else {
           this.delay = 0;
+          tl
+            .set(window.DOM.pageLoader, {
+              delay: this.delay,
+              className: '+=page-load'
+            })
+          // .to(window.DOM.pageLoaderW, 0.5, {
+          //   scaleY: 1,
+          // })
+            .set(window.DOM.menu, {
+              className: '-=hide-anim'
+            })
+            .set(window.DOM.navLogo, {
+              className: '-=hide-anim'
+            })
+            .set(window.DOM.navLang, {
+              className: '-=hide-anim'
+            })
+            .to(window.DOM.pageLoaderB, 0.6, {
+              scaleY: 1,
+            });
         }
 
-        tl
-          .set(window.DOM.pageLoader, {
-            delay: this.delay,
-            className: '+=page-load'
-          })
-          .to(window.DOM.pageLoaderW, 0.5, {
-            scaleY: 1,
-          })
-          .set(window.DOM.menu, {
-            className: '-=hide-anim'
-          })
-          .set(window.DOM.navLogo, {
-            className: '-=hide-anim'
-          })
-          .set(window.DOM.navLang, {
-            className: '-=hide-anim'
-          })
-          .to(window.DOM.pageLoaderB, 0.6, {
-            scaleY: 1,
-          });
+        
         return deferred.promise;
       },
 
@@ -171,7 +192,7 @@ var BarbaWitget = {
                 .to(blockBg, 0.5, {
                   y: 0,
                   autoAlpha: 1,
-                }, '-=0.2');
+                }, '+=0.4');
 
             }
           });

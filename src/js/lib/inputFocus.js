@@ -68,11 +68,21 @@ export default function setInputFocus() {
   // });
   
   $('input[type="tel"]').on('click', function() {
-    $(this).val('+');
+    let i_val =  $(this).val();
+    if(!i_val) {
+      $(this).val('+');
+    }
+  });
+
+  $('input[type="tel"]').on('blur', function() {
+    let i_val =  $(this).val();
+    console.log(i_val);
+    if(i_val === '+') {
+      $(this).val('');
+    }
   });
   
   $('button[type="submit"]').on('click', function() {
-    let error_l;
     setTimeout(function() {
       let error_l = $('.error').length;
       if(!error_l) {
