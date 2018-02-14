@@ -49,7 +49,7 @@ mixin models-item(img, name, add_class)
 mixin search-block
 	.search-block#search-block
 		.form-search
-			form
+			form(novalidate='')
 				.input-item.search-field
 					input.input-field(type="search" id="searching")
 					label.input-label(for="searching")

@@ -72,6 +72,9 @@
 				font-size: 15px
 				transform: translate(-10px, -40px)
 				transition-delay: 0s
+			textarea.input-field
+				label
+					transform: translate(-10px, -34px)
 		input[data-validation] + *
 			&:after
 				content: ' *'
@@ -79,6 +82,8 @@
 			&:after
 				content: ' *'
 		.input-field
+			font-family: $font-family
+			color: $color
 			font-size: 20px
 			padding: 12px 10px
 			position: relative
@@ -93,7 +98,7 @@
 		textarea.input-field
 			&:focus ~ label
 				font-size: 15px
-				transform: translate(-10px, -35px)
+				transform: translate(-10px, -34px)
 				transition-delay: 0s
 				
 		&.search-field
@@ -143,6 +148,12 @@
 			label
 				top: 14px
 				bottom: auto
+			&.editing
+				label
+					font-size: 15px
+					transform: translate(-10px, -34px)
+					transition-delay: 0s
+
 		&.c2
 			width: 45.83%
 		&.c4

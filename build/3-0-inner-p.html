@@ -19,290 +19,292 @@
     <link rel="stylesheet" media="all" href="css/app.css">
   </head>
   <body class="loading">
-    <script type="text/javascript">
-      ! function(e)
-      {
-        function t(o)
+    <div class="scrollbar-inner">
+      <script type="text/javascript">
+        ! function(e)
         {
-          if (n[o]) return n[o].exports;
-          var c = n[o] = {
-            exports:
-            {},
-            id: o,
-            loaded: !1
-          };
-          return e[o].call(c.exports, c, c.exports, t), c.loaded = !0, c.exports
-        }
-        var n = {};
-        return t.m = e, t.c = n, t.p = "/assets/", t(0)
-      }(
-      {
-        0: function(e, t, n)
-        {
-          n(18), n(19)
-        },
-        18: function(e, t)
-        {
-          ! function()
+          function t(o)
           {
-            "use strict";
-
-            function e(e, t, n)
+            if (n[o]) return n[o].exports;
+            var c = n[o] = {
+              exports:
+              {},
+              id: o,
+              loaded: !1
+            };
+            return e[o].call(c.exports, c, c.exports, t), c.loaded = !0, c.exports
+          }
+          var n = {};
+          return t.m = e, t.c = n, t.p = "/assets/", t(0)
+        }(
+        {
+          0: function(e, t, n)
+          {
+            n(18), n(19)
+          },
+          18: function(e, t)
+          {
+            ! function()
             {
-              e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-            }
+              "use strict";
 
-            function t(e)
-            {
-              return window.localStorage && localStorage.font_css_cache
-            }
+              function e(e, t, n)
+              {
+                e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+              }
 
-            function n()
-            {
-              if (window.localStorage && window.XMLHttpRequest)
-                if (t(c)) o(localStorage.font_css_cache);
+              function t(e)
+              {
+                return window.localStorage && localStorage.font_css_cache
+              }
+
+              function n()
+              {
+                if (window.localStorage && window.XMLHttpRequest)
+                  if (t(c)) o(localStorage.font_css_cache);
+                  else
+                  {
+                    var e = new XMLHttpRequest;
+                    e.open("GET", c, !0), e.onreadystatechange = function()
+                    {
+                      4 === e.readyState && (o(e.responseText), localStorage.font_css_cache = e.responseText, localStorage.font_css_cache_file = c)
+                    }, e.send()
+                  }
                 else
                 {
-                  var e = new XMLHttpRequest;
-                  e.open("GET", c, !0), e.onreadystatechange = function()
-                  {
-                    4 === e.readyState && (o(e.responseText), localStorage.font_css_cache = e.responseText, localStorage.font_css_cache_file = c)
-                  }, e.send()
+                  var n = document.createElement("link");
+                  n.href = c, n.rel = "stylesheet", n.type = "text/css", document.getElementsByTagName("head")[0].appendChild(n), document.cookie = "font_css_cache"
                 }
-              else
-              {
-                var n = document.createElement("link");
-                n.href = c, n.rel = "stylesheet", n.type = "text/css", document.getElementsByTagName("head")[0].appendChild(n), document.cookie = "font_css_cache"
               }
-            }
 
-            function o(e)
-            {
-              var t = document.createElement("style");
-              t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
-            }
-            var c = window.fonts_href || "../css/font.css";
-            window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
-          }()
-        },
-        19: function(e, t) {}
-      });
+              function o(e)
+              {
+                var t = document.createElement("style");
+                t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
+              }
+              var c = window.fonts_href || "../css/font.css";
+              window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
+            }()
+          },
+          19: function(e, t) {}
+        });
 
-    </script>
-    <div class="svg-defs-container" style="display: none;">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <symbol id="back" viewBox="0 0 20 19.97">
-          <path fill="#4c4644" d="M1.42 11.42l8.6 8.59 1.41-1.41-7.59-7.59h16.18v-2H3.84l7.6-7.6-1.42-1.4-10 10 1.4 1.42z" />
-        </symbol>
-        <symbol id="carret" viewBox="0 0 16 8.98">
-          <path fill="currentcolor" d="M8 0L0 8.21l.75.77L8 1.54l7.25 7.44.75-.77L8 0z" data-name="UI Kit" />
-        </symbol>
-        <symbol id="cross-X" viewBox="0 0 22.63 21.92">
-          <title>cross-X</title>
-          <path d="M11.31 9.9L1.41 0 .7.71l9.9 9.9L0 21.21l.71.71 10.6-10.61 10.61 10.61.71-.71L12.02 10.6l9.9-9.9-.71-.71z" />
-        </symbol>
-        <symbol id="cross" viewBox="0 0 30 30">
-          <path fill="currentcolor" stroke="currentcolor" d="M16 14V0h-1v14H0v1h15v15h1V15h14v-1z" data-name="UI Kit" />
-        </symbol>
-        <symbol id="logo">
-          <path d="M15.2 3.3c-.6 0-1.2.1-1.7.3-1.7.9-2.5 2.7-3.5 4.3S7.6 11 4.9 11c-1.3 0-2.6-.5-3.6-1.4-1-1.1-1.4-2.5-1.3-4v-.1c0-2 .5-3.4 1.4-4.3C2.6.3 4.2-.1 5.8 0h1v3.3h-1c-1-.1-1.9.1-2.8.4-.6.4-1 1.1-1 1.8 0 1.7 1.2 2.2 2.6 2.2.6 0 1.2-.1 1.7-.3 1.5-.8 2.2-2.4 3.2-4C10.7 1.7 12.1 0 14.9 0c1.3 0 2.6.5 3.6 1.4.9 1.1 1.3 2.6 1.2 4v.1c0 2-.5 3.4-1.4 4.3-1.3.9-2.8 1.4-4.4 1.2h-1V7.8h1c1 .1 1.9-.1 2.8-.4.6-.4 1-1.1 1-1.8.1-1.7-1.1-2.2-2.5-2.3M.2 22v-3.3h17.3v-5.3h2.1V22H.2zm2.1 13.1H.2v-8.6h2.1v5.3h6.5v-5.3H11v5.3h6.5v-5.3h2.1v8.6H2.3zm15.9 5.7c-1.1-.9-2.5-1.3-3.9-1.2H5.5c-1.4-.1-2.8.3-3.9 1.2-.9.9-1.4 2.4-1.4 4.5v5.4h19.4v-5.4c0-2.2-.5-3.7-1.4-4.5zm-.4 6.5H2v-2.8c0-.9.7-1.7 1.6-1.7h12.6c.9 0 1.6.8 1.6 1.7v2.8zm.6 9c-1.3-.9-2.8-1.4-4.4-1.2H5.7c-1.6-.1-3.1.3-4.3 1.2-.9.9-1.4 2.3-1.4 4.3s.5 3.4 1.4 4.3c1.3.9 2.8 1.4 4.4 1.2H14c1.6.1 3.1-.3 4.4-1.2.9-.8 1.4-2.3 1.4-4.3s-.5-3.4-1.4-4.3zm-1.6 6.1c-.9.4-1.9.5-2.8.4H5.8c-1 .1-1.9 0-2.8-.4-.2-.1-.4-.3-.6-.6-.7-1-.4-2.4.6-3 .9-.4 1.9-.6 2.8-.5H14c1-.1 1.9.1 2.8.4.2.1.4.3.6.6.7 1 .4 2.4-.6 3.1zM.2 74.7v-4.1h19.4v3H5.3l14.2 3.7v2.9L5.3 84h14.3v3H.2v-4.1l15.6-4.1L.2 74.7zm0 19.7v-3h19.4v2.8l-13.2 6h13.2v3H.2v-2.8l13.2-6H.2zm19.4 17.4v-3.3H.2v3.3h19.4z"
-            class="st0" />
-        </symbol>
-        <symbol id="logo_flex" viewBox="0 0 20 112">
-          <title>logo</title>
-          <path d="M15.36 3.33a3.82 3.82 0 0 0-1.72.29c-1.64.89-2.47 2.7-3.53 4.28S7.64 11 4.92 11a5.39 5.39 0 0 1-3.67-1.41A5.65 5.65 0 0 1 0 5.6v-.11c0-2 .47-3.42 1.39-4.25A6.59 6.59 0 0 1 5.83 0h1v3.24h-1a6.46 6.46 0 0 0-2.89.43 2 2 0 0 0-1 1.81c0 1.64 1.28 2.18 2.69 2.18a3.82 3.82 0 0 0 1.72-.29C7.86 6.58 8.64 5 9.64 3.45 10.81 1.67 12.22 0 15.08 0a5.39 5.39 0 0 1 3.67 1.41A5.65 5.65 0 0 1 20 5.4v.11c0 2-.47 3.42-1.39 4.25A6.59 6.59 0 0 1 14.17 11h-1V7.76h1a6.46 6.46 0 0 0 2.89-.43 2 2 0 0 0 1-1.81c-.06-1.67-1.31-2.19-2.7-2.19zM0 20v-3.06h17.8V12H20v8H0zm2.2 13H0v-8h2.2v5h6.7v-5h2.2v5h6.7v-5H20v8H2.2zm7.8 5H5.45a5.63 5.63 0 0 0-4 1.28C.48 40.16 0 41.82 0 44.17V50h20v-5.83c0-2.38-.48-4-1.41-4.89a5.59 5.59 0 0 0-4-1.28zm-6.5 3.54h13a1.77 1.77 0 0 1 1.67 1.85v3H1.86v-3a1.77 1.77 0 0 1 1.67-1.85zm15 23.11c-.95.91-2.5 1.35-4.62 1.35H6.13c-2.13 0-3.68-.44-4.67-1.35S0 62.2 0 60s.5-3.74 1.46-4.65S4 54 6.13 54h7.75c2.13 0 3.67.44 4.67 1.35S20 57.8 20 60s-.5 3.74-1.46 4.65zm-8-2.2h3.4a6.56 6.56 0 0 0 3-.47 2.43 2.43 0 0 0 0-4 6.48 6.48 0 0 0-3-.47H6.1a6.55 6.55 0 0 0-3 .47 2.43 2.43 0 0 0 0 4 6.48 6.48 0 0 0 3 .47zM0 74.26V70h20v3.12H5.31L20 77v3L5.31 83.91H20V87H0v-4.26l16-4.23zM0 95v-3h20v2.89L6.38 101H20v3H0v-2.89L13.62 95zm0 17v-3h20v3z"
-            fill="#4c4644" />
-        </symbol>
-        <symbol id="loupe" viewBox="0 0 19.29 19.29">
-          <path fill="none" stroke="currentcolor" stroke-width="2" d="M.7 18.59l6.44-6.44.7.53a6.5 6.5 0 1 0-1.23-1.23l.53.7z" data-name="UI Kit" />
-        </symbol>
-      </svg>
-    </div>
-    <!--BEGIN out-->
-    <div class="page-loader">
-      <div class="page-elem white"></div>
-      <div class="page-elem blend"></div>
-    </div>
-    <div class="out">
-      <div class="page__outer">
-        <div class="page__wrapper">
-          <header class="page__header--wrap">
-            <!--BEGIN header-->
-            <div class="header-inner">
-              <div class="navigation">
-                <div class="navigation-burger js-popup-button" title="menu" data-modal="modal-menu">
-                  <span class="navigation-burger__item"></span>
-                  <span class="navigation-burger__item"></span>
-                  <span class="navigation-burger__item"></span>
-                </div>
-                <a class="navigation-back" href="/2-0-models.html">
-                  <svg class="back">
-                    <use xlink:href="#back"></use>
-                  </svg>
-                </a>
-                <a class="navigation-lang" href="#">рус</a>
-                <a class="navigation-logo" href="/home.html">
-                  <svg class="logo">
-                    <use xlink:href="#logo"></use>
-                  </svg>
-                </a>
-                <a class="navigation-search" href="#search-block">
-                  <svg class="loupe">
-                    <use xlink:href="#loupe"></use>
-                  </svg>
-                </a>
-                <div class="navigation-link header-links">
-                  <div class="navigation-link-wrap">
-                    <a class="navigation-link__item" href="/7-0-Become-model.html">Become a model</a>
-                    <a class="navigation-link__item" href="/6-0-contacts.html">Business request</a>
+      </script>
+      <div class="svg-defs-container" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <symbol id="back" viewBox="0 0 20 19.97">
+            <path fill="#4c4644" d="M1.42 11.42l8.6 8.59 1.41-1.41-7.59-7.59h16.18v-2H3.84l7.6-7.6-1.42-1.4-10 10 1.4 1.42z" />
+          </symbol>
+          <symbol id="carret" viewBox="0 0 16 8.98">
+            <path fill="currentcolor" d="M8 0L0 8.21l.75.77L8 1.54l7.25 7.44.75-.77L8 0z" data-name="UI Kit" />
+          </symbol>
+          <symbol id="cross-X" viewBox="0 0 22.63 21.92">
+            <title>cross-X</title>
+            <path d="M11.31 9.9L1.41 0 .7.71l9.9 9.9L0 21.21l.71.71 10.6-10.61 10.61 10.61.71-.71L12.02 10.6l9.9-9.9-.71-.71z" />
+          </symbol>
+          <symbol id="cross" viewBox="0 0 30 30">
+            <path fill="currentcolor" stroke="currentcolor" d="M16 14V0h-1v14H0v1h15v15h1V15h14v-1z" data-name="UI Kit" />
+          </symbol>
+          <symbol id="logo">
+            <path d="M15.2 3.3c-.6 0-1.2.1-1.7.3-1.7.9-2.5 2.7-3.5 4.3S7.6 11 4.9 11c-1.3 0-2.6-.5-3.6-1.4-1-1.1-1.4-2.5-1.3-4v-.1c0-2 .5-3.4 1.4-4.3C2.6.3 4.2-.1 5.8 0h1v3.3h-1c-1-.1-1.9.1-2.8.4-.6.4-1 1.1-1 1.8 0 1.7 1.2 2.2 2.6 2.2.6 0 1.2-.1 1.7-.3 1.5-.8 2.2-2.4 3.2-4C10.7 1.7 12.1 0 14.9 0c1.3 0 2.6.5 3.6 1.4.9 1.1 1.3 2.6 1.2 4v.1c0 2-.5 3.4-1.4 4.3-1.3.9-2.8 1.4-4.4 1.2h-1V7.8h1c1 .1 1.9-.1 2.8-.4.6-.4 1-1.1 1-1.8.1-1.7-1.1-2.2-2.5-2.3M.2 22v-3.3h17.3v-5.3h2.1V22H.2zm2.1 13.1H.2v-8.6h2.1v5.3h6.5v-5.3H11v5.3h6.5v-5.3h2.1v8.6H2.3zm15.9 5.7c-1.1-.9-2.5-1.3-3.9-1.2H5.5c-1.4-.1-2.8.3-3.9 1.2-.9.9-1.4 2.4-1.4 4.5v5.4h19.4v-5.4c0-2.2-.5-3.7-1.4-4.5zm-.4 6.5H2v-2.8c0-.9.7-1.7 1.6-1.7h12.6c.9 0 1.6.8 1.6 1.7v2.8zm.6 9c-1.3-.9-2.8-1.4-4.4-1.2H5.7c-1.6-.1-3.1.3-4.3 1.2-.9.9-1.4 2.3-1.4 4.3s.5 3.4 1.4 4.3c1.3.9 2.8 1.4 4.4 1.2H14c1.6.1 3.1-.3 4.4-1.2.9-.8 1.4-2.3 1.4-4.3s-.5-3.4-1.4-4.3zm-1.6 6.1c-.9.4-1.9.5-2.8.4H5.8c-1 .1-1.9 0-2.8-.4-.2-.1-.4-.3-.6-.6-.7-1-.4-2.4.6-3 .9-.4 1.9-.6 2.8-.5H14c1-.1 1.9.1 2.8.4.2.1.4.3.6.6.7 1 .4 2.4-.6 3.1zM.2 74.7v-4.1h19.4v3H5.3l14.2 3.7v2.9L5.3 84h14.3v3H.2v-4.1l15.6-4.1L.2 74.7zm0 19.7v-3h19.4v2.8l-13.2 6h13.2v3H.2v-2.8l13.2-6H.2zm19.4 17.4v-3.3H.2v3.3h19.4z"
+              class="st0" />
+          </symbol>
+          <symbol id="logo_flex" viewBox="0 0 20 112">
+            <title>logo</title>
+            <path d="M15.36 3.33a3.82 3.82 0 0 0-1.72.29c-1.64.89-2.47 2.7-3.53 4.28S7.64 11 4.92 11a5.39 5.39 0 0 1-3.67-1.41A5.65 5.65 0 0 1 0 5.6v-.11c0-2 .47-3.42 1.39-4.25A6.59 6.59 0 0 1 5.83 0h1v3.24h-1a6.46 6.46 0 0 0-2.89.43 2 2 0 0 0-1 1.81c0 1.64 1.28 2.18 2.69 2.18a3.82 3.82 0 0 0 1.72-.29C7.86 6.58 8.64 5 9.64 3.45 10.81 1.67 12.22 0 15.08 0a5.39 5.39 0 0 1 3.67 1.41A5.65 5.65 0 0 1 20 5.4v.11c0 2-.47 3.42-1.39 4.25A6.59 6.59 0 0 1 14.17 11h-1V7.76h1a6.46 6.46 0 0 0 2.89-.43 2 2 0 0 0 1-1.81c-.06-1.67-1.31-2.19-2.7-2.19zM0 20v-3.06h17.8V12H20v8H0zm2.2 13H0v-8h2.2v5h6.7v-5h2.2v5h6.7v-5H20v8H2.2zm7.8 5H5.45a5.63 5.63 0 0 0-4 1.28C.48 40.16 0 41.82 0 44.17V50h20v-5.83c0-2.38-.48-4-1.41-4.89a5.59 5.59 0 0 0-4-1.28zm-6.5 3.54h13a1.77 1.77 0 0 1 1.67 1.85v3H1.86v-3a1.77 1.77 0 0 1 1.67-1.85zm15 23.11c-.95.91-2.5 1.35-4.62 1.35H6.13c-2.13 0-3.68-.44-4.67-1.35S0 62.2 0 60s.5-3.74 1.46-4.65S4 54 6.13 54h7.75c2.13 0 3.67.44 4.67 1.35S20 57.8 20 60s-.5 3.74-1.46 4.65zm-8-2.2h3.4a6.56 6.56 0 0 0 3-.47 2.43 2.43 0 0 0 0-4 6.48 6.48 0 0 0-3-.47H6.1a6.55 6.55 0 0 0-3 .47 2.43 2.43 0 0 0 0 4 6.48 6.48 0 0 0 3 .47zM0 74.26V70h20v3.12H5.31L20 77v3L5.31 83.91H20V87H0v-4.26l16-4.23zM0 95v-3h20v2.89L6.38 101H20v3H0v-2.89L13.62 95zm0 17v-3h20v3z"
+              fill="#4c4644" />
+          </symbol>
+          <symbol id="loupe" viewBox="0 0 19.29 19.29">
+            <path fill="none" stroke="currentcolor" stroke-width="2" d="M.7 18.59l6.44-6.44.7.53a6.5 6.5 0 1 0-1.23-1.23l.53.7z" data-name="UI Kit" />
+          </symbol>
+        </svg>
+      </div>
+      <!--BEGIN out-->
+      <div class="page-loader">
+        <div class="page-elem white"></div>
+        <div class="page-elem blend"></div>
+      </div>
+      <div class="out">
+        <div class="page__outer">
+          <div class="page__wrapper">
+            <header class="page__header--wrap">
+              <!--BEGIN header-->
+              <div class="header-inner">
+                <div class="navigation">
+                  <div class="navigation-burger js-popup-button" title="menu" data-modal="modal-menu">
+                    <span class="navigation-burger__item"></span>
+                    <span class="navigation-burger__item"></span>
+                    <span class="navigation-burger__item"></span>
+                  </div>
+                  <a class="navigation-back" href="/2-0-models.html">
+                    <svg class="back">
+                      <use xlink:href="#back"></use>
+                    </svg>
+                  </a>
+                  <a class="navigation-lang" href="#">рус</a>
+                  <a class="navigation-logo" href="/home.html">
+                    <svg class="logo">
+                      <use xlink:href="#logo"></use>
+                    </svg>
+                  </a>
+                  <a class="navigation-search" href="#search-block">
+                    <svg class="loupe">
+                      <use xlink:href="#loupe"></use>
+                    </svg>
+                  </a>
+                  <div class="navigation-link header-links">
+                    <div class="navigation-link-wrap">
+                      <a class="navigation-link__item" href="/7-0-Become-model.html">Become a model</a>
+                      <a class="navigation-link__item" href="/6-0-contacts.html">Business request</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!--END header-->
-          </header>
-          <main class="page__content">
-            <div id="barba-wrapper">
-              <div class="barba-container" data-namespace="inner-model">
-                <div class="block block--fullpage">
-                  <div class="block-load">
-                    <div class="block-inner">
-                      <div class="aside bg-brend">
-                        <div class="inner-wrap">
-                          <div class="inner-title">
-                            <div class="inner-title-wrap">
-                              <h1>Anastasia Viartsiukhova</h1>
-                            </div>
-                          </div>
-                          <div class="inner-info">
-                            <div class="inner-info-wrap">
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Height</div>
-                                <div class="inner-info__desc text">178</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Bust</div>
-                                <div class="inner-info__desc text">80</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Waist</div>
-                                <div class="inner-info__desc text">60</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Hips</div>
-                                <div class="inner-info__desc text">88</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Shoe size</div>
-                                <div class="inner-info__desc text">40</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Hair color</div>
-                                <div class="inner-info__desc text">brown</div>
-                              </div>
-                              <div class="inner-info__item">
-                                <div class="inner-info__title sub-title">Eye color</div>
-                                <div class="inner-info__desc text">green-gray</div>
+              <!--END header-->
+            </header>
+            <main class="page__content">
+              <div id="barba-wrapper">
+                <div class="barba-container" data-namespace="inner-model">
+                  <div class="block block--fullpage">
+                    <div class="block-load">
+                      <div class="block-inner">
+                        <div class="aside bg-brend">
+                          <div class="inner-wrap">
+                            <div class="inner-title">
+                              <div class="inner-title-wrap">
+                                <h1>Anastasia Viartsiukhova</h1>
                               </div>
                             </div>
-                            <div class="inner-info__link">
-                              <a class="link-menu" href="">Instagram</a>
-                              <a class="link-menu" href="">Facebook</a>
+                            <div class="inner-info">
+                              <div class="inner-info-wrap">
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Height</div>
+                                  <div class="inner-info__desc text">178</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Bust</div>
+                                  <div class="inner-info__desc text">80</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Waist</div>
+                                  <div class="inner-info__desc text">60</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Hips</div>
+                                  <div class="inner-info__desc text">88</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Shoe size</div>
+                                  <div class="inner-info__desc text">40</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Hair color</div>
+                                  <div class="inner-info__desc text">brown</div>
+                                </div>
+                                <div class="inner-info__item">
+                                  <div class="inner-info__title sub-title">Eye color</div>
+                                  <div class="inner-info__desc text">green-gray</div>
+                                </div>
+                              </div>
+                              <div class="inner-info__link">
+                                <a class="link-menu" href="">Instagram</a>
+                                <a class="link-menu" href="">Facebook</a>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="main bg-dark">
-                        <div class="swiper-container inner-slider">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
-                              <div class="item" data-src="img/anastasia-1-big.jpg">
-                                <img src="img/anastasia-1.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
-                              <div class="item" data-src="img/anastasia-2-big.jpg">
-                                <img src="img/anastasia-2.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
-                              <div class="item" data-src="img/anastasia-1-big.jpg">
-                                <img src="img/anastasia-1.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
-                              <div class="item" data-src="img/gallery-2.jpg">
-                                <img src="img/gallery-2.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
-                              <div class="item" data-src="img/gallery-4.jpg">
-                                <img src="img/gallery-4.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
-                              <div class="item" data-src="img/gallery-7.jpg">
-                                <img src="img/gallery-7.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
-                              <div class="item" data-src="img/anastasia-2-big.jpg">
-                                <img src="img/anastasia-2.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
-                              <div class="item" data-src="img/anastasia-1-big.jpg">
-                                <img src="img/anastasia-1.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
-                              <div class="item" data-src="img/anastasia-2-big.jpg">
-                                <img src="img/anastasia-2.jpg" alt="">
-                              </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-video" data-link="video-bttn">
-                              <div class="youtube" data-embed="VLP4UqTDgwY">
-                                <div class="play-button">
-                                  <div class="play-button-icon"></div>
+                        <div class="main bg-dark">
+                          <div class="swiper-container inner-slider">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
+                                <div class="item" data-src="img/anastasia-1-big.jpg">
+                                  <img src="img/anastasia-1.jpg" alt="">
                                 </div>
                               </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-video" data-link="video-bttn">
-                              <div class="youtube" data-embed="VLP4UqTDgwY">
-                                <div class="play-button">
-                                  <div class="play-button-icon"></div>
+                              <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
+                                <div class="item" data-src="img/anastasia-2-big.jpg">
+                                  <img src="img/anastasia-2.jpg" alt="">
                                 </div>
                               </div>
-                            </div>
-                            <div class="swiper-slide swiper-slide-social" data-link="social-bttn">
-                              <div class="share-block bg-darken">
-                                <div class="share-block__title">share</div>
-                                <div class="share-block__link">
-                                  <a class="link-social" href="#">Facebook</a>
-                                  <a class="link-social" href="#">Twitter</a>
-                                  <a class="link-social" href="#">Google +</a>
-                                </div>
-                                <div class="share-block__bttn">
-                                  <a class="bttn reverse" href="6-0-contacts.html">
-                                    <span>business request</span>
-                                  </a>
+                              <div class="swiper-slide swiper-slide-portfolio" data-link="portfolio-bttn">
+                                <div class="item" data-src="img/anastasia-1-big.jpg">
+                                  <img src="img/anastasia-1.jpg" alt="">
                                 </div>
                               </div>
+                              <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
+                                <div class="item" data-src="img/gallery-2.jpg">
+                                  <img src="img/gallery-2.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
+                                <div class="item" data-src="img/gallery-4.jpg">
+                                  <img src="img/gallery-4.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-editorial" data-link="editorial-bttn">
+                                <div class="item" data-src="img/gallery-7.jpg">
+                                  <img src="img/gallery-7.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
+                                <div class="item" data-src="img/anastasia-2-big.jpg">
+                                  <img src="img/anastasia-2.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
+                                <div class="item" data-src="img/anastasia-1-big.jpg">
+                                  <img src="img/anastasia-1.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-polaroids" data-link="polaroids-bttn">
+                                <div class="item" data-src="img/anastasia-2-big.jpg">
+                                  <img src="img/anastasia-2.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-video" data-link="video-bttn">
+                                <div class="youtube" data-embed="VLP4UqTDgwY">
+                                  <div class="play-button">
+                                    <div class="play-button-icon"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-video" data-link="video-bttn">
+                                <div class="youtube" data-embed="VLP4UqTDgwY">
+                                  <div class="play-button">
+                                    <div class="play-button-icon"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-social" data-link="social-bttn">
+                                <div class="share-block bg-darken">
+                                  <div class="share-block__title">share</div>
+                                  <div class="share-block__link">
+                                    <a class="link-social" href="#">Facebook</a>
+                                    <a class="link-social" href="#">Twitter</a>
+                                    <a class="link-social" href="#">Google +</a>
+                                  </div>
+                                  <div class="share-block__bttn">
+                                    <a class="bttn reverse" href="6-0-contacts.html">
+                                      <span>business request</span>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--должен всегда быть пустым и последним-->
                             </div>
-                            <!--должен всегда быть пустым и последним-->
-                          </div>
-                          <div class="swiper-scrollbar"></div>
-                          <div class="swiper-navigation">
-                            <div class="slide-target" data-slide="portfolio-bttn">portfolio</div>
-                            <div class="slide-target" data-slide="editorial-bttn">editorial</div>
-                            <div class="slide-target" data-slide="polaroids-bttn">polaroids</div>
-                            <div class="slide-target" data-slide="video-bttn">video</div>
-                            <div class="slide-target" data-slide="social-bttn">social</div>
-                          </div>
-                          <div class="navigation-link">
-                            <div class="navigation-link-wrap">
-                              <a class="navigation-link__item" href="3-0-inner.html">Previous</a>
-                              <a class="navigation-link__item" href="3-0-inner-n.html">Next</a>
+                            <div class="swiper-scrollbar"></div>
+                            <div class="swiper-navigation">
+                              <div class="slide-target" data-slide="portfolio-bttn">portfolio</div>
+                              <div class="slide-target" data-slide="editorial-bttn">editorial</div>
+                              <div class="slide-target" data-slide="polaroids-bttn">polaroids</div>
+                              <div class="slide-target" data-slide="video-bttn">video</div>
+                              <div class="slide-target" data-slide="social-bttn">social</div>
+                            </div>
+                            <div class="navigation-link">
+                              <div class="navigation-link-wrap">
+                                <a class="navigation-link__item" href="3-0-inner.html">Previous</a>
+                                <a class="navigation-link__item" href="3-0-inner-n.html">Next</a>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -311,13 +313,13 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </main>
-          <footer class="page__footer"></footer>
+            </main>
+            <footer class="page__footer"></footer>
+          </div>
         </div>
       </div>
+      <!--END out-->
     </div>
-    <!--END out-->
     <div class="modals">
       <div class="modal-layout js-popup-container" data-modal="modal-menu">
         <div class="modal-container modal-menu">

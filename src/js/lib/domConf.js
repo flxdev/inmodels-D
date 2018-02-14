@@ -41,20 +41,20 @@ window.DOM = {
     this.body[0].style.paddingRight = '';
   },
   hideScroll: function() {
-    if (window.innerWidth > document.documentElement.clientWidth) {
-      this.body.css('padding-right',this.scrollWidth);
-    }
-    this.bodyScrollTop = $(window).scrollTop();
-    this.body.css('top',-this.bodyScrollTop + 'px');
-    window.scroll(0, this.bodyScrollTop);
+    // if (window.innerWidth > document.documentElement.clientWidth) {
+    //   this.body.css('padding-right',this.scrollWidth);
+    // }
+    // this.bodyScrollTop = $(window).scrollTop();
+    // this.body.css('top',-this.bodyScrollTop + 'px');
+    // window.scroll(0, this.bodyScrollTop);
     this.body.addClass('show-menu');
     $('.js-stick').trigger('sticky_kit:recalc');
   },
   showScroll: function() {
   	this.body.removeClass('show-menu');
-    this.bodyScrollTop && (window.scroll(0, this.bodyScrollTop));
-    this.bodyScrollTop = null;
-    this.body[0].style.paddingRight = '';
+    // this.bodyScrollTop && (window.scroll(0, this.bodyScrollTop));
+    // this.bodyScrollTop = null;
+    // this.body[0].style.paddingRight = '';
     $('.js-stick').trigger('sticky_kit:recalc'); 
   },
   addListenerMulti(el, s, fn) {

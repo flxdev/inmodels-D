@@ -26,14 +26,16 @@ export default function initModels() {
     });
     iso.layout();
 
-    let $quicksearch = $('#searching').on('keyup', debounce( function() {
+    let searchField = document.querySelector('.form-search');
+
+    let $quicksearch = $('#searching').on('keyup', debounce( function(event) {
       let qsRegex = new RegExp( $quicksearch.val(), 'gi' );
       iso.arrange({
         filter: function(itemElem) {
           return qsRegex ? itemElem.querySelector('.models-item__title').innerText.match( qsRegex ) : true;
         }
       });
-      let searchField = document.querySelector('.form-search');
+      
       let filterLength = iso.filteredItems.length;
       switch(filterLength) {
         case 3:
@@ -61,7 +63,10 @@ export default function initModels() {
       }
       iso.arrange();
       iso.layout();
+
     }, 200 ));
+
+
     
 
     let clr_bttn = $('.clear-bttn').on('click', debounce( function() {
@@ -213,9 +218,6 @@ export default function initModels() {
       el_input.focus();
       busy = true;
     }
-    console.log(busy);
   });
-
-  
 
 }

@@ -66,6 +66,12 @@ export default function setInputFocus() {
   //     showMaskOnHover: false,
   //   });
   // });
+  $('input').keydown(function(event) {
+    if(event.keyCode === 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
   
   $('input[type="tel"]').on('click', function() {
     let i_val =  $(this).val();
@@ -76,7 +82,6 @@ export default function setInputFocus() {
 
   $('input[type="tel"]').on('blur', function() {
     let i_val =  $(this).val();
-    console.log(i_val);
     if(i_val === '+') {
       $(this).val('');
     }
@@ -90,7 +95,7 @@ export default function setInputFocus() {
         $('.block-success').delay(450).fadeIn(400);
       }
     }, 100);
-
-    
   });
+
+
 }

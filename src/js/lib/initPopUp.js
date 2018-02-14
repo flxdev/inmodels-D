@@ -53,8 +53,8 @@ export default function initPopUp() {
     _popup.addClass(_this.conf.active_class).promise().done(() => {
       setTimeout(function() {
         window.DOM.hideScroll();
-        _this.conf.isAnimate = false;
-      },200); 
+      },200);
+      _this.conf.isAnimate = false;
     });
 
   };

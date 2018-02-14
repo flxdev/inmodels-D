@@ -14,6 +14,7 @@ import initAboutSliders from './lib/initSliders';
 import initRellaxParalax from './lib/initRellaxParalax';
 import scrollAnimations from './lib/scrollAnimations';
 import initInnerSlider from './lib/initInnerSlider';
+import aboutMenu from './lib/aboutMenu';
 import { TimelineMax, Sine} from 'gsap';
 
 var cbk = function(e) {
@@ -230,6 +231,7 @@ var about = Barba.BaseView.extend({
     initAboutSliders();
     initRellaxParalax();
     scrollAnimations();
+    aboutMenu();
     
   },
   onLeave: function() {
@@ -360,8 +362,7 @@ var error = Barba.BaseView.extend({
 });
 
 // $(document).ready(function() {
-
-
+ 
 // });
 
 window.onload = () => {
@@ -376,5 +377,6 @@ window.onload = () => {
   initPopUp();
   BarbaWitget.init();
   scrollAnimations();
+
   window.DOM.body.removeClass('loading');
 };
