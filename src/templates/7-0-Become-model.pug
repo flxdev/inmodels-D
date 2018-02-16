@@ -180,7 +180,7 @@ block content
 													+icon('cross')
 												input.input-field(
 													type="hidden"
-													id="photos"
+													accept="image/*"
 													data-validation="required"
 													data-validation-error-msg="required upload file"
 													)
@@ -189,16 +189,25 @@ block content
 											.dz-message 
 												span.drop-item__icon
 													+icon('cross')
+												input.input-field(
+													type="hidden"
+													accept="image/*")
 												.input-label Add profile photo
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
 												span.drop-item__icon
 													+icon('cross')
+												input.input-field(
+													type="hidden"
+													accept="image/*")
 												.input-label Add photo 3/4
 										.input-item.c2.drop-item(action="/upload")
 											.dz-message 
 												span.drop-item__icon
 													+icon('cross')
+												input.input-field(
+													type="hidden"
+													accept="image/*")
 												.input-label Add photo in full length
 										.input-item.input-textarea
 											textarea.input-field(

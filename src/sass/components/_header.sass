@@ -4,7 +4,7 @@
 	bottom: 0
 	left: 0
 	right: 0
-	z-index: 5
+	z-index: 15
 	visibility: hidden
 	padding: 40px
 
@@ -26,6 +26,7 @@
 		position: absolute
 		top: 0
 		left: 0
+		z-index: 10
 		opacity: 1
 		transition: opacity .3s .3s, visibility 0s .2s
 		// background-blend-mode: difference
@@ -35,10 +36,19 @@
 			height: 2px
 			background-color: $color
 			transform: none
-			transition: transform .35s .6s ease-out
+			transition: transform .35s 1s ease-out
 		&.hide-nav-burger
 			visibility: hidden
-			transition: opacity 0s 0s, visibility 0s 0s
+			opacity: 0
+			transition: opacity .3s 0s, visibility 0s .3s
+			.navigation-burger__item
+				&:first-child
+					transform: translateY(18px)
+					transition: 0s .1s
+			.navigation-burger__item
+				&:last-child
+					transform: translateY(-18px)
+					transition: 0s .1s
 	&-back
 		display: block
 		width: 20px
@@ -48,6 +58,7 @@
 		position: absolute
 		top: 0
 		left: 0
+		z-index: 10
 		opacity: 0
 		transform: translateX(20px)
 		&.view-nav-back
@@ -66,7 +77,7 @@
 		line-height: 1.67
 		letter-spacing: 3px
 		text-transform: uppercase
-		visibility: hidden
+		
 		color: $color
 		transform: translateX(20px)
 		transform-origin: 100% 0
@@ -82,15 +93,17 @@
 		width: 20px
 		height: 112px
 		position: absolute
+		z-index: 300
 		left: 0
 		bottom: 0
+		z-index: 10
 		visibility: visible
 		opacity: 1
 		transform: none
 		color: $color !important
 		// color: #000 
 		-mos-transform-style: preserve-3d
-		transition: opacity .3s, transform .3s, visibility 0s .3s
+		transition: opacity .3s .2s, transform .3s .2s, visibility 0s
 		svg
 			fill: $color
 		&.hide-nav-logo
@@ -99,7 +112,8 @@
 			visibility: hidden
 			transition: opacity .3s, transform .3s, visibility 0s .3s
 	&-search
-		display: none
+		visibility: hidden
+		opacity: 0
 		position: absolute
 		left: 0
 		top: calc(50% - 10px)
@@ -107,8 +121,13 @@
 		color: $light-brend
 		width: 20px
 		height: 20px
+		transform: translateX(-25px)
+		transition: transform .3s 0s, opacity .3s 0s, visibility 0s .3s
 		&.active
-			display: block
+			visibility: visible
+			opacity: 1
+			transform: none
+			transition: transform .3s .2s, opacity .3s .2s, visibility 0s
 	&-link
 		display: inline-block
 		text-transform: uppercase
@@ -193,11 +212,11 @@
 			transition: opacity .1s 0s, visibility 0s .1s
 			&__item
 				&:first-child
-					transform: translateY(20px)
+					transform: translateY(18px)
 					transition: 0s .1s
 			&__item
 				&:last-child
-					transform: translateY(-20px)
+					transform: translateY(-18px)
 					transition: 0s .1s
 		&-link
 			&.header-links
@@ -216,17 +235,12 @@
 			opacity: 1
 			transform: none
 			transition: opacity .3s, transform .3s, visibility 0s
-			&.hide-anim
-				opacity: 0
-				transform: translateX(-25px)
-				visibility: hidden
-				transition: opacity .3s, transform .3s, visibility 0s .3s
 		&-lang
 			visibility: visible
 			opacity: 1
 			transform: none
-			transition: transform .3s .15s, opacity .3s .15s, visibility 0s .1s
-			&.hide-anim
+			transition: transform .3s .0s, opacity .3s .0s, visibility 0s 0s
+			&.hide-anim 
 				transform: translateX(20px)
 				opacity: 0
 				transition: transform .3s .1s, opacity .3s .1s, visibility 0s .3s

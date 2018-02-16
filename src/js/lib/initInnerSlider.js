@@ -10,6 +10,7 @@ export default function initInnerSlider() {
     const pagiTriggers = $('.swiper-navigation').find('.slide-target');
     const slides = $('.swiper-slide');
     const slidesLength = slides.length;
+    const indicator = $('.slide-indicator');
 
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
@@ -28,37 +29,24 @@ export default function initInnerSlider() {
         sensitivity: 1.2,
         eventsTarged: '.block-inner'
       },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-      },
     });
 
-    swiper
-      .on('progress',debounce(() => {
-        let active = $('.swiper-slide-visible').last();
-        // let active = active.removeClass('swiper-slide-visible');
-        let trigger = active.data('link');
-        let triggerIndex = active.index() + 1;
+    var wrapPad = parseInt($('.swiper-navigation').width());
+    
+    
+    swiper.on('progress',debounce(() => {
+      let active = $('.swiper-slide-active');
+      let triggerIndex = active.index();
+      if(triggerIndex + 3 > slidesLength) {
+        let trigger = slides.eq(triggerIndex + 1).data('link');
         pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
-        //   if(triggerIndex + 1 === slidesLength) {
-        //     pagiTriggers.removeClass('active').last().addClass('active');
-        //   }
-      }));
-    // .on('reachEnd',() => {
-    //   // setTimeout(() => {
-    //   let trigger = $('.swiper-slide').last().data('link');
-    //   pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
-    //   // },5);
-    //   return false;
-    // })
-    // .on('reachBeginning',() => {
-    //   // setTimeout(() => {
-    //   let trigger = $('.swiper-slide').first().data('link');
-    //   pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
-    //   // },5);
-
-    // });
+        sychronize();
+      } else {
+        let trigger = active.data('link');
+        pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+        sychronize();
+      }
+    }));
 
     pagiTriggers.each(function() {
       let _ = $(this);
@@ -68,11 +56,35 @@ export default function initInnerSlider() {
         let neededItems = slides.filter(`[data-link="${target}"]`);
         let neededItemsIndex = neededItems.first().index();
         setTimeout(() => {
-          swiper.slideTo(neededItemsIndex);    
+          swiper.slideTo(neededItemsIndex);
+          
         },20);
 
       });
     });
+    sychronize();
+    
+    /* synchrones */
+    function sychronize() {
+      var active = 0;
+      var indicatorL = 0;
+      pagiTriggers.each(function() {
+        var linkP = $(this);
+        
+        if(!linkP.hasClass('active')) {
+          indicatorL=indicatorL+linkP.outerWidth();
+          console.log(indicatorL);
+        } else {
+          active++;
+        }
+        if(active) {
+          return false;
+        }
+      });
+      indicator.css({'left':indicatorL + 20});
+    }
+
+
 
     in_slider.lightGallery({
 	    selector: '.item',

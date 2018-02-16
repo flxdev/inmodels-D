@@ -67,9 +67,10 @@
 						opacity: 1
 						transition-delay: .1s
 				.link-dev
+					visibility: visible
 					transform: rotate(-90deg) translateY(0)
 					opacity: 1
-					transition: color .3s, transform .3s .15s, opacity .3s .15s
+					transition: color .3s, transform .3s .15s, opacity .3s .15s, visibility 0s .1s
 				@for $i from 1 to 7
 					.pages-links__item:nth-child(n+#{$i})
 						opacity: 1
@@ -82,6 +83,13 @@
 				transform: none
 				opacity: 1
 				transition-delay: .25s, .25s, .25s
+				&.hide-anim
+					left: -26px
+					opacity: 0
+					transform: rotate(-200deg)
+					transition: opacity .3s .1s, left .3s .1s, transform .3s .1s
+				
+		
 	&-container
 		background-color: $bg-color
 		width: 100%
@@ -298,7 +306,8 @@
 				transform-origin: 100% 0
 				right: 50px
 				opacity: 0
-				transition: color .3s, transform .3s .1s, opacity .3s .1s
+				visibility: hidden
+				transition: color .3s, transform .3s .1s, opacity .3s .1s, visibility 0s .3s
 				&:hover
 					color: $color
 
@@ -316,4 +325,3 @@
 	opacity: 0
 	transform: rotate(-200deg)
 	transition: opacity .3s .1s, left .3s .1s, transform .3s .1s
-	

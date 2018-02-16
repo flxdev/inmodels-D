@@ -650,9 +650,10 @@
 			width: auto
 			// max-width: 450px
 			overflow: hidden
+			&:hover
+				cursor: pointer
 			.item
 				height: 100%
-				cursor: pointer
 			img
 				height: 100%
 				width: auto 
@@ -707,12 +708,15 @@
 			text-align: left
 			bottom: 30px
 			left: 20px
-			display: flex
-			justify-content: space-between
-			width: 100%
-			max-width: 560px
+			display: inline-block
+			font-size: 0
+			// display: flex
+			// justify-content: space-between
+			// width: 100%
+			// max-width: 560px
 			.slide-target
 				display: inline-block
+				padding: 0 20px
 				background-color: transparent
 				font-size: 12px
 				text-transform: uppercase
@@ -723,6 +727,17 @@
 				cursor: pointer
 				&.active
 					color: $btn-color
+				&:first-child
+					padding-left: 0
+			.slide-indicator
+				display: block
+				width: 40px
+				height: 1px
+				background-color: #ffffff
+				position: absolute
+				top: -15px
+				left: 20px
+				transition: left .5s
 
 
 /* ligtgallery */

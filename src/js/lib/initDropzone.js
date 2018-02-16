@@ -15,10 +15,10 @@ export default function initDropzone() {
         dictFileTooBig : 'Вы превысили допустимый размер файла. Загрузите файл с меньшим размером.',
         dictResponseError : 'Сервер ответил с ошибкой',
         dictInvalidFileType: 'Неверный тип файла',
-        maxFilesize: '10',
+        maxFilesize: '2',
         maxFiles: '1',
         autoDiscover:false,
-        acceptedFiles: 'image/*',
+        acceptedFiles: 'image/*,application/pdf',
         init: function() {
           this.on('success', function(file) {
             if (_t.hasClass('dz-success')) {

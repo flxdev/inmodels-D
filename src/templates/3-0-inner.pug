@@ -44,31 +44,31 @@ block content
 					.main.bg-dark
 						.swiper-container.inner-slider
 							.swiper-wrapper
-								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
 									.item(data-src="img/anastasia-1-big.jpg")
 										img(src="img/anastasia-1.jpg", alt="")
-								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
 									.item(data-src="img/anastasia-2-big.jpg")
 										img(src="img/anastasia-2.jpg", alt="")
-								.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-portfolio(data-link="portfolio-bttn")
 									.item(data-src="img/anastasia-1-big.jpg")
 										img(src="img/anastasia-1.jpg", alt="")
-								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
 									.item(data-src="img/gallery-2.jpg")
 										img(src="img/gallery-2.jpg", alt="")
-								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
 									.item(data-src="img/gallery-4.jpg")
 										img(src="img/gallery-4.jpg", alt="")
-								.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-editorial(data-link="editorial-bttn")
 									.item(data-src="img/gallery-7.jpg")
 										img(src="img/gallery-7.jpg", alt="")
-								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
 									.item(data-src="img/anastasia-2-big.jpg")
 										img(src="img/anastasia-2.jpg", alt="")
-								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
 									.item(data-src="img/anastasia-1-big.jpg")
 										img(src="img/anastasia-1.jpg", alt="")
-								.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
+								a(href="#").no-barba.swiper-slide.swiper-slide-polaroids(data-link="polaroids-bttn")
 									.item(data-src="img/anastasia-2-big.jpg")
 										img(src="img/anastasia-2.jpg", alt="")
 								.swiper-slide.swiper-slide-video(data-link="video-bttn")
@@ -81,10 +81,8 @@ block content
 											.play-button-icon
 								.swiper-slide.swiper-slide-social(data-link="social-bttn")
 									+share-block
-								//-должен всегда быть пустым и последним
-								//- .swiper-slide.slide-placeholder
-							.swiper-scrollbar
 							.swiper-navigation
+								.slide-indicator
 								.slide-target(data-slide="portfolio-bttn") portfolio
 								.slide-target(data-slide="editorial-bttn") editorial
 								.slide-target(data-slide="polaroids-bttn") polaroids

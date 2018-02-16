@@ -71,7 +71,9 @@ export default function initModels() {
 
     let clr_bttn = $('.clear-bttn').on('click', debounce( function() {
       
-      $('.clear-bttn').parent().removeClass('editing').find('input').val('').focus();
+      $(clr_bttn).parents('.active').removeClass('active');
+      $(clr_bttn).parent().removeClass('editing').find('input').val('');
+      busy = false;
       let qsRegex = new RegExp( $quicksearch.val(), 'gi' );
       iso.arrange({
         filter: function(itemElem) {
@@ -87,14 +89,6 @@ export default function initModels() {
 
     }, 200 ));
 
-    $('.clear-bttn').on('click', function() {
-      let parent = $(this).parent(),
-        inpt = parent.find('input'),
-        inpt_val = inpt.val();
-      if(!inpt_val) {
-        $(this).parents('.active').removeClass('active');
-      }
-    });
     
     // debounce so filtering doesn't happen every millisecond
     function debounce( fn, threshold ) {

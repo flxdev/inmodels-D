@@ -79,7 +79,7 @@ var BarbaWitget = {
           tl.set(window.DOM.menu, {
             className: '+=hide-anim'
           });
-          tl.set(window.DOM.navLogo, {
+          tl.set(window.DOM.menuClose, {
             className: '+=hide-anim'
           });
           tl.set(window.DOM.navLang, {
@@ -97,10 +97,7 @@ var BarbaWitget = {
             .set(window.DOM.menu, {
               className: '-=hide-anim'
             })
-            .set(window.DOM.navLogo, {
-              className: '-=hide-anim'
-            })
-            .set(window.DOM.navLang, {
+            .set(window.DOM.menuClose, {
               className: '-=hide-anim'
             })
             .to(window.DOM.pageLoaderB, 0.6, {
@@ -117,12 +114,6 @@ var BarbaWitget = {
           //   scaleY: 1,
           // })
             .set(window.DOM.menu, {
-              className: '-=hide-anim'
-            })
-            .set(window.DOM.navLogo, {
-              className: '-=hide-anim'
-            })
-            .set(window.DOM.navLang, {
               className: '-=hide-anim'
             })
             .to(window.DOM.pageLoaderB, 0.6, {
@@ -161,15 +152,18 @@ var BarbaWitget = {
                   y: -50,
                   autoAlpha: 0,
                 })
+                .set(window.DOM.navLang, {
+                  className: '-=hide-anim'
+                })
                 .to(window.DOM.pageLoaderW, 0.4, {
                   scaleY: 0,
                   transformOrigin:'top center',
-                  
+                  clearProps:'all'
                 })
                 .to(window.DOM.pageLoaderB, 0.4, {
                   scaleY: 0,
                   transformOrigin:'top center',
-                  // clearProps:'all'
+                  clearProps:'all'
                 })
                 
                 .to(blockContent, 0.5, {
@@ -186,7 +180,7 @@ var BarbaWitget = {
                       })
                       .set(window.DOM.pageLoader, {
                         className: '-=page-load'
-                      });
+                      }, '-=1');
                     window.DOM.showScroll();
                   }
                 })
