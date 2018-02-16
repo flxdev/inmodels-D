@@ -47,7 +47,6 @@ export default function setInputFocus() {
       let _item = $(this);
       _item.on('click', function(e) {
         e.stopPropagation();
-        console.log('click');
         let value = $(this).text(),
           parent = $(this).closest('.select');
         parent.find('.select-link').text(value);

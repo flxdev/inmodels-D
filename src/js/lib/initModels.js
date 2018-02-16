@@ -64,15 +64,11 @@ export default function initModels() {
       iso.arrange();
       iso.layout();
 
-    }, 200 ));
-
-
-    
+    }, 200 )); 
 
     let clr_bttn = $('.clear-bttn').on('click', debounce( function() {
-      
       $(clr_bttn).parents('.active').removeClass('active');
-      $(clr_bttn).parent().removeClass('editing').find('input').val('');
+      $(clr_bttn).parent().removeClass('editing').find('input').val('').blur();
       busy = false;
       let qsRegex = new RegExp( $quicksearch.val(), 'gi' );
       iso.arrange({

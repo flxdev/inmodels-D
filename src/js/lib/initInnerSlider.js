@@ -73,7 +73,6 @@ export default function initInnerSlider() {
         
         if(!linkP.hasClass('active')) {
           indicatorL=indicatorL+linkP.outerWidth();
-          console.log(indicatorL);
         } else {
           active++;
         }
