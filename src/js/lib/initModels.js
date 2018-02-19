@@ -24,7 +24,10 @@ export default function initModels() {
         transform: 'none'
       }
     });
-    iso.layout();
+    
+    setTimeout(function() {
+      iso.layout();
+    },50);
 
     let searchField = document.querySelector('.form-search');
 
