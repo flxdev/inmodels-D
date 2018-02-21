@@ -50,7 +50,7 @@ var BarbaWitget = {
       // console.log(elem);
       let _t = $(elem);
       if(_t.attr('href').indexOf('/bitrix/admin/') !== -1 || _t.hasClass('no-barba')) {
-        window.location.href = window.location.host+_t.attr('href');
+        window.location.href = window.location.protocol + '//' + window.location.host+_t.attr('href');
       }
       
     });
