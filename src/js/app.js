@@ -40,17 +40,17 @@ var BarbaWitget = {
     window.DOM.getScrollWidth();
     preventDbClick();
     Barba.Pjax.start();
-    Barba.Prefetch.init();
+    // Barba.Prefetch.init();
 
     /*
       ** проверяем урл (внешний переход или битрикс. или внутренний)
     */
 
     Barba.Dispatcher.on('linkClicked', function(elem) {
-      console.log(elem);
+      // console.log(elem);
       let _t = $(elem);
       if(_t.attr('href').indexOf('/bitrix/admin/') !== -1 || _t.hasClass('no-barba')) {
-        window.location.href = window.location.host+$(this).attr('href');
+        window.location.href = window.location.host+_t.attr('href');
       }
       
     });
