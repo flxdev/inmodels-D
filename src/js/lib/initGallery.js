@@ -69,11 +69,11 @@ export default function initGallery() {
         if($wrapper.length) {
           container.addClass(loadingClass);
           $.get($link.attr('href'), {'AJAX_PAGE' : 'Y'}, function(data) {
-            if(isHistoryApiAvailable()) {
-              if($link.attr('href') !== window.location) {
-                window.history.pushState(null, null, $link.attr('href'));
-              }
-            }
+            // if(isHistoryApiAvailable()) {
+            //   if($link.attr('href') !== window.location) {
+            //     window.history.pushState(null, null, $link.attr('href'));
+            //   }
+            // }
             
             $('.' + ajaxPagerWrapClass).remove();
             container.append(data);
@@ -97,7 +97,7 @@ export default function initGallery() {
         }
       };
 
-    function isHistoryApiAvailable() {return!(!window.history||!history.pushState);}
+    // function isHistoryApiAvailable() {return!(!window.history||!history.pushState);}
 
     $(function() {
     

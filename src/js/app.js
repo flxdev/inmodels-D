@@ -41,6 +41,20 @@ var BarbaWitget = {
     preventDbClick();
     Barba.Pjax.start();
     Barba.Prefetch.init();
+
+    /*
+      ** проверяем урл (внешний переход или битрикс. или внутренний)
+    */
+
+    Barba.Dispatcher.on('linkClicked', function(elem) {
+      console.log(elem);
+      let _t = $(elem);
+      if(_t.attr('href').indexOf('/bitrix/admin/') !== -1 || _t.hasClass('no-barba')) {
+        indow.location.href = window.location.host+$(this).attr('href');
+      }
+      
+    });
+
     Barba.Dispatcher.on('newPageReady', function(currentStatus) {
       var link = currentStatus.url.split(window.location.origin)[1].substring(0);
       var navigationLinks = document.querySelectorAll('.js-nav');
