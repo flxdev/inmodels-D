@@ -1,8 +1,13 @@
 import validator from 'jquery-form-validator/form-validator/jquery.form-validator.min.js';
 import autosize from 'autosize';
-// import inputmask from 'inputmask/dist/min/jquery.inputmask.bundle.min.js';
 
 export default function setInputFocus() {
+
+  $.validate({
+    validateOnBlur : true,
+    onSuccess  : function() {
+    }
+  });
   
   let inputs = $('.input-item');
   if(inputs.length) {
@@ -56,15 +61,9 @@ export default function setInputFocus() {
       });
     });
   }
+
   autosize($('textarea'));
 
-  // $('input[type="tel"]').on('click', function() {
-  //   $(this).inputmask({
-  //     'mask': '8 (999) 999-99-99',
-  //     showMaskOnFocus: true,
-  //     showMaskOnHover: false,
-  //   });
-  // });
   $('input').keydown(function(event) {
     if(event.keyCode === 13) {
       event.preventDefault();
@@ -86,15 +85,4 @@ export default function setInputFocus() {
     }
   });
   
-  $('button[type="submit"]').on('click', function() {
-    setTimeout(function() {
-      let error_l = $('.error').length;
-      if(!error_l) {
-        $('form').fadeOut(400);
-        $('.block-success').delay(450).fadeIn(400);
-      }
-    }, 100);
-  });
-
-
 }
