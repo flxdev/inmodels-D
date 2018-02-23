@@ -3,12 +3,26 @@ import autosize from 'autosize';
 
 export default function setInputFocus() {
 
-  $.validate({
-    validateOnBlur : true,
-    onSuccess  : function() {
-    }
-  });
-  
+  var form_valid = $('.js-validate');
+  if (form_valid.length) {
+    form_valid.each(function() {
+      var form_this = $(this);
+      $.validate({
+        form: form_this,
+        validateOnBlur : true,
+        validateHiddenInputs : true,
+        modules: 'html5, security, sanitize',
+        reCaptchaSiteKey: '6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn',
+        reCaptchaSize: 'normal',
+        reCaptchaTheme: 'light',
+        onSuccess  : function() {
+          $('.drop-item').processQueue();
+        }
+      });
+    });
+  }
+
+
   let inputs = $('.input-item');
   if(inputs.length) {
     inputs.each(function() {

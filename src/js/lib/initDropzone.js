@@ -11,14 +11,16 @@ export default function initDropzone() {
         clickable : true,
         addRemoveLinks : true,
         dictRemoveFile: '',
+        ignoreHiddenFiles: false,
         createImageThumbnails : false,
         dictFileTooBig : 'Вы превысили допустимый размер файла. Загрузите файл с меньшим размером.',
         dictResponseError : 'Сервер ответил с ошибкой',
         dictInvalidFileType: 'Неверный тип файла',
         maxFilesize: '2',
         maxFiles: '1',
-        autoDiscover:false,
+        autoDiscover : false,
         acceptedFiles: 'image/*,application/pdf',
+        autoProcessQueue : false,
         init: function() {
           this.on('success', function(file) {
             if (_t.hasClass('dz-success')) {

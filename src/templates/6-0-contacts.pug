@@ -58,9 +58,16 @@ block content
 											.dz-message 
 												span.drop-item__icon
 													+icon('cross')
+												input.input-field(
+													type="hidden")
 												.input-label Attach file
-										.input-item.c2.input-bttn
-											button.bttn.normal(type="submit" )
+										.input-item.c2.input-recaptcha
+											input.recaptcha(
+												data-validation="recaptcha"
+												data-validation-recaptcha-sitekey="6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn"
+												data-validation-error-msg="Вы не прошли каптчу")
+										.input-item.input-bttn
+											button.bttn.normal.w100(type="submit" )
 												span send a message
 								.block-success
 									.block-success__title
