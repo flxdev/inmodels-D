@@ -324,10 +324,14 @@
 					&:after
 						opacity: 0
 		&.input-recaptcha
-			border: none;
+			width: 51%
+			border: none
+			+r(1240)
+				width: 100%
 			&:before,
 			&:after
 				display: none;
+			&-wrap
 		&.animate
 			opacity: 1
 			transform: none

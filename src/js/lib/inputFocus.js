@@ -1,4 +1,5 @@
 import validator from 'jquery-form-validator/form-validator/jquery.form-validator.min.js';
+import 'jquery-form-validator/src/modules/security.js';
 import autosize from 'autosize';
 
 export default function setInputFocus() {
@@ -11,7 +12,7 @@ export default function setInputFocus() {
         form: form_this,
         validateOnBlur : true,
         validateHiddenInputs : true,
-        modules: 'html5, security, sanitize',
+        modules: 'security',
         reCaptchaSiteKey: '6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn',
         reCaptchaSize: 'normal',
         reCaptchaTheme: 'light',
