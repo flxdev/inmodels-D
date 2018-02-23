@@ -8,6 +8,7 @@ export default function setInputFocus() {
   if (form_valid.length) {
     form_valid.each(function() {
       var form_this = $(this);
+      alert();
       $.validate({
         form: form_this,
         validateOnBlur : true,
