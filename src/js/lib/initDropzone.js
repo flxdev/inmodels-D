@@ -19,13 +19,27 @@ export default function initDropzone() {
         maxFilesize: '2',
         maxFiles: '1',
         autoDiscover : false,
-        acceptedFiles: 'image/*,application/pdf',
+        acceptedFiles: '.jpg, .jpeg, .png, .pdf',
         autoProcessQueue : false,
         init: function() {
-          this.on('success', function(file) {
-            if (_t.hasClass('dz-success')) {
-              _t.find('input').val('true').validate();
-            }
+
+          var _tItem = _t.find('input');
+
+          this.on('addedfile', function(file) {
+            _tItem.val(file.name);
+            _tItem.validate();
+          });
+
+          this.on('removedfile', function(file) {
+            _tItem.removeAttr('value');
+            _tItem.validate();
+          });
+
+          var submitButton = $('button[type="submit"]');
+          var wrapperThis = this;
+
+          submitButton.on('click', function(e) {
+            wrapperThis.processQueue();
           });
         }
       });

@@ -8,7 +8,6 @@ export default function setInputFocus() {
   if (form_valid.length) {
     form_valid.each(function() {
       var form_this = $(this);
-      alert();
       $.validate({
         form: form_this,
         validateOnBlur : true,
@@ -17,9 +16,9 @@ export default function setInputFocus() {
         reCaptchaSiteKey: '6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn',
         reCaptchaSize: 'normal',
         reCaptchaTheme: 'light',
-        onSuccess  : function() {
-          $('.drop-item').processQueue();
-        }
+        // onSuccess  : function() {
+        //   $('.drop-item').processQueue();
+        // }
       });
     });
   }

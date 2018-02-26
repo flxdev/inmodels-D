@@ -90,7 +90,7 @@ export default (env) => {
   if (isProduction) {
     webpackConfig.plugins.push(
       new webpack.LoaderOptionsPlugin({
-        minimize: true,
+        minimize: false,
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.DedupePlugin(),
@@ -98,10 +98,11 @@ export default (env) => {
         uglifyOptions: {
           ie8: false,
           // ecma: 5,
+          // output: {
+          //   // comments: false,
+          //   beautify: true,
+          // },
         },
-        // output: {
-        //   comments: false,
-        // },
       })
     );
   }
