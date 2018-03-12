@@ -97,7 +97,7 @@ export default (env) => {
       new UglifyJsPlugin({
         uglifyOptions: {
           ie8: false,
-          // ecma: 5,
+          ecma: 5,
           // output: {
           //   // comments: false,
           //   beautify: true,

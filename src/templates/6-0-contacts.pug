@@ -54,20 +54,29 @@ block content
 												data-validation="required"
 												data-validation-error-msg="required field")
 											label.input-label(for="user-msg") Message
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
+										.input-item.c2.drop-item
+											label.input-label(for="user-file")
 												span.drop-item__icon
 													+icon('cross')
-												input.input-field(
-													type="hidden")
-												.input-label Attach file
+												input.input-field.drop-input(
+													type="file"
+													id="user-file"
+													data-validation="mime size" 
+													data-validation-allowing="jpg, png, gif" 
+													data-validation-max-size="2M"
+													data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+													data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf")
+												span Attach file
+											.file-name-wrap
+												span.file-name
+												a.clear-file(href="#")
+													+icon('cross-X')
 										.input-item.c2.input-recaptcha
 											.recaptcha-wrap
 												input.recaptcha(
 													data-validation="recaptcha"
 													data-validation-recaptcha-sitekey="6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn"
 													data-validation-error-msg="Вы не прошли каптчу")
-
 										.input-item.input-bttn
 											button.bttn.normal.w100(type="submit" )
 												span send a message

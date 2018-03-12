@@ -174,41 +174,78 @@ block content
 										
 									.form-block__title photo
 									.input-row
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
+										.input-item.c2.drop-item
+											.input-label(for="user-file")
 												span.drop-item__icon
 													+icon('cross')
-												input.input-field(
-													type="hidden"
-													accept="image/*"
-													data-validation="required"
-													data-validation-error-msg="required upload file"
+												input.input-field.drop-input(
+													type="file"
+													id="user-file"
+													data-validation="mime size" 
+													data-validation-allowing="jpg, png, gif" 
+													data-validation-max-size="2M"
+													data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+													data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf"
 													)
-												.input-label Add photo face
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
+												span Add photo face
+											.file-name-wrap
+												span.file-name
+												a.clear-file(href="#")
+													+icon('cross-X')
+										.input-item.c2.drop-item
+											.input-label(for="user-file")
 												span.drop-item__icon
 													+icon('cross')
-												input.input-field(
-													type="hidden"
-													accept="image/*")
-												.input-label Add profile photo
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
+												input.input-field.drop-input(
+													type="file"
+													id="user-file"
+													data-validation="mime size" 
+													data-validation-allowing="jpg, png, gif" 
+													data-validation-max-size="2M"
+													data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+													data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf"
+													)
+												span Add profile photo
+											.file-name-wrap
+												span.file-name
+												a.clear-file(href="#")
+													+icon('cross-X')
+										.input-item.c2.drop-item
+											.input-label(for="user-file")
 												span.drop-item__icon
 													+icon('cross')
-												input.input-field(
-													type="hidden"
-													accept="image/*")
-												.input-label Add photo 3/4
-										.input-item.c2.drop-item(action="/upload")
-											.dz-message 
+												input.input-field.drop-input(
+													type="file"
+													id="user-file"
+													data-validation="mime size" 
+													data-validation-allowing="jpg, png, gif" 
+													data-validation-max-size="2M"
+													data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+													data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf"
+													)
+												span Add photo 3/4
+											.file-name-wrap
+												span.file-name
+												a.clear-file(href="#")
+													+icon('cross-X')
+										.input-item.c2.drop-item
+											.input-label(for="user-file")
 												span.drop-item__icon
 													+icon('cross')
-												input.input-field(
-													type="hidden"
-													accept="image/*")
-												.input-label Add photo in full length
+												input.input-field.drop-input(
+													type="file"
+													id="user-file"
+													data-validation="mime size" 
+													data-validation-allowing="jpg, png, gif" 
+													data-validation-max-size="2M"
+													data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+													data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf"
+													)
+												span Add photo in full length
+											.file-name-wrap
+												span.file-name
+												a.clear-file(href="#")
+													+icon('cross-X')
 										.input-item.input-textarea
 											textarea.input-field(
 												type="text"

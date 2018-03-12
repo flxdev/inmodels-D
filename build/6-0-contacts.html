@@ -207,15 +207,24 @@
                                   <textarea class="input-field" type="text" id="user-msg" rows="1.5" data-validation="required" data-validation-error-msg="required field"></textarea>
                                   <label class="input-label" for="user-msg">Message</label>
                                 </div>
-                                <div class="input-item c2 drop-item" action="/upload">
-                                  <div class="dz-message">
+                                <div class="input-item c2 drop-item">
+                                  <label class="input-label" for="user-file">
                                     <span class="drop-item__icon">
                                       <svg class="cross">
                                         <use xlink:href="#cross"></use>
                                       </svg>
                                     </span>
-                                    <input class="input-field" type="hidden">
-                                    <div class="input-label">Attach file</div>
+                                    <input class="input-field drop-input" type="file" id="user-file" data-validation="mime size" data-validation-allowing="jpg, png, gif" data-validation-max-size="2M" data-validation-error-msg-size="Загрузите файл не больше 2Мб"
+                                      data-validation-error-msg-mime="Вы можете загрузить изображения или документ .pdf">
+                                    <span>Attach file</span>
+                                  </label>
+                                  <div class="file-name-wrap">
+                                    <span class="file-name"></span>
+                                    <a class="clear-file" href="#">
+                                      <svg class="cross-X">
+                                        <use xlink:href="#cross-X"></use>
+                                      </svg>
+                                    </a>
                                   </div>
                                 </div>
                                 <div class="input-item c2 input-recaptcha">
