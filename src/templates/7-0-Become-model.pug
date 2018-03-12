@@ -255,10 +255,11 @@ block content
 											label.input-label(for="user-msg") Note
 										.input-item.c2.input-recaptcha
 											.recaptcha-wrap
-												input.recaptcha(
-													data-validation="recaptcha"
-													data-validation-recaptcha-sitekey="6LfyQ0YUAAAAALnPYQDtOHEU5cBfXMIMC3m5kPXn"
-													data-validation-error-msg="Вы не прошли каптчу")
+												.g-recaptcha(
+													data-sitekey="6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE"
+													data-theme="light"
+													data-size="normal"
+														)
 										.input-item.input-bttn
 											button.bttn.normal.w100(type="submit")
 												span send a message
