@@ -5,6 +5,7 @@ import autosize from 'autosize';
 
 export default function setInputFocus() {
 
+  
   var form_valid = $('.js-validate');
   if (form_valid.length) {
     form_valid.each(function() {
@@ -14,6 +15,16 @@ export default function setInputFocus() {
         validateOnBlur : true,
         validateHiddenInputs : true,
         modules: 'file',
+        // modules: 'security, file',
+        // reCaptchaSiteKey: '6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE',
+        // reCaptchaSize: 'normal',
+        // reCaptchaTheme: 'light',
+        onSuccess: function() {
+          // var v = grecaptcha.getResponse();
+          // if(v.length == 0) {
+          //   return false;
+          // }
+        }
       });
     });
   }

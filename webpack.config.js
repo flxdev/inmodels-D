@@ -89,21 +89,21 @@ export default (env) => {
 
   if (isProduction) {
     webpackConfig.plugins.push(
-      new webpack.LoaderOptionsPlugin({
-        minimize: false,
-      }),
+      // new webpack.LoaderOptionsPlugin({
+      //   minimize: false,
+      // }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.DedupePlugin(),
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          ie8: false,
-          ecma: 5,
-          // output: {
-          //   // comments: false,
-          //   beautify: true,
-          // },
-        },
-      })
+      // new UglifyJsPlugin({
+      //   uglifyOptions: {
+      //     ie8: false,
+      //     // ecma: 5,
+      //     // output: {
+      //     //   // comments: false,
+      //     //   beautify: true,
+      //     // },
+      //   },
+      // })
     );
   }
   return webpackConfig;
