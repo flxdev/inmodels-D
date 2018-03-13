@@ -1,5 +1,5 @@
 import validator from 'jquery-form-validator/form-validator/jquery.form-validator.min.js';
-import 'jquery-form-validator/src/modules/security.js';
+// import 'jquery-form-validator/src/modules/security.js';
 import 'jquery-form-validator/src/modules/file.js';
 import autosize from 'autosize';
 
@@ -14,10 +14,12 @@ export default function setInputFocus() {
         form: form_this,
         validateOnBlur : true,
         validateHiddenInputs : true,
-        modules: 'security, file',
-        reCaptchaSiteKey: '6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE',
-        reCaptchaSize: 'normal',
-        reCaptchaTheme: 'light',
+        scrollToTopOnError : false,
+        modules: 'file',
+        // modules: 'security, file',
+        // reCaptchaSiteKey: '6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE',
+        // reCaptchaSize: 'normal',
+        // reCaptchaTheme: 'light',
       });
     });
   }
