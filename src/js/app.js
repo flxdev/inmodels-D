@@ -313,7 +313,6 @@ var models = Barba.BaseView.extend({
 var contacts = Barba.BaseView.extend({
   namespace: 'contacts',
   onEnter: function() {
-
   },
   onEnterCompleted: function() {
     stickInit();
@@ -321,7 +320,6 @@ var contacts = Barba.BaseView.extend({
     // initDropzone();
     setInputFocus();
     scrollAnimations();
-
   },
   onLeaveComplete: function() {
   }
@@ -331,8 +329,6 @@ var innerModel = Barba.BaseView.extend({
   namespace: 'inner-model',
   onEnter: function() {
   	window.DOM.navLogo.addClass('hide-nav-logo');
-    
-    
   },
   onEnterCompleted: function() {
   	initInnerSlider();

@@ -175,12 +175,12 @@ block content
 									.form-block__title photo
 									.input-row
 										.input-item.c2.drop-item
-											.input-label(for="user-file")
+											label.input-label(for="photo-face")
 												span.drop-item__icon
 													+icon('cross')
 												input.input-field.drop-input(
 													type="file"
-													id="user-file"
+													id="photo-face"
 													data-validation="mime size" 
 													data-validation-allowing="jpg, png, gif" 
 													data-validation-max-size="2M"
@@ -193,12 +193,12 @@ block content
 												a.clear-file(href="#")
 													+icon('cross-X')
 										.input-item.c2.drop-item
-											.input-label(for="user-file")
+											label.input-label(for="photo-profile")
 												span.drop-item__icon
 													+icon('cross')
 												input.input-field.drop-input(
 													type="file"
-													id="user-file"
+													id="photo-profile"
 													data-validation="mime size" 
 													data-validation-allowing="jpg, png, gif" 
 													data-validation-max-size="2M"
@@ -211,12 +211,12 @@ block content
 												a.clear-file(href="#")
 													+icon('cross-X')
 										.input-item.c2.drop-item
-											.input-label(for="user-file")
+											label.input-label(for="photo-3/4")
 												span.drop-item__icon
 													+icon('cross')
 												input.input-field.drop-input(
 													type="file"
-													id="user-file"
+													id="photo-3/4"
 													data-validation="mime size" 
 													data-validation-allowing="jpg, png, gif" 
 													data-validation-max-size="2M"
@@ -229,12 +229,12 @@ block content
 												a.clear-file(href="#")
 													+icon('cross-X')
 										.input-item.c2.drop-item
-											.input-label(for="user-file")
+											label.input-label(for="photo-length")
 												span.drop-item__icon
 													+icon('cross')
 												input.input-field.drop-input(
 													type="file"
-													id="user-file"
+													id="photo-length"
 													data-validation="mime size" 
 													data-validation-allowing="jpg, png, gif" 
 													data-validation-max-size="2M"
@@ -255,12 +255,10 @@ block content
 											label.input-label(for="user-msg") Note
 										.input-item.c2.input-recaptcha
 											.recaptcha-wrap
-												.g-recaptcha(
-													data-sitekey="6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE"
-													data-theme="light"
-													data-size="normal"
-													data-callback="captchaCall"
-														)
+												input.recaptcha(
+													data-validation="recaptcha"
+													data-validation-recaptcha-sitekey="6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE"
+													data-validation-error-msg="Вы не прошли каптчу")
 										.input-item.input-bttn
 											button.bttn.normal.w100(type="submit")
 												span send a message

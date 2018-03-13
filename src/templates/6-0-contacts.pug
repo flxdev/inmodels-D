@@ -73,11 +73,10 @@ block content
 													+icon('cross-X')
 										.input-item.c2.input-recaptcha
 											.recaptcha-wrap
-												.g-recaptcha(
-													data-sitekey="6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE"
-													data-theme="light"
-													data-size="normal"
-														)
+												input.recaptcha(
+													data-validation="recaptcha"
+													data-validation-recaptcha-sitekey="6Ldb6EcUAAAAAGrmkKj7Q0ZEGXI0pzw-yvOXMhTE"
+													data-validation-error-msg="Вы не прошли каптчу")
 										.input-item.input-bttn
 											button.bttn.normal.w100(type="submit" )
 												span send a message
