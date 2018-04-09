@@ -35,16 +35,31 @@ export default function initInnerSlider() {
     
     
     swiper.on('progress',debounce(() => {
-      let active = $('.swiper-slide-active');
+      // let active = $('.swiper-slide-active');
+      let active = $('.swiper-slide-next');
       let triggerIndex = active.index();
+      let vis = $('.swiper-slide-active');
+      
       if(triggerIndex + 3 > slidesLength) {
-        let trigger = slides.eq(triggerIndex + 1).data('link');
-        pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
-        sychronize();
+
+        if(triggerIndex + 1 === slidesLength - 1 || triggerIndex === slidesLength - 1) {
+          let trigger = $('.swiper-slide-social').data('link');
+          pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+          sychronize();
+        } else {
+          let trigger = slides.eq(triggerIndex + 1).data('link');
+          pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
+          sychronize();
+        }
+
+        
+
       } else {
+
         let trigger = active.data('link');
         pagiTriggers.removeClass('active').filter(`[data-slide="${trigger}"]`).addClass('active');
         sychronize();
+
       }
     }));
 
@@ -62,9 +77,8 @@ export default function initInnerSlider() {
 
       });
     });
+
     sychronize();
-    
-    /* synchrones */
     function sychronize() {
       var active = 0;
       var indicatorL = 0;

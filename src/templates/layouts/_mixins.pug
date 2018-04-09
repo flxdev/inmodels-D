@@ -28,7 +28,8 @@ mixin share-block
 mixin gallery-item(img, date, title, short, add_class)
 	a(href="5-1-gallery-news.html" class='gallery-item '+ add_class)
 		.gallery-item__img
-			img(src="img/"+img, alt="gallery-item")
+			.gallery-item__inn
+				img(src="img/"+img, alt="gallery-item")
 		.gallery-item__info
 			.gallery-item__date= date
 			.gallery-item__desc
@@ -42,7 +43,8 @@ mixin models-item(img, name, add_class)
 		- var add_class = ' ' + add_class
 	a(href="3-0-inner.html" class='models-item '+ add_class)
 		.models-item__img
-			img(src="img/"+img, alt="models-item")
+			.models-item__inn
+				img(src="img/"+img, alt="models-item")
 		.models-item__info
 			.models-item__title= name
 

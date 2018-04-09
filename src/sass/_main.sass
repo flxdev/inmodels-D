@@ -86,9 +86,11 @@
 		padding-bottom: 40px
 		.stamp-models
 			position: absolute
-			width: 23%
+			// width: 23%
 			height: 50px
 			top: 30px
+			margin: 5px
+			width: calc(25% - 10px)
 			&.stamp1
 				left: 0
 			&.stamp2
@@ -107,6 +109,18 @@
 			margin: 5px
 			font-size: 0
 			overflow: hidden
+			&__img
+				width: 100%
+				height: 0
+				padding-bottom: 150%
+				position: relative
+				background-color: rgba(0,0,0,.5)
+			&__inn
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
 			&__title
 				color: #ffffff
 				font-size: 36px
@@ -249,8 +263,22 @@
 				background-color: rgba(#000000, .5)
 				opacity: 0
 				transition: opacity .4s
+			&__img
+				width: 100%
+				height: 0
+				padding-bottom: 150%
+				position: relative
+				background-color: rgba(0,0,0,.5)
+			&__inn
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
 			img
 				transition: transform .4s
+				height: 100%
+				width: auto
 			&:hover
 				.gallery-item__info
 					opacity: 1
@@ -359,9 +387,10 @@
 		margin: 80px auto 85px auto
 	&__row
 		display: flex
-		align-items: flex-end
-		+r(1150)
-			align-items: flex-start
+		align-items: flex-start
+		// align-items: flex-end
+		// +r(1150)
+		// 	align-items: flex-start
 	&__cell
 		position: relative
 		width: 50%
@@ -556,15 +585,18 @@
 		transform: translateX(20px)
 		transition: opacity .1s .0s, transform .0s .1s
 		&-wrap
-			transform: rotate(-90deg)
 			width: 100%
 			position: absolute
-			bottom: -125px
-			transform-origin: 0 0
+			bottom: 0px
 			left: -40px
 			h1
+				transform: rotate(-90deg)
+				transform-origin: 0 0
 				text-transform: none
-				text-align: left			
+				text-align: left
+				position: absolute
+				top: 0
+				left: 0
 	&-info
 		width: 53%
 		text-align: left
@@ -597,6 +629,7 @@
 				margin-top: 15px
 	&-wrap
 		display: flex
+		width: 100%
 		&.active
 			@for $i from 1 to 10
 				.inner-info__item:nth-child(n+#{$i})
@@ -620,7 +653,7 @@
 	width: 100%
 	padding-bottom: 120px
 	padding-right: 20px !important
-	+r(1200)
+	+r(1300)
 		padding-top: 40px
 	.navigation-link
 		bottom: 29px
@@ -635,7 +668,7 @@
 				color: #fff 
 				&:after
 					background: #fff !important
-		+r(1200)
+		+r(1300)
 			top: 0
 			bottom: auto
 	.navigation-link-wrap:hover .navigation-link__item:first-child:not(:hover):after
@@ -660,7 +693,7 @@
 				object-fit: cover
 			&.swiper-slide-video
 				width: 100%	
-				max-width: 80%
+				max-width: 60%
 				background-color: #000000
 				+vertical
 				.youtube
