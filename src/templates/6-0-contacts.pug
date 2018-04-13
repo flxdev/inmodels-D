@@ -39,7 +39,8 @@ block content
 											input.input-field(
 												type="tel"
 												id="user-tel"
-												pattern=".+[0-9]")
+												pattern="^\\+\\d*"
+											)
 											label.input-label(for="user-tel") Phone
 										.input-item
 											input.input-field(type="email"
@@ -83,4 +84,3 @@ block content
 										p.text-middle In the near future our employee will contact you.
 									a(href="home.html").bttn.transparent
 										span Go to home page
-							

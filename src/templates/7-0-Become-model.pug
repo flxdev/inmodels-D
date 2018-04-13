@@ -54,49 +54,51 @@ block content
 											label.input-label(for="model-local") City / country
 										.input-item.c2
 											input.input-field(
-												type="number"
+												type="text"
 												id="model-age"
 												inputmode="numeric"
-												pattern="[0-9]*"
+												pattern="\\d*"
 												)
 											label.input-label(for="model-age") Age
 									.form-block__title options
 									.input-row
 										.input-item.c4
 											input.input-field(
-												type="number"
+												type="text"
+												inputmode="numeric"
+												pattern="\\d*"
 												id="model-height"
-												data-validation="required"
+												data-validation="number"
 												data-validation-error-msg="required field"
 												)
 											label.input-label(for="model-height") Height
 										.input-item.c4
 											input.input-field(
-												type="number"
+												type="text"
 												inputmode="numeric"
-												pattern="[0-9]*"
+												pattern="\\d*"
 												id="model-bust"
-												data-validation="required"
+												data-validation="number"
 												data-validation-error-msg="required field"
 												)
 											label.input-label(for="model-bust") Bust
 										.input-item.c4
 											input.input-field(
-												type="number"
+												type="text"
 												inputmode="numeric"
-												pattern="[0-9]*"
+												pattern="\\d*"
 												id="model-waist"
-												data-validation="required"
+												data-validation="number"
 												data-validation-error-msg="required field"
 												)
 											label.input-label(for="model-waist") Waist
 										.input-item.c4
 											input.input-field(
-												type="number"
+												type="text"
 												inputmode="numeric"
-												pattern="[0-9]*"
+												pattern="\\d*"
 												id="model-hips"
-												data-validation="required"
+												data-validation="number"
 												data-validation-error-msg="required field"
 												)
 											label.input-label(for="model-hips") Hips
@@ -117,7 +119,7 @@ block content
 										.input-item.c2
 											input.input-field(
 												type="tel"
-												pattern=".+[0-9]"
+												pattern="^\\+\\d*"
 												id="model-phone"
 												)
 											label.input-label(for="model-phone") Phone

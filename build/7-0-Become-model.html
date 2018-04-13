@@ -199,26 +199,26 @@
                                   <label class="input-label" for="model-local">City / country</label>
                                 </div>
                                 <div class="input-item c2">
-                                  <input class="input-field" type="number" id="model-age" inputmode="numeric" pattern="[0-9]*">
+                                  <input class="input-field" type="text" id="model-age" inputmode="numeric" pattern="\d*">
                                   <label class="input-label" for="model-age">Age</label>
                                 </div>
                               </div>
                               <div class="form-block__title">options</div>
                               <div class="input-row">
                                 <div class="input-item c4">
-                                  <input class="input-field" type="number" id="model-height" data-validation="required" data-validation-error-msg="required field">
+                                  <input class="input-field" type="text" inputmode="numeric" pattern="\d*" id="model-height" data-validation="number" data-validation-error-msg="required field">
                                   <label class="input-label" for="model-height">Height</label>
                                 </div>
                                 <div class="input-item c4">
-                                  <input class="input-field" type="number" inputmode="numeric" pattern="[0-9]*" id="model-bust" data-validation="required" data-validation-error-msg="required field">
+                                  <input class="input-field" type="text" inputmode="numeric" pattern="\d*" id="model-bust" data-validation="number" data-validation-error-msg="required field">
                                   <label class="input-label" for="model-bust">Bust</label>
                                 </div>
                                 <div class="input-item c4">
-                                  <input class="input-field" type="number" inputmode="numeric" pattern="[0-9]*" id="model-waist" data-validation="required" data-validation-error-msg="required field">
+                                  <input class="input-field" type="text" inputmode="numeric" pattern="\d*" id="model-waist" data-validation="number" data-validation-error-msg="required field">
                                   <label class="input-label" for="model-waist">Waist</label>
                                 </div>
                                 <div class="input-item c4">
-                                  <input class="input-field" type="number" inputmode="numeric" pattern="[0-9]*" id="model-hips" data-validation="required" data-validation-error-msg="required field">
+                                  <input class="input-field" type="text" inputmode="numeric" pattern="\d*" id="model-hips" data-validation="number" data-validation-error-msg="required field">
                                   <label class="input-label" for="model-hips">Hips</label>
                                 </div>
                                 <div class="input-item c2">
@@ -233,7 +233,7 @@
                               <div class="form-block__title">Сontacts</div>
                               <div class="input-row">
                                 <div class="input-item c2">
-                                  <input class="input-field" type="tel" pattern=".+[0-9]" id="model-phone">
+                                  <input class="input-field" type="tel" pattern="^\+\d*" id="model-phone">
                                   <label class="input-label" for="model-phone">Phone</label>
                                 </div>
                                 <div class="input-item c2">
