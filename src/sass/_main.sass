@@ -285,16 +285,21 @@
 				left: 0
 				width: 100%
 				height: 100%
+				transform: scale3D(1, 1, 1)
+				will-change: transform
+				transition: transform .4s
+				// top: -5%
+				// left: -5%
+				// width: 110%
+				// height: 110%
+				// transform: scale3D(0.91,0.91,1)
 			img
 				display: block
-				transition: transform .4s
 				object-fit: cover
 				height: 100%
 				width: auto
 				background-color: rgba(0,0,0,.05)
-				transition: transform .4s
-				transform: scale(1.005)
-				will-change: transform
+				
 			&:hover
 				.gallery-item__info
 					opacity: 1
@@ -310,8 +315,9 @@
 					opacity: 1
 					transition: transform .4s .3s, opacity .3s .3s
 					transform: none
-				img
-					transform: scale(1.03)
+				.gallery-item__inn
+					transform: scale3D(1.03, 1.03, 1)
+					// transform: scale3D(1, 1, 1)
 
 .gallery-news
 	.main
