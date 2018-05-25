@@ -85,6 +85,7 @@ var BarbaWitget = {
         var deferred = Barba.Utils.deferred();
         let tl = new TimelineMax({
           onComplete: () => {
+            window.scroll(0, 0);
             window.DOM.menuClose.trigger('click');
             deferred.resolve();
           }
@@ -145,8 +146,8 @@ var BarbaWitget = {
         let oldCont = $(this.oldContainer);
         let blockContent = newCont.find('.block-load');
         let blockBg = newCont.find('.block__bg');
-        window.scroll(0, 0);
-        window.DOM.hideScroll();
+
+        // window.DOM.hideScroll();
         let tlIn = new TimelineMax();
         tlIn
           .set(oldCont,{
@@ -159,7 +160,7 @@ var BarbaWitget = {
               
               tlIn
                 .set(blockContent, {
-                  y: 50,
+                  y: 25,
                   autoAlpha: 0,
                 })
                 .set(blockBg, {
@@ -180,7 +181,7 @@ var BarbaWitget = {
                   clearProps:'all'
                 })
                 
-                .to(blockContent, 0.5, {
+                .to(blockContent, 0.25, {
                   y: 0,
                   autoAlpha: 1,
                   clearProps:'all',
@@ -383,4 +384,5 @@ window.onload = () => {
   scrollAnimations();
 
   window.DOM.body.removeClass('loading');
+
 };

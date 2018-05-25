@@ -18,6 +18,7 @@ export default function initInnerSlider() {
       spaceBetween: 20,
       freeMode: true,
       // pagination: false,
+      touchEventsTarget: 'wrapper',
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       on: {

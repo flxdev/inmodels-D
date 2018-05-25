@@ -96,7 +96,7 @@ export default (env) => {
       new webpack.optimize.DedupePlugin(),
       new UglifyJsPlugin({
         uglifyOptions: {
-          ie8: false,
+          ie8: true,
           ecma: 5,
           // output: {
           //   // comments: false,
